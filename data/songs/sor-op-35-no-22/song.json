@@ -1,0 +1,672 @@
+{
+ "id": "sor-op-35-no-22",
+ "title": "Op. 35 No. 22 (Study in B minor)",
+ "artist": "Fernando Sor",
+ "album": null,
+ "year": 1828,
+ "key": "B minor",
+ "bpm": 96,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0,
+   "bpm": 96,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  3,
+  4
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   3,
+   4
+  ]
+ ],
+ "capo": 0,
+ "bars": 48,
+ "source": {
+  "name": "Mutopia Project",
+  "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1850",
+  "file": "sor35-22.musicxml",
+  "software": "music21 v.10.5.0",
+  "label": "Mutopia Project edition typeset by Glen Larsen (CC BY-SA 3.0)"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "A",
+   "bar": 0
+  },
+  {
+   "name": "B",
+   "bar": 16
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "chord": "F#7"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "chord": "F#"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "chord": "F#"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "F#7"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "C#dim"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "F#"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 17,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 18,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 19,
+   "pos": 0.0,
+   "chord": "F#"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "chord": "F#7"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 23,
+   "pos": 0.0,
+   "chord": "F#"
+  },
+  {
+   "bar": 24,
+   "pos": 0.0,
+   "chord": "D#dim"
+  },
+  {
+   "bar": 25,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 26,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 27,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 28,
+   "pos": 0.0,
+   "chord": "C/E"
+  },
+  {
+   "bar": 30,
+   "pos": 0.0,
+   "chord": "G#dim7"
+  },
+  {
+   "bar": 31,
+   "pos": 0.0,
+   "chord": "F#"
+  },
+  {
+   "bar": 32,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 33,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 34,
+   "pos": 0.0,
+   "chord": "F#7"
+  },
+  {
+   "bar": 35,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 36,
+   "pos": 0.0,
+   "chord": "F#"
+  },
+  {
+   "bar": 37,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 38,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 39,
+   "pos": 0.0,
+   "chord": "F#7"
+  },
+  {
+   "bar": 40,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 41,
+   "pos": 0.0,
+   "chord": "C#7"
+  },
+  {
+   "bar": 42,
+   "pos": 0.0,
+   "chord": "F#7"
+  },
+  {
+   "bar": 43,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 44,
+   "pos": 0.0,
+   "chord": "C#dim"
+  },
+  {
+   "bar": 45,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 46,
+   "pos": 0.0,
+   "chord": "F#7"
+  },
+  {
+   "bar": 47,
+   "pos": 0.0,
+   "chord": "Bm"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "A",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 0,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 1,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 2,
+        "chords": [
+         "F#7"
+        ]
+       },
+       {
+        "bar": 3,
+        "chords": [
+         "Bm"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 4,
+        "chords": [
+         "F#"
+        ]
+       },
+       {
+        "bar": 5,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 6,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 7,
+        "chords": [
+         "F#"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 8,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 9,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 10,
+        "chords": [
+         "F#7"
+        ]
+       },
+       {
+        "bar": 11,
+        "chords": [
+         "G"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 12,
+        "chords": [
+         "C#dim"
+        ]
+       },
+       {
+        "bar": 13,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 14,
+        "chords": [
+         "F#"
+        ]
+       },
+       {
+        "bar": 15,
+        "chords": [
+         "Bm"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "B",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 16,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 17,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 18,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 19,
+        "chords": [
+         "F#"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 20,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 21,
+        "chords": [
+         "F#7"
+        ]
+       },
+       {
+        "bar": 22,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 23,
+        "chords": [
+         "F#"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 24,
+        "chords": [
+         "D#dim"
+        ]
+       },
+       {
+        "bar": 25,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 26,
+        "chords": [
+         "A7"
+        ]
+       },
+       {
+        "bar": 27,
+        "chords": [
+         "D"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 28,
+        "chords": [
+         "C/E"
+        ]
+       },
+       {
+        "bar": 29,
+        "chords": [
+         "C/E"
+        ]
+       },
+       {
+        "bar": 30,
+        "chords": [
+         "G#dim7"
+        ]
+       },
+       {
+        "bar": 31,
+        "chords": [
+         "F#"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 32,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 33,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 34,
+        "chords": [
+         "F#7"
+        ]
+       },
+       {
+        "bar": 35,
+        "chords": [
+         "Bm"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 36,
+        "chords": [
+         "F#"
+        ]
+       },
+       {
+        "bar": 37,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 38,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 39,
+        "chords": [
+         "F#7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 40,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 41,
+        "chords": [
+         "C#7"
+        ]
+       },
+       {
+        "bar": 42,
+        "chords": [
+         "F#7"
+        ]
+       },
+       {
+        "bar": 43,
+        "chords": [
+         "G"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 44,
+        "chords": [
+         "C#dim"
+        ]
+       },
+       {
+        "bar": 45,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 46,
+        "chords": [
+         "F#7"
+        ]
+       },
+       {
+        "bar": 47,
+        "chords": [
+         "Bm"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "guitar",
+ "tracks": [
+  {
+   "id": "guitar",
+   "name": "Guitar",
+   "role": "Classical guitar",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "nylon",
+   "file": "tracks/guitar.json"
+  }
+ ]
+}

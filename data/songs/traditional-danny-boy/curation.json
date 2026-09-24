@@ -1,0 +1,37 @@
+{
+  "title": "Danny Boy",
+  "artist": "Traditional",
+  "key": "C major",
+  "duration": "0:59",
+  "sourceName": "Nagori",
+  "sourceLabel": "Tune Londonderry Air (traditional, published 1855), words by Frederic Weatherly (1913); arranged for this collection",
+  "tracks": {
+    "2": {
+      "id": "melody",
+      "name": "Melody",
+      "role": "Melody guitar",
+      "sound": "acoustic"
+    },
+    "3": {
+      "id": "rhythm",
+      "name": "Rhythm",
+      "role": "Rhythm guitar, open chords",
+      "sound": "acoustic"
+    }
+  },
+  "defaultTrack": "rhythm",
+  "chordTimelinePriority": [
+    "rhythm"
+  ],
+  "sections": [
+    {
+      "name": "Verse",
+      "bar": 0
+    },
+    {
+      "name": "Refrain",
+      "bar": 8
+    }
+  ],
+  "year": 1913
+}

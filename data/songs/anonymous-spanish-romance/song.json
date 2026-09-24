@@ -1,0 +1,396 @@
+{
+ "id": "anonymous-spanish-romance",
+ "title": "Spanish Romance (Romanza)",
+ "artist": "Anonymous",
+ "album": null,
+ "year": null,
+ "key": "E minor",
+ "bpm": 66,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0,
+   "bpm": 66,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  3,
+  4
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   3,
+   4
+  ]
+ ],
+ "capo": 0,
+ "bars": 32,
+ "source": {
+  "name": "Mutopia Project",
+  "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=795",
+  "file": "romance-patched.musicxml",
+  "software": "music21 v.10.5.0",
+  "label": "Mutopia Project edition typeset by Jeff Covey (CC BY-SA 2.5)"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "A",
+   "bar": 0
+  },
+  {
+   "name": "B",
+   "bar": 16
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "B"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "B7"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "chord": "E"
+  },
+  {
+   "bar": 18,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 19,
+   "pos": 0.5,
+   "chord": "B7"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "chord": "B"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "chord": "E"
+  },
+  {
+   "bar": 26,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 28,
+   "pos": 0.0,
+   "chord": "B"
+  },
+  {
+   "bar": 29,
+   "pos": 0.0,
+   "chord": "B7"
+  },
+  {
+   "bar": 30,
+   "pos": 0.0,
+   "chord": "E"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "A",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 0,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 1,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 2,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 3,
+        "chords": [
+         "Em"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 4,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 5,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 6,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 7,
+        "chords": [
+         "Am"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 8,
+        "chords": [
+         "B"
+        ]
+       },
+       {
+        "bar": 9,
+        "chords": [
+         "B"
+        ]
+       },
+       {
+        "bar": 10,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 11,
+        "chords": [
+         "Em"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 12,
+        "chords": [
+         "B7"
+        ]
+       },
+       {
+        "bar": 13,
+        "chords": [
+         "B7"
+        ]
+       },
+       {
+        "bar": 14,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 15,
+        "chords": [
+         "Em"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "B",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 16,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 17,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 18,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 19,
+        "chords": [
+         "B7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 20,
+        "chords": [
+         "B"
+        ]
+       },
+       {
+        "bar": 21,
+        "chords": [
+         "B"
+        ]
+       },
+       {
+        "bar": 22,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 23,
+        "chords": [
+         "E"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 24,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 25,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 26,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 27,
+        "chords": [
+         "A"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 28,
+        "chords": [
+         "B"
+        ]
+       },
+       {
+        "bar": 29,
+        "chords": [
+         "B7"
+        ]
+       },
+       {
+        "bar": 30,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 31,
+        "chords": [
+         "E"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "guitar",
+ "tracks": [
+  {
+   "id": "guitar",
+   "name": "Guitar",
+   "role": "Classical guitar",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "nylon",
+   "file": "tracks/guitar.json"
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Adelita",
+  "artist": "Francisco Tárrega",
+  "key": "E minor",
+  "duration": "0:41",
+  "sourceName": "Mutopia Project",
+  "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=808",
+  "sourceLabel": "Mutopia Project edition typeset by Stewart Holmes (CC BY-SA 2.5)",
+  "tracks": {
+    "1": {
+      "id": "guitar",
+      "name": "Guitar",
+      "role": "Classical guitar",
+      "sound": "nylon"
+    }
+  },
+  "sections": [
+    {
+      "name": "A",
+      "bar": 0
+    },
+    {
+      "name": "B",
+      "bar": 8
+    }
+  ],
+  "chordVocabulary": [
+    "Em",
+    "B7",
+    "Am",
+    "C",
+    "D",
+    "G",
+    "E",
+    "A",
+    "B",
+    "F#m",
+    "C#m",
+    "G#m",
+    "E7"
+  ],
+  "sortArtist": "Tárrega, Francisco"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Nagori",
+  "defaultLang": "auto",
+  "url": "https://guitar.luminoid.dev",
+  "copyright": "© 2026 Luminoid · MIT",
+  "title": {
+    "en": "",
+    "zh": ""
+  },
+  "intro": {
+    "en": "",
+    "zh": ""
+  },
+  "collection": {
+    "en": "",
+    "zh": ""
+  },
+  "footer": {
+    "en": "",
+    "zh": ""
+  }
+}

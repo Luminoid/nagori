@@ -1,0 +1,48 @@
+{
+  "title": "Op. 60 No. 3",
+  "artist": "Fernando Sor",
+  "key": "C major",
+  "sourceName": "Mutopia Project",
+  "sourceLabel": "Mutopia Project edition typeset by Fabrice De Volder (CC BY-SA 3.0)",
+  "tracks": {
+    "1": {
+      "id": "guitar",
+      "name": "Guitar",
+      "role": "Classical guitar",
+      "sound": "nylon"
+    }
+  },
+  "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=671",
+  "sections": [
+    {
+      "name": "A",
+      "bar": 0
+    },
+    {
+      "name": "B",
+      "bar": 8
+    }
+  ],
+  "chordVocabulary": [
+    "C",
+    "G",
+    "G7",
+    "F",
+    "Am",
+    "Dm",
+    "E7",
+    "A7",
+    "D7"
+  ],
+  "sortArtist": "Sor, Fernando",
+  "bpm": 96,
+  "tempo": [
+    {
+      "bar": 0,
+      "pos": 0.0,
+      "bpm": 96,
+      "unit": 4
+    }
+  ],
+  "year": 1837
+}

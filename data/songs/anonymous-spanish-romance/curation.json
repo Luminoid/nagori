@@ -1,0 +1,45 @@
+{
+  "title": "Spanish Romance (Romanza)",
+  "artist": "Anonymous",
+  "key": "E minor",
+  "sourceName": "Mutopia Project",
+  "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=795",
+  "sourceLabel": "Mutopia Project edition typeset by Jeff Covey (CC BY-SA 2.5)",
+  "bpm": 66,
+  "tempo": [
+    {
+      "bar": 0,
+      "pos": 0,
+      "bpm": 66,
+      "unit": 4
+    }
+  ],
+  "tracks": {
+    "1": {
+      "id": "guitar",
+      "name": "Guitar",
+      "role": "Classical guitar",
+      "sound": "nylon",
+      "strings": 6
+    }
+  },
+  "sections": [
+    {
+      "name": "A",
+      "bar": 0
+    },
+    {
+      "name": "B",
+      "bar": 16
+    }
+  ],
+  "chordVocabulary": [
+    "Em",
+    "B7",
+    "Am",
+    "B",
+    "E",
+    "A"
+  ],
+  "duration": "1:27"
+}

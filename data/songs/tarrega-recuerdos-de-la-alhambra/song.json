@@ -1,0 +1,707 @@
+{
+ "id": "tarrega-recuerdos-de-la-alhambra",
+ "title": "Recuerdos de la Alhambra",
+ "artist": "Francisco Tárrega",
+ "album": null,
+ "year": 1896,
+ "key": "A minor",
+ "bpm": 66,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0,
+   "bpm": 66,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  3,
+  4
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   3,
+   4
+  ]
+ ],
+ "capo": 0,
+ "bars": 58,
+ "source": {
+  "name": "Mutopia Project",
+  "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=810",
+  "file": "recuerdos.musicxml",
+  "software": "music21 v.10.5.0",
+  "label": "Mutopia Project edition typeset by Stewart Holmes (CC BY-SA 3.0)"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "A minor",
+   "bar": 0
+  },
+  {
+   "name": "A major",
+   "bar": 20
+  },
+  {
+   "name": "Coda",
+   "bar": 37
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "E"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "E7"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "chord": "E7"
+  },
+  {
+   "bar": 17,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 18,
+   "pos": 0.0,
+   "chord": "E"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 24,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 26,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 28,
+   "pos": 0.0,
+   "chord": "F#m"
+  },
+  {
+   "bar": 29,
+   "pos": 0.0,
+   "chord": "G#"
+  },
+  {
+   "bar": 30,
+   "pos": 0.0,
+   "chord": "C#m"
+  },
+  {
+   "bar": 32,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 33,
+   "pos": 0.0,
+   "chord": "C#m"
+  },
+  {
+   "bar": 34,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 36,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 37,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 38,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 39,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 40,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 42,
+   "pos": 0.0,
+   "chord": "E"
+  },
+  {
+   "bar": 43,
+   "pos": 0.0,
+   "chord": "E7"
+  },
+  {
+   "bar": 44,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 44,
+   "pos": 0.5,
+   "chord": "F"
+  },
+  {
+   "bar": 45,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 46,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 47,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 48,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 50,
+   "pos": 0.0,
+   "chord": "E"
+  },
+  {
+   "bar": 51,
+   "pos": 0.0,
+   "chord": "E7"
+  },
+  {
+   "bar": 52,
+   "pos": 0.0,
+   "chord": "A"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "A minor",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 0,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 1,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 2,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 3,
+        "chords": [
+         "Am"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 4,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 5,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 6,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 7,
+        "chords": [
+         "C"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 8,
+        "chords": [
+         "F"
+        ]
+       },
+       {
+        "bar": 9,
+        "chords": [
+         "F"
+        ]
+       },
+       {
+        "bar": 10,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 11,
+        "chords": [
+         "E7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 12,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 13,
+        "chords": [
+         "A7"
+        ]
+       },
+       {
+        "bar": 14,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 15,
+        "chords": [
+         "Dm"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 16,
+        "chords": [
+         "E7"
+        ]
+       },
+       {
+        "bar": 17,
+        "chords": [
+         "F"
+        ]
+       },
+       {
+        "bar": 18,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 19,
+        "chords": [
+         "E"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "A major",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 20,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 21,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 22,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 23,
+        "chords": [
+         "A"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 24,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 25,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 26,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 27,
+        "chords": [
+         "A"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 28,
+        "chords": [
+         "F#m"
+        ]
+       },
+       {
+        "bar": 29,
+        "chords": [
+         "G#"
+        ]
+       },
+       {
+        "bar": 30,
+        "chords": [
+         "C#m"
+        ]
+       },
+       {
+        "bar": 31,
+        "chords": [
+         "C#m"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 32,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 33,
+        "chords": [
+         "C#m"
+        ]
+       },
+       {
+        "bar": 34,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 35,
+        "chords": [
+         "A"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 36,
+        "chords": [
+         "Am"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Coda",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 37,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 38,
+        "chords": [
+         "F"
+        ]
+       },
+       {
+        "bar": 39,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 40,
+        "chords": [
+         "A"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 41,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 42,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 43,
+        "chords": [
+         "E7"
+        ]
+       },
+       {
+        "bar": 44,
+        "chords": [
+         "A",
+         "F"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 45,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 46,
+        "chords": [
+         "F"
+        ]
+       },
+       {
+        "bar": 47,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 48,
+        "chords": [
+         "A"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 49,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 50,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 51,
+        "chords": [
+         "E7"
+        ]
+       },
+       {
+        "bar": 52,
+        "chords": [
+         "A"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 53,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 54,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 55,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 56,
+        "chords": [
+         "A"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 57,
+        "chords": [
+         "A"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "guitar",
+ "tracks": [
+  {
+   "id": "guitar",
+   "name": "Guitar",
+   "role": "Classical guitar",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "nylon",
+   "file": "tracks/guitar.json"
+  }
+ ]
+}

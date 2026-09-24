@@ -1,0 +1,36 @@
+{
+  "title": "House of the Rising Sun",
+  "artist": "Traditional",
+  "key": "A minor",
+  "duration": "0:40",
+  "sourceName": "Nagori",
+  "sourceLabel": "Traditional American folk song, the melody of the 1930s recordings; arranged for this collection",
+  "tracks": {
+    "2": {
+      "id": "melody",
+      "name": "Melody",
+      "role": "Melody guitar",
+      "sound": "acoustic"
+    },
+    "3": {
+      "id": "rhythm",
+      "name": "Rhythm",
+      "role": "Rhythm guitar, open chords",
+      "sound": "acoustic"
+    }
+  },
+  "defaultTrack": "rhythm",
+  "chordTimelinePriority": [
+    "rhythm"
+  ],
+  "sections": [
+    {
+      "name": "Verse 1",
+      "bar": 0
+    },
+    {
+      "name": "Verse 2",
+      "bar": 8
+    }
+  ]
+}

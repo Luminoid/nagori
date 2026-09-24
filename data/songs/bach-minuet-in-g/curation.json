@@ -1,0 +1,50 @@
+{
+  "title": "Minuet in G, BWV Anh. 114",
+  "artist": "Christian Petzold (attributed to J. S. Bach)",
+  "key": "G major",
+  "sourceName": "Mutopia Project",
+  "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=695",
+  "sourceLabel": "Mutopia Project edition typeset by Yannick Kirschhoffer (public domain)",
+  "bpm": 112,
+  "tempo": [
+    {
+      "bar": 0,
+      "pos": 0,
+      "bpm": 112,
+      "unit": 4
+    }
+  ],
+  "tracks": {
+    "1": {
+      "id": "guitar",
+      "name": "Guitar",
+      "role": "Classical guitar",
+      "sound": "nylon",
+      "strings": 6
+    }
+  },
+  "sections": [
+    {
+      "name": "A",
+      "bar": 0
+    },
+    {
+      "name": "B",
+      "bar": 16
+    }
+  ],
+  "chordVocabulary": [
+    "G",
+    "D",
+    "D7",
+    "C",
+    "Am",
+    "Em",
+    "A7",
+    "Bm",
+    "A"
+  ],
+  "duration": "0:51",
+  "sortArtist": "Petzold, Christian",
+  "year": 1725
+}

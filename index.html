@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nagori · Guitar chords, tabs and tools</title>
+  <meta name="description" content="Guitar chords and tabs synced to the video, with finger positions for every part.">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0e1013" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f5f5f2" media="(prefers-color-scheme: light)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nagori">
+  <meta property="og:title" content="Nagori · Guitar chords, tabs and tools">
+  <meta property="og:description" content="Guitar chords and tabs synced to the video, with finger positions for every part.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://guitar.luminoid.dev/">
+  <meta property="og:url" content="https://guitar.luminoid.dev/">
+  <meta property="og:image" content="https://guitar.luminoid.dev/icons/og.png">
+  <meta name="twitter:image" content="https://guitar.luminoid.dev/icons/og.png">
+  <link rel="alternate" hreflang="en" href="https://guitar.luminoid.dev/?lang=en">
+  <link rel="alternate" hreflang="zh-Hans" href="https://guitar.luminoid.dev/?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://guitar.luminoid.dev/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Nagori","url":"https://guitar.luminoid.dev/","description":"Guitar chords and tabs synced to the video, with finger positions for every part."}</script>
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/icon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="icons/icon-16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip.link">Skip to content</a>
+  <header class="site-header">
+    <div class="header-left">
+      <a class="brand" href="./">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="9" cy="6" r="2" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="2" fill="currentColor" stroke="none"/><circle cx="7" cy="18" r="2" fill="currentColor" stroke="none"/></svg>
+        Nagori
+      </a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="./" aria-current="page" data-i18n="nav.songs">Songs</a>
+        <a href="tools.html" data-i18n="nav.tools">Tools</a>
+      </nav>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn text" id="lang-toggle" type="button" lang="zh-Hans">中文</button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle light or dark theme" title="Toggle theme" data-i18n-aria="theme.toggle" data-i18n-title="theme.toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <noscript><p class="status">Nagori needs JavaScript to show its songs and tools. <span lang="zh-Hans">本站需要启用 JavaScript。</span></p></noscript>
+    <section class="hero">
+      <h1 data-i18n="home.title">Chords, tabs, and every finger position, in time with the video.</h1>
+      <p data-i18n="home.intro">Pick a song, play the video or the tab itself, and follow bar by bar. Each part comes with the chord shapes and finger positions it uses.</p>
+          </section>
+    <section class="tools-strip" aria-labelledby="tools-heading">
+      <h2 id="tools-heading" class="sr-only" data-i18n="nav.tools">Tools</h2>
+      <a class="tool-card" href="tools.html#metronome"><b data-i18n="metro.title">Metronome</b><span data-i18n="home.toolMetronome">Tap a tempo, pick beats and subdivisions.</span></a>
+      <a class="tool-card" href="tools.html#chords"><b data-i18n="dict.title">Chords</b><span data-i18n="home.toolChords">Every common shape, with fingering.</span></a>
+      <a class="tool-card" href="tools.html#fretboard"><b data-i18n="fret.title">Fretboard</b><span data-i18n="home.toolFretboard">The note at every fret, scales highlighted.</span></a>
+      <a class="tool-card" href="tools.html#tuner"><b data-i18n="tuner.title">Tuner</b><span data-i18n="home.toolTuner">Reference strings, or the microphone.</span></a>
+    </section>
+    <section aria-labelledby="songs-heading">
+      <div class="song-toolbar">
+        <h2 id="songs-heading" class="sr-only" data-i18n="home.songs">Songs</h2>
+        <input type="search" id="song-filter" class="song-filter" autocomplete="off" hidden>
+        <label class="song-sort" hidden><span data-i18n="home.sort">Sort</span><select id="song-sort"></select></label>
+        <span class="song-count" id="song-count"></span>
+      </div>
+      <div class="song-grid" id="song-grid"><p class="status" data-i18n="home.loading">Loading songs…</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-i18n="home.footer">
+    Nagori is a personal practice tool. Transcriptions are credited on each song page.
+  </footer>
+
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>

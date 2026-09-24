@@ -1,0 +1,451 @@
+{
+ "id": "traditional-amazing-grace",
+ "title": "Amazing Grace",
+ "artist": "Traditional",
+ "album": null,
+ "year": 1779,
+ "key": "G major",
+ "bpm": 66,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "bpm": 66,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  3,
+  4
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   3,
+   4
+  ]
+ ],
+ "capo": 0,
+ "bars": 33,
+ "source": {
+  "name": "Nagori",
+  "url": null,
+  "file": "traditional-amazing-grace.musicxml",
+  "software": "gen.py for Nagori",
+  "label": "Words by John Newton (1779), tune New Britain (1835); arranged for this collection"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "Verse 1",
+   "bar": 0
+  },
+  {
+   "name": "Verse 2",
+   "bar": 16
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 4,
+   "pos": 0.6666666666666666,
+   "chord": "D7"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "D7"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 12,
+   "pos": 0.6666666666666666,
+   "chord": "D7"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "D7"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 17,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 18,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 19,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 20,
+   "pos": 0.6666666666666666,
+   "chord": "D7"
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 23,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 24,
+   "pos": 0.0,
+   "chord": "D7"
+  },
+  {
+   "bar": 25,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 26,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 27,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 28,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 28,
+   "pos": 0.6666666666666666,
+   "chord": "D7"
+  },
+  {
+   "bar": 29,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 30,
+   "pos": 0.0,
+   "chord": "D7"
+  },
+  {
+   "bar": 31,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 32,
+   "pos": 0.0,
+   "chord": "G"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "Verse 1",
+    "lines": [
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": null,
+        "text": "A"
+       },
+       {
+        "chord": "G",
+        "text": "mazing grace, how "
+       },
+       {
+        "chord": "C",
+        "text": "sweet the "
+       },
+       {
+        "chord": "G",
+        "text": "sound,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "D7",
+        "text": "that "
+       },
+       {
+        "chord": "G",
+        "text": "saved a "
+       },
+       {
+        "chord": "Em",
+        "text": "wretch like "
+       },
+       {
+        "chord": "D",
+        "text": "me."
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "D7",
+        "text": "I "
+       },
+       {
+        "chord": "G",
+        "text": "once was lost, but "
+       },
+       {
+        "chord": "C",
+        "text": "now am "
+       },
+       {
+        "chord": "G",
+        "text": "found,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "D7",
+        "text": "was "
+       },
+       {
+        "chord": "Em",
+        "text": "blind, but "
+       },
+       {
+        "chord": "D7",
+        "text": "now I "
+       },
+       {
+        "chord": "G",
+        "text": "see."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Verse 2",
+    "lines": [
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "G",
+        "text": "'Twas grace that taught my "
+       },
+       {
+        "chord": "C",
+        "text": "heart to "
+       },
+       {
+        "chord": "G",
+        "text": "fear,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "D7",
+        "text": "and "
+       },
+       {
+        "chord": "G",
+        "text": "grace my "
+       },
+       {
+        "chord": "Em",
+        "text": "fears re"
+       },
+       {
+        "chord": "D",
+        "text": "lieved;"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "D7",
+        "text": "how "
+       },
+       {
+        "chord": "G",
+        "text": "precious did that "
+       },
+       {
+        "chord": "C",
+        "text": "grace ap"
+       },
+       {
+        "chord": "G",
+        "text": "pear"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "D7",
+        "text": "the "
+       },
+       {
+        "chord": "Em",
+        "text": "hour I "
+       },
+       {
+        "chord": "D7",
+        "text": "first be"
+       },
+       {
+        "chord": "G",
+        "text": "lieved."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "rhythm",
+ "tracks": [
+  {
+   "id": "melody",
+   "name": "Melody",
+   "role": "Melody guitar",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "acoustic",
+   "file": "tracks/melody.json"
+  },
+  {
+   "id": "rhythm",
+   "name": "Rhythm",
+   "role": "Rhythm guitar, open chords",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "acoustic",
+   "file": "tracks/rhythm.json"
+  }
+ ]
+}

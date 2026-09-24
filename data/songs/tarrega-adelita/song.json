@@ -1,0 +1,270 @@
+{
+ "id": "tarrega-adelita",
+ "title": "Adelita",
+ "artist": "Francisco Tárrega",
+ "album": null,
+ "year": null,
+ "key": "E minor",
+ "bpm": 70,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "bpm": 70,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  3,
+  4
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   3,
+   4
+  ]
+ ],
+ "capo": 0,
+ "bars": 16,
+ "source": {
+  "name": "Mutopia Project",
+  "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=808",
+  "file": "adelita.musicxml",
+  "software": "music21 v.10.5.0",
+  "label": "Mutopia Project edition typeset by Stewart Holmes (CC BY-SA 2.5)"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "A",
+   "bar": 0
+  },
+  {
+   "name": "B",
+   "bar": 8
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "chord": "B7"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "chord": "B7"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "E"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "B7"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "E"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "B7"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "chord": "E"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "A",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 0,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 1,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 2,
+        "chords": [
+         "B7"
+        ]
+       },
+       {
+        "bar": 3,
+        "chords": [
+         "Em"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 4,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 5,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 6,
+        "chords": [
+         "B7"
+        ]
+       },
+       {
+        "bar": 7,
+        "chords": [
+         "Em"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "B",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 8,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 9,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 10,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 11,
+        "chords": [
+         "B7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 12,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 13,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 14,
+        "chords": [
+         "B7"
+        ]
+       },
+       {
+        "bar": 15,
+        "chords": [
+         "E"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "guitar",
+ "tracks": [
+  {
+   "id": "guitar",
+   "name": "Guitar",
+   "role": "Classical guitar",
+   "instrument": "guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "nylon",
+   "file": "tracks/guitar.json"
+  }
+ ]
+}

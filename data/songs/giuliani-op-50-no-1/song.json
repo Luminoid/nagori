@@ -1,0 +1,513 @@
+{
+ "id": "giuliani-op-50-no-1",
+ "title": "Op. 50 No. 1",
+ "artist": "Mauro Giuliani",
+ "album": null,
+ "year": null,
+ "key": "C major",
+ "bpm": 104,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "bpm": 104,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  3,
+  4
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   3,
+   4
+  ]
+ ],
+ "capo": 0,
+ "bars": 32,
+ "source": {
+  "name": "Mutopia Project",
+  "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1329",
+  "file": "giuliani-op50n01.musicxml",
+  "software": "music21 v.10.5.0",
+  "label": "Mutopia Project edition typeset by Stephen Rhen (CC BY 3.0)"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "A",
+   "bar": 0
+  },
+  {
+   "name": "B",
+   "bar": 16
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 5,
+   "pos": 0.5,
+   "chord": "Am"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "chord": "G7"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 8,
+   "pos": 0.5,
+   "chord": "C"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "G7"
+  },
+  {
+   "bar": 10,
+   "pos": 0.5,
+   "chord": "C"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 17,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 18,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 19,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "chord": "G7"
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 23,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 24,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 24,
+   "pos": 0.5,
+   "chord": "C"
+  },
+  {
+   "bar": 25,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 26,
+   "pos": 0.0,
+   "chord": "G7"
+  },
+  {
+   "bar": 26,
+   "pos": 0.5,
+   "chord": "C"
+  },
+  {
+   "bar": 27,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 28,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 28,
+   "pos": 0.5,
+   "chord": "G"
+  },
+  {
+   "bar": 29,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 29,
+   "pos": 0.5,
+   "chord": "Dm"
+  },
+  {
+   "bar": 30,
+   "pos": 0.0,
+   "chord": "C"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "A",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 0,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 1,
+        "chords": [
+         "G"
+        ]
+       },
+       {
+        "bar": 2,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 3,
+        "chords": [
+         "G"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 4,
+        "chords": [
+         "F"
+        ]
+       },
+       {
+        "bar": 5,
+        "chords": [
+         "C",
+         "Am"
+        ]
+       },
+       {
+        "bar": 6,
+        "chords": [
+         "G7"
+        ]
+       },
+       {
+        "bar": 7,
+        "chords": [
+         "C"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 8,
+        "chords": [
+         "G",
+         "C"
+        ]
+       },
+       {
+        "bar": 9,
+        "chords": [
+         "G"
+        ]
+       },
+       {
+        "bar": 10,
+        "chords": [
+         "G7",
+         "C"
+        ]
+       },
+       {
+        "bar": 11,
+        "chords": [
+         "G"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 12,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 13,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 14,
+        "chords": [
+         "G"
+        ]
+       },
+       {
+        "bar": 15,
+        "chords": [
+         "C"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "B",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 16,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 17,
+        "chords": [
+         "G"
+        ]
+       },
+       {
+        "bar": 18,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 19,
+        "chords": [
+         "G"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 20,
+        "chords": [
+         "G7"
+        ]
+       },
+       {
+        "bar": 21,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 22,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 23,
+        "chords": [
+         "C"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 24,
+        "chords": [
+         "G",
+         "C"
+        ]
+       },
+       {
+        "bar": 25,
+        "chords": [
+         "G"
+        ]
+       },
+       {
+        "bar": 26,
+        "chords": [
+         "G7",
+         "C"
+        ]
+       },
+       {
+        "bar": 27,
+        "chords": [
+         "G"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 28,
+        "chords": [
+         "C",
+         "G"
+        ]
+       },
+       {
+        "bar": 29,
+        "chords": [
+         "Am",
+         "Dm"
+        ]
+       },
+       {
+        "bar": 30,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 31,
+        "chords": [
+         "C"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "guitar",
+ "tracks": [
+  {
+   "id": "guitar",
+   "name": "Guitar",
+   "role": "Classical guitar",
+   "instrument": "P7dd33c3a370097aa61c0fac4ac208874",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "nylon",
+   "file": "tracks/guitar.json"
+  }
+ ]
+}

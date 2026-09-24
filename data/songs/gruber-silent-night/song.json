@@ -1,0 +1,296 @@
+{
+ "id": "gruber-silent-night",
+ "title": "Silent Night",
+ "artist": "Franz Xaver Gruber",
+ "album": null,
+ "year": 1818,
+ "key": "C major",
+ "bpm": 84,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "bpm": 84,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  6,
+  8
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   6,
+   8
+  ]
+ ],
+ "capo": 0,
+ "bars": 24,
+ "source": {
+  "name": "Nagori",
+  "url": null,
+  "file": "gruber-silent-night.musicxml",
+  "software": "gen.py for Nagori",
+  "label": "Music by Franz Xaver Gruber (1818), words by Joseph Mohr in John Freeman Young's English (1859); arranged for this collection"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "Verse 1",
+   "bar": 0
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "chord": "G7"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "chord": "G7"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "chord": "G7"
+  },
+  {
+   "bar": 17,
+   "pos": 0.0,
+   "chord": "G7"
+  },
+  {
+   "bar": 18,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 19,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "chord": "G7"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 23,
+   "pos": 0.0,
+   "chord": "C"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "Verse 1",
+    "lines": [
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "C",
+        "text": "Silent night, holy night,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "G7",
+        "text": "all is calm, "
+       },
+       {
+        "chord": "C",
+        "text": "all is bright,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "F",
+        "text": "round yon virgin "
+       },
+       {
+        "chord": "C",
+        "text": "mother and child,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "F",
+        "text": "holy infant so "
+       },
+       {
+        "chord": "C",
+        "text": "tender and mild,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "G7",
+        "text": "sleep in heavenly "
+       },
+       {
+        "chord": "C",
+        "text": "peace,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "C",
+        "text": "sleep in heav"
+       },
+       {
+        "chord": "G7",
+        "text": "enly "
+       },
+       {
+        "chord": "C",
+        "text": "peace."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "rhythm",
+ "tracks": [
+  {
+   "id": "melody",
+   "name": "Melody",
+   "role": "Melody guitar",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "acoustic",
+   "file": "tracks/melody.json"
+  },
+  {
+   "id": "rhythm",
+   "name": "Rhythm",
+   "role": "Rhythm guitar, open chords",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "acoustic",
+   "file": "tracks/rhythm.json"
+  }
+ ]
+}

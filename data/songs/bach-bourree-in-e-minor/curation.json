@@ -1,0 +1,57 @@
+{
+  "title": "Bourrée in E minor, BWV 996",
+  "artist": "Johann Sebastian Bach",
+  "key": "E minor",
+  "sourceName": "Mutopia Project",
+  "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1743",
+  "sourceLabel": "Mutopia Project edition typeset by Rudy Matela (public domain)",
+  "bpm": 120,
+  "tempo": [
+    {
+      "bar": 0,
+      "pos": 0,
+      "bpm": 60,
+      "unit": 2
+    }
+  ],
+  "tracks": {
+    "1": {
+      "id": "guitar",
+      "name": "Guitar",
+      "role": "Classical guitar",
+      "sound": "nylon",
+      "strings": 6
+    }
+  },
+  "sections": [
+    {
+      "name": "A",
+      "bar": 0
+    },
+    {
+      "name": "B",
+      "bar": 9
+    }
+  ],
+  "chordVocabulary": [
+    "Em",
+    "B7",
+    "Am",
+    "D",
+    "G",
+    "G7",
+    "C",
+    "B",
+    "D7",
+    "A",
+    "A7",
+    "F#7",
+    "Bm",
+    "E",
+    "E7",
+    "F#m"
+  ],
+  "duration": "0:48",
+  "sortArtist": "Bach, Johann Sebastian",
+  "year": 1712
+}

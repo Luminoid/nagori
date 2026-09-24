@@ -1,0 +1,441 @@
+{
+ "id": "traditional-scarborough-fair",
+ "title": "Scarborough Fair",
+ "artist": "Traditional",
+ "album": null,
+ "year": null,
+ "key": "A minor",
+ "bpm": 92,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "bpm": 92,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  3,
+  4
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   3,
+   4
+  ]
+ ],
+ "capo": 0,
+ "bars": 38,
+ "source": {
+  "name": "Nagori",
+  "url": null,
+  "file": "traditional-scarborough-fair.musicxml",
+  "software": "gen.py for Nagori",
+  "label": "Traditional English ballad, melody as sung in the 19th century; arranged for this collection"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "Verse 1",
+   "bar": 0
+  },
+  {
+   "name": "Verse 2",
+   "bar": 19
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 17,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 18,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 19,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 23,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 24,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 25,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 26,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 27,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 28,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 29,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 30,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 31,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 32,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 33,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 34,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 35,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 36,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 37,
+   "pos": 0.0,
+   "chord": "Am"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "Verse 1",
+    "lines": [
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "Am",
+        "text": "Are you going to "
+       },
+       {
+        "chord": "G",
+        "text": "Scarborough "
+       },
+       {
+        "chord": "Am",
+        "text": "Fair?"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "C",
+        "text": "Parsley, "
+       },
+       {
+        "chord": "Am",
+        "text": "sage, rose"
+       },
+       {
+        "chord": "D",
+        "text": "mary and "
+       },
+       {
+        "chord": "Am",
+        "text": "thyme;"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "Am",
+        "text": "remember "
+       },
+       {
+        "chord": "C",
+        "text": "me to the one who lives "
+       },
+       {
+        "chord": "G",
+        "text": "there,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "Am",
+        "text": "she once "
+       },
+       {
+        "chord": "G",
+        "text": "was a true love of "
+       },
+       {
+        "chord": "Am",
+        "text": "mine."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Verse 2",
+    "lines": [
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "Am",
+        "text": "Tell her to make me "
+       },
+       {
+        "chord": "G",
+        "text": "a cambric "
+       },
+       {
+        "chord": "Am",
+        "text": "shirt,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "C",
+        "text": "parsley, "
+       },
+       {
+        "chord": "Am",
+        "text": "sage, rose"
+       },
+       {
+        "chord": "D",
+        "text": "mary and "
+       },
+       {
+        "chord": "Am",
+        "text": "thyme,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "Am",
+        "text": "without an"
+       },
+       {
+        "chord": "C",
+        "text": "y seam or fine needle"
+       },
+       {
+        "chord": "G",
+        "text": "work,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "Am",
+        "text": "then she'll "
+       },
+       {
+        "chord": "G",
+        "text": "be a true love of "
+       },
+       {
+        "chord": "Am",
+        "text": "mine."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "rhythm",
+ "tracks": [
+  {
+   "id": "melody",
+   "name": "Melody",
+   "role": "Melody guitar",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "acoustic",
+   "file": "tracks/melody.json"
+  },
+  {
+   "id": "rhythm",
+   "name": "Rhythm",
+   "role": "Rhythm guitar, open chords",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "acoustic",
+   "file": "tracks/rhythm.json"
+  }
+ ]
+}

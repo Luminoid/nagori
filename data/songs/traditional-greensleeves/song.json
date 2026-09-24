@@ -1,0 +1,323 @@
+{
+ "id": "traditional-greensleeves",
+ "title": "Greensleeves",
+ "artist": "Traditional",
+ "album": null,
+ "year": 1580,
+ "key": "E minor",
+ "bpm": 78,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "bpm": 78,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  6,
+  8
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   6,
+   8
+  ]
+ ],
+ "capo": 0,
+ "bars": 17,
+ "source": {
+  "name": "Mutopia Project",
+  "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1247",
+  "file": "greensleeves-arr.musicxml",
+  "software": "greensleeves.py from the Mutopia Project hymntune (public domain)",
+  "label": "Melody and bass line from the Mutopia Project hymntune setting typeset by Steve Dunlop (public domain)"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "Verse",
+   "bar": 0
+  },
+  {
+   "name": "Chorus",
+   "bar": 9
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 3,
+   "pos": 0.5,
+   "chord": "C"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 9,
+   "pos": 0.5,
+   "chord": "G"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "Em"
+  },
+  {
+   "bar": 11,
+   "pos": 0.5,
+   "chord": "C"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "B7"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "chord": "Bm"
+  },
+  {
+   "bar": 13,
+   "pos": 0.5,
+   "chord": "G"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "chord": "Em"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "Verse",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 0,
+        "chords": []
+       },
+       {
+        "bar": 1,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 2,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 3,
+        "chords": [
+         "Em",
+         "C"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 4,
+        "chords": [
+         "Bm"
+        ]
+       },
+       {
+        "bar": 5,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 6,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 7,
+        "chords": [
+         "Em"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 8,
+        "chords": [
+         "Em"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Chorus",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 9,
+        "chords": [
+         "Bm",
+         "G"
+        ]
+       },
+       {
+        "bar": 10,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 11,
+        "chords": [
+         "Em",
+         "C"
+        ]
+       },
+       {
+        "bar": 12,
+        "chords": [
+         "B7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 13,
+        "chords": [
+         "Bm",
+         "G"
+        ]
+       },
+       {
+        "bar": 14,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 15,
+        "chords": [
+         "Em"
+        ]
+       },
+       {
+        "bar": 16,
+        "chords": [
+         "Em"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "melody",
+ "tracks": [
+  {
+   "id": "melody",
+   "name": "Melody",
+   "role": "Guitar",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "nylon",
+   "file": "tracks/melody.json"
+  },
+  {
+   "id": "bass",
+   "name": "Bass line",
+   "role": "Bass",
+   "instrument": "Bass",
+   "strings": 4,
+   "tuning": [
+    43,
+    38,
+    33,
+    28
+   ],
+   "kind": "bass",
+   "file": "tracks/bass.json"
+  }
+ ]
+}

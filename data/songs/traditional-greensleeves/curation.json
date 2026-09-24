@@ -1,0 +1,42 @@
+{
+  "title": "Greensleeves",
+  "artist": "Traditional",
+  "key": "E minor",
+  "sourceName": "Mutopia Project",
+  "sourceLabel": "Melody and bass line from the Mutopia Project hymntune setting typeset by Steve Dunlop (public domain)",
+  "tracks": {
+    "1": {
+      "id": "melody",
+      "name": "Melody",
+      "role": "Guitar",
+      "sound": "nylon"
+    },
+    "2": {
+      "id": "bass",
+      "name": "Bass line",
+      "role": "Bass",
+      "transpose": -12
+    }
+  },
+  "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1247",
+  "sections": [
+    {
+      "name": "Verse",
+      "bar": 0
+    },
+    {
+      "name": "Chorus",
+      "bar": 9
+    }
+  ],
+  "chordVocabulary": [
+    "Em",
+    "D",
+    "G",
+    "C",
+    "B7",
+    "Am",
+    "Bm"
+  ],
+  "year": 1580
+}

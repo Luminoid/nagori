@@ -1,0 +1,56 @@
+{
+  "title": "Lágrima",
+  "artist": "Francisco Tárrega",
+  "key": "E major",
+  "sourceName": "Mutopia Project",
+  "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2103",
+  "sourceLabel": "Mutopia Project edition typeset by Jeffrey Olson (public domain)",
+  "bpm": 60,
+  "tempo": [
+    {
+      "bar": 0,
+      "pos": 0,
+      "bpm": 60,
+      "unit": 4
+    }
+  ],
+  "tracks": {
+    "1": {
+      "id": "guitar",
+      "name": "Guitar",
+      "role": "Classical guitar",
+      "sound": "nylon",
+      "strings": 6
+    }
+  },
+  "sections": [
+    {
+      "name": "A",
+      "bar": 0
+    },
+    {
+      "name": "B",
+      "bar": 8
+    }
+  ],
+  "chordVocabulary": [
+    "E",
+    "B7",
+    "A",
+    "C#m",
+    "G#7",
+    "F#7",
+    "B",
+    "Em",
+    "Am",
+    "C",
+    "D",
+    "G",
+    "Bm",
+    "D7",
+    "E7",
+    "F#m7b5"
+  ],
+  "duration": "0:48",
+  "sortArtist": "Tárrega, Francisco"
+}

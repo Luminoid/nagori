@@ -1,0 +1,37 @@
+{
+  "title": "Amazing Grace",
+  "artist": "Traditional",
+  "key": "G major",
+  "duration": "1:28",
+  "sourceName": "Nagori",
+  "sourceLabel": "Words by John Newton (1779), tune New Britain (1835); arranged for this collection",
+  "tracks": {
+    "2": {
+      "id": "melody",
+      "name": "Melody",
+      "role": "Melody guitar",
+      "sound": "acoustic"
+    },
+    "3": {
+      "id": "rhythm",
+      "name": "Rhythm",
+      "role": "Rhythm guitar, open chords",
+      "sound": "acoustic"
+    }
+  },
+  "defaultTrack": "rhythm",
+  "chordTimelinePriority": [
+    "rhythm"
+  ],
+  "sections": [
+    {
+      "name": "Verse 1",
+      "bar": 0
+    },
+    {
+      "name": "Verse 2",
+      "bar": 16
+    }
+  ],
+  "year": 1779
+}

@@ -1,0 +1,182 @@
+{
+  "title": "Capricho Árabe",
+  "artist": "Francisco Tárrega",
+  "key": "D minor",
+  "bpm": 72,
+  "tempo": [
+    {
+      "bar": 0,
+      "pos": 0,
+      "bpm": 72,
+      "unit": 4
+    }
+  ],
+  "sourceName": "Mutopia Project",
+  "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1951",
+  "sourceLabel": "Mutopia Project edition typeset by Glen Larsen (CC BY-SA 4.0)",
+  "tracks": {
+    "1": {
+      "id": "guitar",
+      "name": "Guitar",
+      "role": "Classical guitar",
+      "sound": "nylon",
+      "tuning": [
+        64,
+        59,
+        55,
+        50,
+        45,
+        38
+      ],
+      "strings": 6
+    }
+  },
+  "sections": [
+    {
+      "name": "Introduction",
+      "bar": 0
+    },
+    {
+      "name": "Theme",
+      "bar": 12
+    },
+    {
+      "name": "D major",
+      "bar": 44
+    },
+    {
+      "name": "Reprise",
+      "bar": 60
+    }
+  ],
+  "chordVocabulary": [
+    "Dm",
+    "A7",
+    "A",
+    "Gm",
+    "Em7b5",
+    "Bb",
+    "F",
+    "C7",
+    "C",
+    "D7",
+    "G7",
+    "E7",
+    "D",
+    "G",
+    "Bm",
+    "F#m",
+    "D#dim7"
+  ],
+  "duration": "3:53",
+  "sortArtist": "Tárrega, Francisco",
+  "year": 1888,
+  "chordLibrary": {
+    "A": [
+      {
+        "frets": "x0222x",
+        "fingers": "x0111x"
+      },
+      {
+        "frets": "777xxx",
+        "fingers": "111xxx"
+      }
+    ],
+    "Em7b5": [
+      {
+        "frets": "xx5333",
+        "fingers": "xx3111"
+      },
+      {
+        "frets": "x x x x x 12",
+        "fingers": "x x x x x 1"
+      }
+    ],
+    "A7": [
+      {
+        "frets": "xxx333",
+        "fingers": "xxx333"
+      },
+      {
+        "frets": "x0x333",
+        "fingers": "x0x111"
+      }
+    ],
+    "Dm": [
+      {
+        "frets": "xxxxx9",
+        "fingers": "xxxxx1"
+      },
+      {
+        "frets": "xxxxx5",
+        "fingers": "xxxxx1"
+      }
+    ],
+    "D7": [
+      {
+        "frets": "0xx231",
+        "fingers": "0xx231"
+      },
+      {
+        "frets": "xx0212",
+        "fingers": "xx0213"
+      }
+    ],
+    "Gm": [
+      {
+        "frets": "xxxx86",
+        "fingers": "xxxx31"
+      },
+      {
+        "frets": "xxx3x5",
+        "fingers": "xxx1x3"
+      }
+    ],
+    "F": [
+      {
+        "frets": "3xxx10",
+        "fingers": "3xxx10"
+      }
+    ],
+    "D": [
+      {
+        "frets": "0xxxx7",
+        "fingers": "0xxxx1"
+      },
+      {
+        "frets": "0x4235",
+        "fingers": "0x3124"
+      }
+    ],
+    "Bb": [
+      {
+        "frets": "x13331",
+        "fingers": "x12341"
+      }
+    ],
+    "C7": [
+      {
+        "frets": "x32310",
+        "fingers": "x32410"
+      }
+    ],
+    "E7": [
+      {
+        "frets": "x22100",
+        "fingers": "x23100"
+      }
+    ],
+    "D#dim7": [
+      {
+        "frets": "x6757x",
+        "fingers": "x2314x"
+      }
+    ],
+    "G": [
+      {
+        "frets": "5x0003",
+        "fingers": "2x0003"
+      }
+    ]
+  }
+}

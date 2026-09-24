@@ -1,0 +1,42 @@
+{
+  "title": "Ode to Joy",
+  "artist": "Ludwig van Beethoven",
+  "key": "D major",
+  "duration": "0:36",
+  "sourceName": "Nagori",
+  "sourceLabel": "The theme of the Ninth Symphony's finale (1824); arranged for this collection",
+  "tracks": {
+    "1": {
+      "id": "melody",
+      "name": "Melody",
+      "role": "Melody guitar",
+      "sound": "acoustic"
+    },
+    "2": {
+      "id": "rhythm",
+      "name": "Rhythm",
+      "role": "Rhythm guitar, open chords",
+      "sound": "acoustic"
+    }
+  },
+  "defaultTrack": "rhythm",
+  "chordTimelinePriority": [
+    "rhythm"
+  ],
+  "sections": [
+    {
+      "name": "A",
+      "bar": 0
+    },
+    {
+      "name": "B",
+      "bar": 8
+    },
+    {
+      "name": "A 2",
+      "bar": 12
+    }
+  ],
+  "year": 1824,
+  "sortArtist": "Beethoven, Ludwig van"
+}

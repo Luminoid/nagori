@@ -1,0 +1,61 @@
+{
+  "title": "Op. 60 No. 3",
+  "artist": "Matteo Carcassi",
+  "key": "A major",
+  "bpm": 80,
+  "tempo": [
+    {
+      "bar": 0,
+      "pos": 0,
+      "bpm": 80,
+      "unit": 4
+    }
+  ],
+  "sourceName": "Mutopia Project",
+  "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=14",
+  "sourceLabel": "Mutopia Project edition typeset by Jeff Covey (public domain)",
+  "tracks": {
+    "1": {
+      "id": "guitar",
+      "name": "Guitar",
+      "role": "Classical guitar",
+      "sound": "nylon",
+      "strings": 6,
+      "tuning": [
+        64,
+        59,
+        55,
+        50,
+        45,
+        40
+      ]
+    }
+  },
+  "sections": [
+    {
+      "name": "A",
+      "bar": 0
+    },
+    {
+      "name": "B",
+      "bar": 8
+    }
+  ],
+  "chordVocabulary": [
+    "A",
+    "E",
+    "E7",
+    "E7/G#",
+    "D",
+    "F#m",
+    "B7",
+    "A#dim7",
+    "F#7",
+    "C#7",
+    "G#dim7",
+    "G#dim"
+  ],
+  "duration": "1:12",
+  "sortArtist": "Carcassi, Matteo",
+  "year": 1836
+}

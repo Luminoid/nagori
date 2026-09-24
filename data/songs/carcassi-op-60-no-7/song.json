@@ -1,0 +1,445 @@
+{
+ "id": "carcassi-op-60-no-7",
+ "title": "Op. 60 No. 7",
+ "artist": "Matteo Carcassi",
+ "album": null,
+ "year": 1836,
+ "key": "A minor",
+ "bpm": 104,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0,
+   "bpm": 104,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  4,
+  4
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   4,
+   4
+  ]
+ ],
+ "capo": 0,
+ "bars": 28,
+ "source": {
+  "name": "Mutopia Project",
+  "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=300",
+  "file": "carcassi-op60-07.musicxml",
+  "software": "music21 v.10.5.0",
+  "label": "Mutopia Project edition typeset by Jeff Covey (public domain)"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "A",
+   "bar": 0
+  },
+  {
+   "name": "B",
+   "bar": 8
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 3,
+   "pos": 0.5,
+   "chord": "E"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "chord": "E7"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "G7"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "chord": "G7"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "chord": "E"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 17,
+   "pos": 0.0,
+   "chord": "E"
+  },
+  {
+   "bar": 18,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 19,
+   "pos": 0.0,
+   "chord": "E7"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "chord": "Bb"
+  },
+  {
+   "bar": 22,
+   "pos": 0.5,
+   "chord": "C#dim"
+  },
+  {
+   "bar": 23,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 24,
+   "pos": 0.0,
+   "chord": "B7"
+  },
+  {
+   "bar": 24,
+   "pos": 0.5,
+   "chord": "E7"
+  },
+  {
+   "bar": 25,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 26,
+   "pos": 0.0,
+   "chord": "E7"
+  },
+  {
+   "bar": 27,
+   "pos": 0.0,
+   "chord": "Am"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "A",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 0,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 1,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 2,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 3,
+        "chords": [
+         "Am",
+         "E"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 4,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 5,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 6,
+        "chords": [
+         "E7"
+        ]
+       },
+       {
+        "bar": 7,
+        "chords": [
+         "Am"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "B",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 8,
+        "chords": [
+         "C"
+        ]
+       },
+       {
+        "bar": 9,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 10,
+        "chords": [
+         "G7"
+        ]
+       },
+       {
+        "bar": 11,
+        "chords": [
+         "C"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 12,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 13,
+        "chords": [
+         "G7"
+        ]
+       },
+       {
+        "bar": 14,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 15,
+        "chords": [
+         "E"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 16,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 17,
+        "chords": [
+         "E"
+        ]
+       },
+       {
+        "bar": 18,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 19,
+        "chords": [
+         "E7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 20,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 21,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 22,
+        "chords": [
+         "Bb",
+         "C#dim"
+        ]
+       },
+       {
+        "bar": 23,
+        "chords": [
+         "Dm"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 24,
+        "chords": [
+         "B7",
+         "E7"
+        ]
+       },
+       {
+        "bar": 25,
+        "chords": [
+         "Am"
+        ]
+       },
+       {
+        "bar": 26,
+        "chords": [
+         "E7"
+        ]
+       },
+       {
+        "bar": 27,
+        "chords": [
+         "Am"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "guitar",
+ "tracks": [
+  {
+   "id": "guitar",
+   "name": "Guitar",
+   "role": "Classical guitar",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "nylon",
+   "file": "tracks/guitar.json"
+  }
+ ]
+}

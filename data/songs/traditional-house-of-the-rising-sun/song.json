@@ -1,0 +1,381 @@
+{
+ "id": "traditional-house-of-the-rising-sun",
+ "title": "House of the Rising Sun",
+ "artist": "Traditional",
+ "album": null,
+ "year": null,
+ "key": "A minor",
+ "bpm": 72,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "bpm": 72,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  6,
+  8
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   6,
+   8
+  ]
+ ],
+ "capo": 0,
+ "bars": 17,
+ "source": {
+  "name": "Nagori",
+  "url": null,
+  "file": "traditional-house-of-the-rising-sun.musicxml",
+  "software": "gen.py for Nagori",
+  "label": "Traditional American folk song, the melody of the 1930s recordings; arranged for this collection"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "Verse 1",
+   "bar": 0
+  },
+  {
+   "name": "Verse 2",
+   "bar": 8
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "chord": "E7"
+  },
+  {
+   "bar": 2,
+   "pos": 0.5,
+   "chord": "Am"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 3,
+   "pos": 0.5,
+   "chord": "G7"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 4,
+   "pos": 0.5,
+   "chord": "E7"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 6,
+   "pos": 0.5,
+   "chord": "F"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 7,
+   "pos": 0.5,
+   "chord": "E7"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "E7"
+  },
+  {
+   "bar": 10,
+   "pos": 0.5,
+   "chord": "Am"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 11,
+   "pos": 0.5,
+   "chord": "G7"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 12,
+   "pos": 0.5,
+   "chord": "E7"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 14,
+   "pos": 0.5,
+   "chord": "F"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "chord": "Am"
+  },
+  {
+   "bar": 15,
+   "pos": 0.5,
+   "chord": "E7"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "chord": "Am"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "Verse 1",
+    "lines": [
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": null,
+        "text": "There "
+       },
+       {
+        "chord": "Am",
+        "text": "is a house in "
+       },
+       {
+        "chord": "E7",
+        "text": "New Or"
+       },
+       {
+        "chord": "Am",
+        "text": "leans"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "Am",
+        "text": "they call the "
+       },
+       {
+        "chord": "G7",
+        "text": "rising "
+       },
+       {
+        "chord": "C",
+        "text": "sun."
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "E7",
+        "text": "And it's "
+       },
+       {
+        "chord": "Am",
+        "text": "been the ruin of many poor "
+       },
+       {
+        "chord": "F",
+        "text": "boy,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "F",
+        "text": "and "
+       },
+       {
+        "chord": "Am",
+        "text": "Lord, I "
+       },
+       {
+        "chord": "E7",
+        "text": "know I'm "
+       },
+       {
+        "chord": "Am",
+        "text": "one."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Verse 2",
+    "lines": [
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "Am",
+        "text": "Go and tell my ba"
+       },
+       {
+        "chord": "E7",
+        "text": "by sis"
+       },
+       {
+        "chord": "Am",
+        "text": "ter"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "Am",
+        "text": "never do "
+       },
+       {
+        "chord": "G7",
+        "text": "like I've "
+       },
+       {
+        "chord": "C",
+        "text": "done,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "E7",
+        "text": "oh, to "
+       },
+       {
+        "chord": "Am",
+        "text": "shun that house in New Orleans, "
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "F",
+        "text": "that "
+       },
+       {
+        "chord": "Am",
+        "text": "they call "
+       },
+       {
+        "chord": "E7",
+        "text": "the Rising "
+       },
+       {
+        "chord": "Am",
+        "text": "Sun."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "rhythm",
+ "tracks": [
+  {
+   "id": "melody",
+   "name": "Melody",
+   "role": "Melody guitar",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "acoustic",
+   "file": "tracks/melody.json"
+  },
+  {
+   "id": "rhythm",
+   "name": "Rhythm",
+   "role": "Rhythm guitar, open chords",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "acoustic",
+   "file": "tracks/rhythm.json"
+  }
+ ]
+}

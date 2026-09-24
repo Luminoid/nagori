@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 -285 1200 1200">
+  <rect x="0" y="-285" width="1200" height="1200" fill="#0e1013"/>
+  <rect x="0" y="0" width="1200" height="630" fill="#0e1013"/>
+  <g transform="translate(96 160) scale(4.5)">
+    <rect width="64" height="64" rx="14" fill="#171a20"/>
+    <g stroke="#3a404c" stroke-width="3" stroke-linecap="round"><path d="M14 20h36M14 32h36M14 44h36"/></g>
+    <circle cx="26" cy="20" r="5" fill="#f2b544"/><circle cx="40" cy="32" r="5" fill="#f2b544"/><circle cx="22" cy="44" r="5" fill="#f2b544"/>
+  </g>
+  <text x="440" y="285" fill="#e8eaf0" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="112" font-weight="700" letter-spacing="-2">Nagori</text>
+  <text x="444" y="360" fill="#8d95a5" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="40">Guitar chords, tabs and tools</text>
+  <g stroke="#3a404c" stroke-width="3" stroke-linecap="round"><path d="M96 520h1008M96 556h1008M96 592h1008"/></g>
+  <g fill="#f2b544"><circle cx="300" cy="520" r="8"/><circle cx="520" cy="556" r="8"/><circle cx="820" cy="592" r="8"/><circle cx="960" cy="520" r="8"/></g>
+</svg>

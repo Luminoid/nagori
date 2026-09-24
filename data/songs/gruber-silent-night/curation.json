@@ -1,0 +1,34 @@
+{
+  "title": "Silent Night",
+  "artist": "Franz Xaver Gruber",
+  "key": "C major",
+  "duration": "0:51",
+  "sourceName": "Nagori",
+  "sourceLabel": "Music by Franz Xaver Gruber (1818), words by Joseph Mohr in John Freeman Young's English (1859); arranged for this collection",
+  "tracks": {
+    "2": {
+      "id": "melody",
+      "name": "Melody",
+      "role": "Melody guitar",
+      "sound": "acoustic"
+    },
+    "3": {
+      "id": "rhythm",
+      "name": "Rhythm",
+      "role": "Rhythm guitar, open chords",
+      "sound": "acoustic"
+    }
+  },
+  "defaultTrack": "rhythm",
+  "chordTimelinePriority": [
+    "rhythm"
+  ],
+  "sections": [
+    {
+      "name": "Verse 1",
+      "bar": 0
+    }
+  ],
+  "year": 1818,
+  "sortArtist": "Gruber, Franz Xaver"
+}

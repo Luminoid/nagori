@@ -1,0 +1,34 @@
+{
+  "title": "Happy Birthday to You",
+  "artist": "Patty and Mildred Hill",
+  "key": "G major",
+  "duration": "0:15",
+  "sourceName": "Nagori",
+  "sourceLabel": "Melody Good Morning to All by Patty and Mildred Hill (1893), public domain; arranged for this collection",
+  "tracks": {
+    "2": {
+      "id": "melody",
+      "name": "Melody",
+      "role": "Melody guitar",
+      "sound": "acoustic"
+    },
+    "3": {
+      "id": "rhythm",
+      "name": "Rhythm",
+      "role": "Rhythm guitar, open chords",
+      "sound": "acoustic"
+    }
+  },
+  "defaultTrack": "rhythm",
+  "chordTimelinePriority": [
+    "rhythm"
+  ],
+  "sections": [
+    {
+      "name": "Verse",
+      "bar": 0
+    }
+  ],
+  "year": 1893,
+  "sortArtist": "Hill, Patty and Mildred"
+}

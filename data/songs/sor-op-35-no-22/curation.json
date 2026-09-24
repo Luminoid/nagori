@@ -1,0 +1,66 @@
+{
+  "title": "Op. 35 No. 22 (Study in B minor)",
+  "artist": "Fernando Sor",
+  "key": "B minor",
+  "bpm": 96,
+  "tempo": [
+    {
+      "bar": 0,
+      "pos": 0,
+      "bpm": 96,
+      "unit": 4
+    }
+  ],
+  "sourceName": "Mutopia Project",
+  "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1850",
+  "sourceLabel": "Mutopia Project edition typeset by Glen Larsen (CC BY-SA 3.0)",
+  "tracks": {
+    "1": {
+      "id": "guitar",
+      "name": "Guitar",
+      "role": "Classical guitar",
+      "sound": "nylon",
+      "strings": 6,
+      "tuning": [
+        64,
+        59,
+        55,
+        50,
+        45,
+        40
+      ]
+    }
+  },
+  "sections": [
+    {
+      "name": "A",
+      "bar": 0
+    },
+    {
+      "name": "B",
+      "bar": 16
+    }
+  ],
+  "chordVocabulary": [
+    "Bm",
+    "F#7",
+    "F#",
+    "Em",
+    "G",
+    "D",
+    "A",
+    "A7",
+    "C#7",
+    "B7",
+    "E7",
+    "D7",
+    "E",
+    "C#dim",
+    "D#dim",
+    "C/E",
+    "G#dim7"
+  ],
+  "duration": "1:30",
+  "sortArtist": "Sor, Fernando",
+  "year": 1828
+}

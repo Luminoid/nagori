@@ -1,0 +1,984 @@
+{
+ "id": "tarrega-capricho-arabe",
+ "title": "Capricho Árabe",
+ "artist": "Francisco Tárrega",
+ "album": null,
+ "year": 1888,
+ "key": "D minor",
+ "bpm": 72,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0,
+   "bpm": 72,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  3,
+  4
+ ],
+ "tuning": "Drop D (D A D G B E)",
+ "timeSignatures": [
+  [
+   3,
+   4
+  ],
+  [
+   4,
+   4
+  ]
+ ],
+ "capo": 0,
+ "bars": 73,
+ "source": {
+  "name": "Mutopia Project",
+  "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1951",
+  "file": "capricho-arabe.musicxml",
+  "software": "music21 v.10.5.0",
+  "label": "Mutopia Project edition typeset by Glen Larsen (CC BY-SA 4.0)"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "Introduction",
+   "bar": 0
+  },
+  {
+   "name": "Theme",
+   "bar": 12
+  },
+  {
+   "name": "D major",
+   "bar": 44
+  },
+  {
+   "name": "Reprise",
+   "bar": 60
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "chord": "Em7b5"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "chord": "Em7b5"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "chord": "Em7b5"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "Bb"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 19,
+   "pos": 0.0,
+   "chord": "D7"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "chord": "Gm"
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 29,
+   "pos": 0.0,
+   "chord": "D7"
+  },
+  {
+   "bar": 30,
+   "pos": 0.0,
+   "chord": "Gm"
+  },
+  {
+   "bar": 31,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 32,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 33,
+   "pos": 0.0,
+   "chord": "Bb"
+  },
+  {
+   "bar": 33,
+   "pos": 0.5,
+   "chord": "Gm"
+  },
+  {
+   "bar": 34,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 36,
+   "pos": 0.5,
+   "chord": "Dm"
+  },
+  {
+   "bar": 37,
+   "pos": 0.0,
+   "chord": "C7"
+  },
+  {
+   "bar": 38,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 40,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 42,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 43,
+   "pos": 0.0,
+   "chord": "E7"
+  },
+  {
+   "bar": 44,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 47,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 48,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 49,
+   "pos": 0.5,
+   "chord": "D#dim7"
+  },
+  {
+   "bar": 50,
+   "pos": 0.0,
+   "chord": "A"
+  },
+  {
+   "bar": 50,
+   "pos": 0.5,
+   "chord": "E7"
+  },
+  {
+   "bar": 51,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 52,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 55,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 56,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 58,
+   "pos": 0.0,
+   "chord": "G"
+  },
+  {
+   "bar": 59,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 60,
+   "pos": 0.0,
+   "chord": "D"
+  },
+  {
+   "bar": 60,
+   "pos": 0.5,
+   "chord": "A7"
+  },
+  {
+   "bar": 61,
+   "pos": 0.0,
+   "chord": "Dm"
+  },
+  {
+   "bar": 67,
+   "pos": 0.0,
+   "chord": "D7"
+  },
+  {
+   "bar": 68,
+   "pos": 0.0,
+   "chord": "Gm"
+  },
+  {
+   "bar": 69,
+   "pos": 0.0,
+   "chord": "A7"
+  },
+  {
+   "bar": 70,
+   "pos": 0.0,
+   "chord": "Dm"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "Introduction",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 0,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 1,
+        "chords": [
+         "Em7b5"
+        ]
+       },
+       {
+        "bar": 2,
+        "chords": [
+         "Em7b5"
+        ]
+       },
+       {
+        "bar": 3,
+        "chords": [
+         "A"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 4,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 5,
+        "chords": [
+         "Em7b5"
+        ]
+       },
+       {
+        "bar": 6,
+        "chords": [
+         "Em7b5"
+        ]
+       },
+       {
+        "bar": 7,
+        "chords": [
+         "A"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 8,
+        "chords": [
+         "A7"
+        ]
+       },
+       {
+        "bar": 9,
+        "chords": [
+         "Em7b5"
+        ]
+       },
+       {
+        "bar": 10,
+        "chords": [
+         "A7"
+        ]
+       },
+       {
+        "bar": 11,
+        "chords": [
+         "Bb"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Theme",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 12,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 13,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 14,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 15,
+        "chords": [
+         "Dm"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 16,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 17,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 18,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 19,
+        "chords": [
+         "D7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 20,
+        "chords": [
+         "Gm"
+        ]
+       },
+       {
+        "bar": 21,
+        "chords": [
+         "A7"
+        ]
+       },
+       {
+        "bar": 22,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 23,
+        "chords": [
+         "Dm"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 24,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 25,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 26,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 27,
+        "chords": [
+         "Dm"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 28,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 29,
+        "chords": [
+         "D7"
+        ]
+       },
+       {
+        "bar": 30,
+        "chords": [
+         "Gm"
+        ]
+       },
+       {
+        "bar": 31,
+        "chords": [
+         "A7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 32,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 33,
+        "chords": [
+         "Bb",
+         "Gm"
+        ]
+       },
+       {
+        "bar": 34,
+        "chords": [
+         "F"
+        ]
+       },
+       {
+        "bar": 35,
+        "chords": [
+         "F"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 36,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 37,
+        "chords": [
+         "C7"
+        ]
+       },
+       {
+        "bar": 38,
+        "chords": [
+         "F"
+        ]
+       },
+       {
+        "bar": 39,
+        "chords": [
+         "F"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 40,
+        "chords": [
+         "A7"
+        ]
+       },
+       {
+        "bar": 41,
+        "chords": [
+         "A7"
+        ]
+       },
+       {
+        "bar": 42,
+        "chords": [
+         "A"
+        ]
+       },
+       {
+        "bar": 43,
+        "chords": [
+         "E7"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "D major",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 44,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 45,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 46,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 47,
+        "chords": [
+         "A7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 48,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 49,
+        "chords": [
+         "D#dim7"
+        ]
+       },
+       {
+        "bar": 50,
+        "chords": [
+         "A",
+         "E7"
+        ]
+       },
+       {
+        "bar": 51,
+        "chords": [
+         "A7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 52,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 53,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 54,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 55,
+        "chords": [
+         "A7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 56,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 57,
+        "chords": [
+         "D"
+        ]
+       },
+       {
+        "bar": 58,
+        "chords": [
+         "G"
+        ]
+       },
+       {
+        "bar": 59,
+        "chords": [
+         "A7"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Reprise",
+    "lines": [
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 60,
+        "chords": [
+         "D",
+         "A7"
+        ]
+       },
+       {
+        "bar": 61,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 62,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 63,
+        "chords": [
+         "Dm"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 64,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 65,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 66,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 67,
+        "chords": [
+         "D7"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 68,
+        "chords": [
+         "Gm"
+        ]
+       },
+       {
+        "bar": 69,
+        "chords": [
+         "A7"
+        ]
+       },
+       {
+        "bar": 70,
+        "chords": [
+         "Dm"
+        ]
+       },
+       {
+        "bar": 71,
+        "chords": [
+         "Dm"
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bars",
+      "bars": [
+       {
+        "bar": 72,
+        "chords": [
+         "Dm"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {
+  "A": [
+   {
+    "frets": "x0222x",
+    "fingers": "x0111x"
+   },
+   {
+    "frets": "777xxx",
+    "fingers": "111xxx"
+   }
+  ],
+  "Em7b5": [
+   {
+    "frets": "xx5333",
+    "fingers": "xx3111"
+   },
+   {
+    "frets": "x x x x x 12",
+    "fingers": "x x x x x 1"
+   }
+  ],
+  "A7": [
+   {
+    "frets": "xxx333",
+    "fingers": "xxx333"
+   },
+   {
+    "frets": "x0x333",
+    "fingers": "x0x111"
+   }
+  ],
+  "Dm": [
+   {
+    "frets": "xxxxx9",
+    "fingers": "xxxxx1"
+   },
+   {
+    "frets": "xxxxx5",
+    "fingers": "xxxxx1"
+   }
+  ],
+  "D7": [
+   {
+    "frets": "0xx231",
+    "fingers": "0xx231"
+   },
+   {
+    "frets": "xx0212",
+    "fingers": "xx0213"
+   }
+  ],
+  "Gm": [
+   {
+    "frets": "xxxx86",
+    "fingers": "xxxx31"
+   },
+   {
+    "frets": "xxx3x5",
+    "fingers": "xxx1x3"
+   }
+  ],
+  "F": [
+   {
+    "frets": "3xxx10",
+    "fingers": "3xxx10"
+   }
+  ],
+  "D": [
+   {
+    "frets": "0xxxx7",
+    "fingers": "0xxxx1"
+   },
+   {
+    "frets": "0x4235",
+    "fingers": "0x3124"
+   }
+  ],
+  "Bb": [
+   {
+    "frets": "x13331",
+    "fingers": "x12341"
+   }
+  ],
+  "C7": [
+   {
+    "frets": "x32310",
+    "fingers": "x32410"
+   }
+  ],
+  "E7": [
+   {
+    "frets": "x22100",
+    "fingers": "x23100"
+   }
+  ],
+  "D#dim7": [
+   {
+    "frets": "x6757x",
+    "fingers": "x2314x"
+   }
+  ],
+  "G": [
+   {
+    "frets": "5x0003",
+    "fingers": "2x0003"
+   }
+  ]
+ },
+ "fingeringOverrides": {},
+ "defaultTrack": "guitar",
+ "tracks": [
+  {
+   "id": "guitar",
+   "name": "Guitar",
+   "role": "Classical guitar",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    38
+   ],
+   "kind": "guitar",
+   "sound": "nylon",
+   "file": "tracks/guitar.json"
+  }
+ ]
+}

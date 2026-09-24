@@ -1,0 +1,452 @@
+{
+ "id": "traditional-danny-boy",
+ "title": "Danny Boy",
+ "artist": "Traditional",
+ "album": null,
+ "year": 1913,
+ "key": "C major",
+ "bpm": 66,
+ "tempo": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "bpm": 66,
+   "unit": 4
+  }
+ ],
+ "timeSignature": [
+  4,
+  4
+ ],
+ "tuning": "Standard (E A D G B E)",
+ "timeSignatures": [
+  [
+   4,
+   4
+  ]
+ ],
+ "capo": 0,
+ "bars": 17,
+ "source": {
+  "name": "Nagori",
+  "url": null,
+  "file": "traditional-danny-boy.musicxml",
+  "software": "gen.py for Nagori",
+  "label": "Tune Londonderry Air (traditional, published 1855), words by Frederic Weatherly (1913); arranged for this collection"
+ },
+ "video": null,
+ "sections": [
+  {
+   "name": "Verse",
+   "bar": 0
+  },
+  {
+   "name": "Refrain",
+   "bar": 8
+  }
+ ],
+ "chordTimeline": [
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 3,
+   "pos": 0.5,
+   "chord": "Am"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "chord": "D7"
+  },
+  {
+   "bar": 4,
+   "pos": 0.5,
+   "chord": "G7"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 5,
+   "pos": 0.5,
+   "chord": "C7"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "chord": "F"
+  },
+  {
+   "bar": 6,
+   "pos": 0.5,
+   "chord": "G7"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 7,
+   "pos": 0.5,
+   "chord": "G7"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 8,
+   "pos": 0.5,
+   "chord": "G7"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 9,
+   "pos": 0.5,
+   "chord": "F"
+  },
+  {
+   "bar": 9,
+   "pos": 0.75,
+   "chord": "G7"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 10,
+   "pos": 0.5,
+   "chord": "G7"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 11,
+   "pos": 0.5,
+   "chord": "F"
+  },
+  {
+   "bar": 11,
+   "pos": 0.75,
+   "chord": "A7"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "chord": "D7"
+  },
+  {
+   "bar": 12,
+   "pos": 0.5,
+   "chord": "G7"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 13,
+   "pos": 0.5,
+   "chord": "F"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 14,
+   "pos": 0.25,
+   "chord": "Am7"
+  },
+  {
+   "bar": 14,
+   "pos": 0.5,
+   "chord": "F"
+  },
+  {
+   "bar": 14,
+   "pos": 0.75,
+   "chord": "G7"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "chord": "C"
+  },
+  {
+   "bar": 15,
+   "pos": 0.5,
+   "chord": "G7"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "chord": "C"
+  }
+ ],
+ "chordSheet": {
+  "source": "generated",
+  "generated": true,
+  "sections": [
+   {
+    "name": "Verse",
+    "lines": [
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": null,
+        "text": "Oh, Danny "
+       },
+       {
+        "chord": "C",
+        "text": "boy, the pipes, the pipes are "
+       },
+       {
+        "chord": "F",
+        "text": "calling"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "F",
+        "text": "from glen to "
+       },
+       {
+        "chord": "C",
+        "text": "glen, and "
+       },
+       {
+        "chord": "Am",
+        "text": "down the mountain "
+       },
+       {
+        "chord": "D7",
+        "text": "side."
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "G7",
+        "text": "The summer's "
+       },
+       {
+        "chord": "C",
+        "text": "gone, and "
+       },
+       {
+        "chord": "C7",
+        "text": "all the roses "
+       },
+       {
+        "chord": "F",
+        "text": "falling,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "G7",
+        "text": "'tis you, 'tis "
+       },
+       {
+        "chord": "C",
+        "text": "you must "
+       },
+       {
+        "chord": "G7",
+        "text": "go and I must "
+       },
+       {
+        "chord": "C",
+        "text": "bide."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Refrain",
+    "lines": [
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "G7",
+        "text": "But come ye "
+       },
+       {
+        "chord": "C",
+        "text": "back when "
+       },
+       {
+        "chord": "F",
+        "text": "summer's "
+       },
+       {
+        "chord": "G7",
+        "text": "in the "
+       },
+       {
+        "chord": "C",
+        "text": "meadow,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "G7",
+        "text": "or when the "
+       },
+       {
+        "chord": "C",
+        "text": "valley's "
+       },
+       {
+        "chord": "F",
+        "text": "hushed and "
+       },
+       {
+        "chord": "A7",
+        "text": "white with "
+       },
+       {
+        "chord": "D7",
+        "text": "snow,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "G7",
+        "text": "'tis I'll be "
+       },
+       {
+        "chord": "C",
+        "text": "here in "
+       },
+       {
+        "chord": "F",
+        "text": "sunshine or in "
+       },
+       {
+        "chord": "C",
+        "text": "sha"
+       },
+       {
+        "chord": "Am7",
+        "text": "dow,"
+       }
+      ]
+     },
+     {
+      "type": "line",
+      "segments": [
+       {
+        "chord": "F",
+        "text": "oh, "
+       },
+       {
+        "chord": "G7",
+        "text": "Danny "
+       },
+       {
+        "chord": "C",
+        "text": "boy, oh, Danny "
+       },
+       {
+        "chord": "G7",
+        "text": "boy, I love you "
+       },
+       {
+        "chord": "C",
+        "text": "so."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chordLibrary": {},
+ "fingeringOverrides": {},
+ "defaultTrack": "rhythm",
+ "tracks": [
+  {
+   "id": "melody",
+   "name": "Melody",
+   "role": "Melody guitar",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "acoustic",
+   "file": "tracks/melody.json"
+  },
+  {
+   "id": "rhythm",
+   "name": "Rhythm",
+   "role": "Rhythm guitar, open chords",
+   "instrument": "Guitar",
+   "strings": 6,
+   "tuning": [
+    64,
+    59,
+    55,
+    50,
+    45,
+    40
+   ],
+   "kind": "guitar",
+   "sound": "acoustic",
+   "file": "tracks/rhythm.json"
+  }
+ ]
+}

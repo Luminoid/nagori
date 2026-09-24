@@ -1,0 +1,38 @@
+{
+  "title": "Op. 50 No. 1",
+  "artist": "Mauro Giuliani",
+  "key": "C major",
+  "sourceName": "Mutopia Project",
+  "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1329",
+  "sourceLabel": "Mutopia Project edition typeset by Stephen Rhen (CC BY 3.0)",
+  "tracks": {
+    "1": {
+      "id": "guitar",
+      "name": "Guitar",
+      "role": "Classical guitar",
+      "sound": "nylon",
+      "transpose": -12
+    }
+  },
+  "sections": [
+    {
+      "name": "A",
+      "bar": 0
+    },
+    {
+      "name": "B",
+      "bar": 16
+    }
+  ],
+  "chordVocabulary": [
+    "C",
+    "G",
+    "G7",
+    "F",
+    "Am",
+    "Dm",
+    "E7",
+    "D7"
+  ],
+  "sortArtist": "Giuliani, Mauro"
+}
