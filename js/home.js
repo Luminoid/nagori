@@ -3,7 +3,7 @@ import { t, applyLang, setupLanguageToggle, keyName, tuningName, parens } from '
 import { loadSite, applySite } from './site.js';
 import { registerOffline } from './offline.js';
 import { SORTS, DEFAULT_SORT, sortSongs, groupSongs, keyLabel } from './song-sort.js';
-import { openStore, memoryStore, pickFolderEntries, entriesFromDataTransfer, readSongFolders, makeRecord } from './local-songs.js';
+import { openStore, memoryStore, pickFolderEntries, entriesFromDataTransfer, readSongFolders, planImport } from './local-songs.js';
 
 const SORT_KEY = 'nagori:sort';
 
@@ -130,18 +130,33 @@ async function main() {
     render(filter.value);
     say([t('local.removed', { title: song.title })]);
   }
+  // Adding a folder again is a sync: unchanged songs are left alone, changed ones updated keeping their date, and songs the folder no longer holds can be removed.
   const importEntries = async (entries) => {
     if (!entries) return;
     say([t('local.reading')]);
     const { songs: found, problems } = await readSongFolders(entries);
-    for (const item of found) await store.put(await makeRecord(item));
+    const plan = await planImport(found, await store.list());
+    for (const record of plan.records) await store.put(record);
     await refreshLocal();
     showControls();
     render(filter.value);
     const lines = [];
-    if (found.length) lines.push(t('local.added', { n: found.length }));
-    else if (!problems.length) lines.push(t('local.none'));
+    if (plan.added.length) lines.push(t('local.added', { n: plan.added.length }));
+    if (plan.updated.length) lines.push(t('local.updated', { n: plan.updated.length }));
+    if (plan.unchanged.length) lines.push(t('local.unchanged', { n: plan.unchanged.length }));
+    for (const item of plan.replaced) lines.push(t('local.replaced', { title: item.title, folder: item.from }));
+    if (!found.length && !problems.length) lines.push(t('local.none'));
+    for (const dup of plan.duplicates) lines.push(t('local.problem', { folder: dup.folder, message: t('local.duplicate', { id: dup.id }) }));
     for (const problem of problems) lines.push(t('local.problem', { folder: problem.folder, message: t(problem.key, problem.params) }));
+    if (plan.leftovers.length) {
+      const titles = local.filter((song) => plan.leftovers.includes(song.id)).map((song) => song.title);
+      lines.push(h('span', {}, t('local.leftovers', { n: plan.leftovers.length, titles: titles.join(', ') }), ' ', h('button', { class: 'btn small', type: 'button', onclick: async () => {
+        for (const id of plan.leftovers) await store.remove(id);
+        await refreshLocal();
+        render(filter.value);
+        say([t('local.leftoversRemoved', { n: plan.leftovers.length })]);
+      } }, t('local.removeLeftovers'))));
+    }
     say(lines, !found.length);
   };
   if (panel) {

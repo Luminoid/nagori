@@ -9,12 +9,17 @@ export const DB_NAME = 'nagori';
 export const STORE_NAME = 'local-songs';
 const ID_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const KINDS = ['guitar', 'bass'];
+const SKIP_DIRS = new Set(['node_modules', '__pycache__']);
+
+/** Folders never worth reading: version control, dependencies, caches, anything hidden. */
+const skipDir = (name) => name.startsWith('.') || SKIP_DIRS.has(name);
+const skipPath = (path) => path.split('/').slice(0, -1).some(skipDir);
 
 // --- Reading a folder ----------------------------------------------------------
 
 /** A folder's files as entries [{ path, text() }] from an <input webkitdirectory> or a plain file list. */
 export function entriesFromFileList(files) {
-  return [...files].map((file) => ({ path: file.webkitRelativePath || file.name, text: () => file.text() }));
+  return [...files].map((file) => ({ path: file.webkitRelativePath || file.name, text: () => file.text() })).filter((entry) => !skipPath(entry.path));
 }
 
 /** The same from a directory handle (showDirectoryPicker), walking it. */
@@ -22,8 +27,9 @@ export async function entriesFromDirectoryHandle(handle, prefix = handle.name) {
   const out = [];
   for await (const [name, child] of handle.entries()) {
     const path = prefix ? `${prefix}/${name}` : name;
-    if (child.kind === 'directory') out.push(...(await entriesFromDirectoryHandle(child, path)));
-    else out.push({ path, text: () => child.getFile().then((file) => file.text()) });
+    if (child.kind === 'directory') {
+      if (!skipDir(name)) out.push(...(await entriesFromDirectoryHandle(child, path)));
+    } else out.push({ path, text: () => child.getFile().then((file) => file.text()) });
   }
   return out;
 }
@@ -48,6 +54,7 @@ export async function entriesFromDataTransfer(transfer) {
   const walk = async (entry) => {
     if (!entry) return;
     if (entry.isDirectory) {
+      if (skipDir(entry.name)) return;
       for (const child of await readAll(entry.createReader())) await walk(child);
     } else if (entry.isFile) {
       const file = await new Promise((resolve, reject) => entry.file(resolve, reject));
@@ -89,7 +96,7 @@ const join = (folder, file) => (folder ? `${folder}/${file.replace(/^\.?\//, '')
 export function slugify(name) {
   return String(name || '')
     .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
@@ -151,9 +158,11 @@ export function indexRow(song, { added, duration = null, sortArtist = null } = {
 
 /**
  * Every song among the entries: a song.json with its track files beside it,
- * one folder or a whole collection. Returns { songs: [{ folder, song, files,
- * curation }], problems: [{ folder, key, params }] }; a song with problems is
- * left out and reported.
+ * one folder or a whole collection. Returns { songs: [{ folder, root, song,
+ * files, curation }], problems: [{ folder, key, params }] }; a song with
+ * problems is left out and reported. `root` is the top folder the visitor
+ * chose, so a later import of the same folder can tell which songs it no
+ * longer holds.
  */
 export async function readSongFolders(entries) {
   const byPath = new Map(entries.map((entry) => [entry.path.replace(/^\/+/, ''), entry]));
@@ -200,9 +209,48 @@ export async function readSongFolders(entries) {
         curation = null; // optional; a broken one is ignored
       }
     }
-    songs.push({ folder: label, song, files, curation });
+    songs.push({ folder: label, root: path.split('/')[0] === 'song.json' ? label : path.split('/')[0], song, files, curation });
   }
   return { songs, problems };
+}
+
+const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+
+/**
+ * What an import means against what the store holds: records to write
+ * (new songs, and changed ones keeping their original added date), the
+ * ids left as they were, and the leftovers, songs from an earlier import
+ * of the same top folder that this import no longer contains. A song whose
+ * id was last added from another folder is replaced and reported as such;
+ * later duplicates of an id within one import are dropped and reported.
+ * Folders are told apart by their name alone.
+ */
+export async function planImport(found, existing, today = new Date().toISOString().slice(0, 10)) {
+  const previous = new Map(existing.map((record) => [record.id, record]));
+  const seen = new Set();
+  const roots = new Set();
+  const plan = { records: [], added: [], updated: [], replaced: [], unchanged: [], duplicates: [], leftovers: [] };
+  for (const item of found) {
+    roots.add(item.root);
+    if (seen.has(item.song.id)) {
+      plan.duplicates.push({ folder: item.folder, id: item.song.id });
+      continue;
+    }
+    seen.add(item.song.id);
+    const old = previous.get(item.song.id);
+    if (old && same(old.song, item.song) && same(old.files, item.files) && old.root === item.root) {
+      plan.unchanged.push(item.song.id);
+      continue;
+    }
+    const record = { ...(await makeRecord(item, old ? old.added : today)), root: item.root };
+    if (old) record.updated = today;
+    plan.records.push(record);
+    if (!old) plan.added.push(item.song.id);
+    else if (old.root && old.root !== item.root) plan.replaced.push({ id: item.song.id, title: item.song.title, from: old.root });
+    else plan.updated.push(item.song.id);
+  }
+  for (const record of existing) if (record.root && roots.has(record.root) && !seen.has(record.id)) plan.leftovers.push(record.id);
+  return plan;
 }
 
 /** The tab's length as m:ss from the tempo map, the way make index computes it. */
