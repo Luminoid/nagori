@@ -4,7 +4,7 @@ import { h, clear, loadJSON, storage, formatChord, chordKey, formatTime, formatB
 import { layoutTrack, renderSystem, beatIndexAt } from './tab-renderer.js';
 import { analyzeTrack, positionsBySection, fingerString } from './fingering.js';
 import { libraryFor, STANDARD_TUNING } from './chord-library.js';
-import { loadSite, applySite, pageTitle, siteText } from './site.js';
+import { loadSite, applySite, pageTitle, siteText, pageHref } from './site.js';
 import { registerOffline } from './offline.js';
 import { openStore } from './local-songs.js';
 import { parseKey, tuningFor } from './theory.js';
@@ -168,7 +168,7 @@ function renderHead(song) {
   const key = parseKey(song.key);
   const guitar = [song.tracks.find((tr) => tr.id === song.defaultTrack), ...song.tracks].find((tr) => tr && tr.kind === 'guitar') || song.tracks[0];
   const tuning = tuningFor(guitar?.tuning);
-  const fretboardLink = (extra) => `tools.html?${new URLSearchParams({ ...(tuning ? { tuning: tuning.id } : {}), ...extra })}#fretboard`;
+  const fretboardLink = (extra) => pageHref(`tools.html?${new URLSearchParams({ ...(tuning ? { tuning: tuning.id } : {}), ...extra })}#fretboard`);
   const chips = [
     [t('meta.key'), keyName(song.key), key ? { href: fretboardLink({ root: key.root, scale: key.scale, names: key.flats ? 'flats' : 'sharps' }), title: t('meta.keyLink') } : null],
     [t('meta.tempo'), tempoLabel(song)],

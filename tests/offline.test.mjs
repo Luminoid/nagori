@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { access, readFile } from 'node:fs/promises';
-import { SHELL, CACHE, strategyFor } from '../js/offline.js';
+import { SHELL, CACHE, REFRESH_INTERVAL, strategyFor, pageKey, shellKeys } from '../js/offline.js';
 
 const root = new URL('../', import.meta.url);
 
@@ -39,6 +39,9 @@ test('the worker handles same-origin GETs and nothing else', () => {
   const origin = 'https://tabs.example.com';
   assert.equal(strategyFor(`${origin}/`, 'GET', origin), 'page');
   assert.equal(strategyFor(`${origin}/song.html?id=knives-out`, 'GET', origin), 'page');
+  assert.equal(strategyFor(`${origin}/song?id=knives-out`, 'GET', origin, 'navigate'), 'page', 'a host that drops .html still navigates to a page');
+  assert.equal(strategyFor(`${origin}/songs/knives-out`, 'GET', origin, 'navigate'), 'page');
+  assert.equal(strategyFor(`${origin}/data/songs/x/song.json`, 'GET', origin, 'cors'), 'asset');
   assert.equal(strategyFor(`${origin}/data/songs/x/song.json`, 'GET', origin), 'asset');
   assert.equal(strategyFor(`${origin}/js/tools.js`, 'GET', origin), 'asset');
   assert.equal(strategyFor('https://www.youtube.com/iframe_api', 'GET', origin), null);
@@ -46,7 +49,32 @@ test('the worker handles same-origin GETs and nothing else', () => {
   assert.equal(strategyFor('not a url', 'GET', origin), null);
 });
 
+test('a page is keyed by its path alone, in the form without .html that some hosts serve', () => {
+  const origin = 'https://tabs.example.com';
+  assert.equal(pageKey(`${origin}/song.html?id=knives-out&view=tab`), `${origin}/song`);
+  assert.equal(pageKey(`${origin}/song?id=knives-out#app`), `${origin}/song`);
+  assert.equal(pageKey(`${origin}/songs/knives-out.html?view=chords`), `${origin}/songs/knives-out`);
+  assert.equal(pageKey(`${origin}/index.html?lang=zh`), `${origin}/`);
+  assert.equal(pageKey(`${origin}/`), `${origin}/`);
+  assert.equal(pageKey(`${origin}/tabs/index.html`), `${origin}/tabs/`);
+  assert.equal(pageKey(`${origin}/404.html`), `${origin}/404`);
+});
+
+test('the shell served cache first is every shell file but the data, keyed like the requests', () => {
+  const keys = shellKeys('https://tabs.example.com/tabs/');
+  assert.ok(keys.has('https://tabs.example.com/tabs/'), 'the home page');
+  assert.ok(keys.has('https://tabs.example.com/tabs/song'), 'song.html under its short key');
+  assert.ok(keys.has('https://tabs.example.com/tabs/404'));
+  assert.ok(keys.has('https://tabs.example.com/tabs/js/util.js'));
+  assert.ok(keys.has('https://tabs.example.com/tabs/css/styles.css'));
+  assert.ok(!keys.has('https://tabs.example.com/tabs/song.html'));
+  assert.ok(!keys.has('https://tabs.example.com/tabs/data/songs.json'), 'the song index is fetched first');
+  assert.ok(!keys.has('https://tabs.example.com/tabs/data/site.json'));
+  assert.equal(keys.size, SHELL.filter((e) => !e.startsWith('data/')).length - 1, "'./' and index.html share a key");
+  assert.ok(REFRESH_INTERVAL >= 60 * 1000 && REFRESH_INTERVAL <= 60 * 60 * 1000, 'refreshed within the hour, not on every navigation');
+});
+
 test('sw.js imports its list from js/offline.js', async () => {
   const worker = await readFile(new URL('sw.js', root), 'utf8');
-  assert.match(worker, /import \{ CACHE, SHELL, strategyFor \} from '\.\/js\/offline\.js'/);
+  assert.match(worker, /import \{ CACHE, SHELL, REFRESH_INTERVAL, strategyFor, pageKey, shellKeys \} from '\.\/js\/offline\.js'/);
 });

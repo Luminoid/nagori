@@ -26,6 +26,18 @@ function siteName() {
   return site.name || DEFAULTS.name;
 }
 
+/**
+ * A link to one of the site's pages, as written (`song.html?id=x`) or, when
+ * site.json says the host serves pages without the extension (`cleanUrls`:
+ * Cloudflare Pages, GitHub Pages), in that form (`song?id=x`, `./` for index).
+ * Links to other sites pass through.
+ */
+export function pageHref(path, clean = site.cleanUrls) {
+  if (!clean || /^[a-z][a-z0-9+.-]*:|^\/\//i.test(path)) return path;
+  const short = path.replace(/(^|\/)index\.html(?=$|[?#])/, '$1').replace(/\.html(?=$|[?#])/, '');
+  return short === '' || /^[?#]/.test(short) ? `./${short}` : short;
+}
+
 /** A per-language text from the config, or '' when the config leaves it empty. */
 export function siteText(key) {
   const value = site[key];
@@ -42,10 +54,18 @@ export function pageTitle(...parts) {
 /**
  * Put the configured name and texts into a page after applyLang(): the brand
  * in the header, the document title, and the hero, collection heading and
- * footer wherever a page has them.
+ * footer wherever a page has them; with `cleanUrls`, the page's links to the
+ * other pages take the host's form.
  */
 export function applySite(root = document) {
   const name = siteName();
+  if (site.cleanUrls) {
+    for (const a of root.querySelectorAll('a[href]')) {
+      const href = a.getAttribute('href');
+      const short = pageHref(href);
+      if (short !== href) a.setAttribute('href', short);
+    }
+  }
   for (const brand of root.querySelectorAll('.brand')) {
     const textNode = [...brand.childNodes].find((n) => n.nodeType === Node.TEXT_NODE && n.textContent.trim());
     if (textNode) textNode.textContent = ` ${name}`;

@@ -1,6 +1,6 @@
 import { h, clear, loadJSON, storage, setupThemeToggle, foldText } from './util.js';
 import { t, applyLang, setupLanguageToggle, keyName, tuningName, parens } from './i18n.js';
-import { loadSite, applySite } from './site.js';
+import { loadSite, applySite, pageHref } from './site.js';
 import { registerOffline } from './offline.js';
 import { SORTS, DEFAULT_SORT, sortSongs, groupSongs, keyLabel } from './song-sort.js';
 import { openStore, memoryStore, pickFolderEntries, entriesFromDataTransfer, readSongFolders, planImport } from './local-songs.js';
@@ -16,8 +16,8 @@ export function initialSort(search, remembered) {
 
 /** A private song (private/songs, never committed) or one of the visitor's own (this browser's store) opens through song.html with its root in the URL; a public one has its own page. */
 function songHref(song, view) {
-  if (song.local) return `song.html?id=${encodeURIComponent(song.id)}&base=local&view=${view}`;
-  return song.private ? `song.html?id=${encodeURIComponent(song.id)}&base=private&view=${view}` : `songs/${encodeURIComponent(song.id)}.html?view=${view}`;
+  if (song.local) return pageHref(`song.html?id=${encodeURIComponent(song.id)}&base=local&view=${view}`);
+  return pageHref(song.private ? `song.html?id=${encodeURIComponent(song.id)}&base=private&view=${view}` : `songs/${encodeURIComponent(song.id)}.html?view=${view}`);
 }
 
 /** A card; `heading` is h3 under the page's "Songs" heading, h4 under a group heading; `onRemove` gives a visitor's own song its Remove button. */

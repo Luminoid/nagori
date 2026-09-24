@@ -128,13 +128,28 @@ Write `song.json` and the track files directly; `examples/twelve-bar-blues/` is 
 ## site.json
 
 ```json
-{ "name": "Nagori", "defaultLang": "auto", "url": "https://guitar.luminoid.dev", "copyright": "© 2026 Luminoid · MIT",
+{ "name": "Nagori", "defaultLang": "auto", "url": "https://guitar.luminoid.dev", "cleanUrls": true, "copyright": "© 2026 Luminoid · MIT",
   "title": { "en": "", "zh": "" }, "intro": { "en": "", "zh": "" },
   "collection": { "en": "", "zh": "" }, "footer": { "en": "", "zh": "" } }
 ```
 
-`name` is the brand in the header and the page titles. `url` is where the site is published (`https://tabs.example.com`, or with a sub-path); once it is set, `make index` also writes `sitemap.xml` and `robots.txt` for it. `defaultLang` is `auto` (follow the browser), `en` or `zh`; a visitor's own choice, made with the header toggle or `?lang=`, always wins. The texts are per language and optional: `title` and `intro` replace the home page's heading and paragraph, `collection` puts a visible heading over the song grid, `footer` replaces the footer line on the home and tools pages. `copyright` (one string for every language, `"© 2026 Name · MIT"`) is appended to every footer, the song page's included; leave it empty for no such line.
+`name` is the brand in the header and the page titles. `url` is where the site is published (`https://tabs.example.com`, or with a sub-path); once it is set, `make index` also writes `sitemap.xml` and `robots.txt` for it. `cleanUrls` says the host serves `song.html` at `/song` and `songs/<id>.html` at `/songs/<id>` (Cloudflare Pages, GitHub Pages): the pages' links, canonical addresses, structured data and the sitemap then leave the `.html` out; omit it, or set it false, for a host that serves the file names only. `defaultLang` is `auto` (follow the browser), `en` or `zh`; a visitor's own choice, made with the header toggle or `?lang=`, always wins. The texts are per language and optional: `title` and `intro` replace the home page's heading and paragraph, `collection` puts a visible heading over the song grid, `footer` replaces the footer line on the home and tools pages. `copyright` (one string for every language, `"© 2026 Name · MIT"`) is appended to every footer, the song page's included; leave it empty for no such line.
 
 ## Songs added in the browser
 
-The home page's "Your songs" panel reads folders in this format from the visitor's disk (`js/local-songs.js`): every `song.json` found, with the track files its `tracks[].file` names beside it and, when present, a `curation.json` for `duration` and `sortArtist`. A song whose `id` is missing takes its folder's name. The browser checks what the page needs (ids, title, artist, bars, time signature, parts with their files, measure counts, strings and tuning) and reports anything else as is; `make validate` remains the full check. The songs are kept in IndexedDB on that device and never uploaded. Reading the same top folder again syncs it: a song whose files did not change is left alone, a changed one is replaced (its added date kept), a repeated id within one import is skipped, and songs from the earlier import that the folder no longer contains are listed with a button to remove them. A song whose id was last added from a different folder is replaced and the message says which folder it came from. Folders are told apart by their name alone, so two different folders with the same name look like one. Hidden folders such as `.git`, and `node_modules`, are never read.
+The home page's "Your songs" panel reads folders in this format from the visitor's disk (`js/local-songs.js`): every `song.json` found, with the track files its `tracks[].file` names beside it and, when present, a `curation.json` for `duration` and `sortArtist`. A song whose `id` is missing takes its folder's name. The browser checks what the page needs (ids, title, artist, bars, time signature, parts with their files, measure counts, strings and tuning) and reports anything else as is; `make validate` remains the full check. The songs are kept in IndexedDB on that device and never uploaded.
+
+The folder can be one song folder or any folder that holds song folders at any depth, so a fork's `data/songs` and a collection kept anywhere on disk both work; only `song.json`, the files it names and `curation.json` are read, everything else in the folder is ignored:
+
+```
+my-songs/
+  twelve-bar-blues/
+    song.json
+    tracks/guitar.json
+    tracks/bass.json
+    curation.json      optional
+  another-song/
+    ...
+```
+
+Reading the same top folder again syncs it: a song whose files did not change is left alone, a changed one is replaced (its added date kept), a repeated id within one import is skipped, and songs from the earlier import that the folder no longer contains are listed with a button to remove them. A song whose id was last added from a different folder is replaced and the message says which folder it came from. Folders are told apart by their name alone, so two different folders with the same name look like one. Hidden folders such as `.git`, and `node_modules`, are never read.

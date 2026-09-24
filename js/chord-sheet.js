@@ -4,6 +4,7 @@ import { h, clear, formatChord, chordKey } from './util.js';
 import { voicingSVG } from './chord-diagram.js';
 import { t, sectionName, tuningName } from './i18n.js';
 import { libraryFor } from './chord-library.js';
+import { pageHref } from './site.js';
 
 function sectionBars(song, name) {
   const idx = song.sections.findIndex((s) => s.name === name);
@@ -60,7 +61,7 @@ export function renderChordSheet(container, song, { onChordSeek, stringLabels } 
     const card = h(
       'div',
       { class: 'chord-card', dataset: { chord: key } },
-      h('div', { class: 'name' }, h('a', { href: `tools.html?chord=${encodeURIComponent(key)}#chords`, title: t('sheet.dictionary') }, formatChord(name))),
+      h('div', { class: 'name' }, h('a', { href: pageHref(`tools.html?chord=${encodeURIComponent(key)}#chords`), title: t('sheet.dictionary') }, formatChord(name))),
       voicing ? h('div', { html: voicingSVG(voicing, strings, formatChord(name), stringLabels) }) : h('div', { class: 'frets' }, t('sheet.noDiagram')),
       voicing ? h('div', { class: 'frets' }, voicing.frets) : null,
     );

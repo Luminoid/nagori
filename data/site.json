@@ -2,6 +2,7 @@
   "name": "Nagori",
   "defaultLang": "auto",
   "url": "https://guitar.luminoid.dev",
+  "cleanUrls": true,
   "copyright": "© 2026 Luminoid · MIT",
   "title": {
     "en": "",

@@ -6,12 +6,25 @@ The songs in this repository are a small public-domain collection. The author's 
 
 ## Use it with your own songs
 
-On the site itself, without installing anything: the home page's "Your songs" panel reads a song folder (or a whole collection of them) from your disk, by picker or by drag and drop, and keeps it in your browser's storage. Those songs open, play and print like the others and stay on that device only; nothing is uploaded. The folder format is the one below, which the importers write.
+On the site itself, without installing anything: the home page's "Your songs" panel reads a song folder (or a whole collection of them) from your disk, by picker or by drag and drop, and keeps it in your browser's storage. Those songs open, play and print like the others and stay on that device only; nothing is uploaded. It takes a single song folder or any folder that holds song folders at any depth (a fork's `data/songs`, a collection kept anywhere on disk); the layout is the one the importers write:
+
+```
+my-songs/                    any folder holding song folders, or a single song folder
+  twelve-bar-blues/
+    song.json                the song: title, tempo, sections, chords, the list of parts
+    tracks/guitar.json       one file per part, the tab bar by bar
+    tracks/bass.json
+    curation.json            optional: the length shown on the card and the name to sort by
+  another-song/
+    ...
+```
+
+To run your own copy of the site with your songs built in:
 
 1. Fork or download the repository and delete the folders under `data/songs/` you do not want (they are the public-domain starter collection).
 2. Add songs: import a MusicXML score from Guitar Pro, MuseScore or TuxGuitar, or write the JSON by hand (`make example` drops a hand-written twelve-bar blues into the collection to start from). "Adding a song" below has the commands, [docs/song-format.md](docs/song-format.md) the format.
 3. `make index` rebuilds the home page listing and writes each song's page from the song folders (the importers do it themselves), `make validate` checks every song, `make test` runs the test suite over your data too.
-4. Edit `data/site.json`: the site's name and address, its default language (`"auto"` follows the browser, or `"en"` / `"zh"`), the copyright line, and per language the home page title and intro, the collection's name and the footer line. Empty fields keep the built-in text. The name also sits in the titles, meta tags and noscript lines of the four HTML files, in `manifest.webmanifest` and in `icons/og.svg` (regenerate `og.png` after editing it): search for "Nagori" to find every spot.
+4. Edit `data/site.json`: the site's name and address, its default language (`"auto"` follows the browser, or `"en"` / `"zh"`), the copyright line, whether the host serves pages without their `.html` (`cleanUrls`, see "Deployment"), and per language the home page title and intro, the collection's name and the footer line. Empty fields keep the built-in text. The name also sits in the titles, meta tags and noscript lines of the four HTML files, in `manifest.webmanifest` and in `icons/og.svg` (regenerate `og.png` after editing it): search for "Nagori" to find every spot.
 5. Deploy the folder as static files (see "Deployment"). The code is MIT licensed; the songs you add are yours to license.
 
 ## Features
@@ -93,6 +106,7 @@ scripts/songlib.py            what every importer shares: sections, tempo, chord
 scripts/import-musicxml.py    MusicXML importer (Guitar Pro, MuseScore, TuxGuitar exports)
 scripts/validate-song.py      checks a song folder against docs/song-format.md
 scripts/build-index.py        rebuilds data/songs.json from the song folders
+scripts/serve.py              development server (make serve): pages with or without their .html, 404.html for unknown paths, nothing cached
 examples/twelve-bar-blues/    a song written by hand, the smallest complete example
 data/site.json                site configuration
 docs/song-format.md           the data format
@@ -190,9 +204,12 @@ Static hosting, nothing to build: upload the folder, or point GitHub Pages, Clou
 - Set `url` in `data/site.json` to the site's address (this copy: `https://guitar.luminoid.dev`) and run `make index`: it writes `sitemap.xml` and `robots.txt` for that address (robots.txt only counts at a domain's root; on a sub-path host submit the sitemap directly). `copyright` in the same file is the line every footer ends with.
 - The song pages that `make index` writes carry canonical, hreflang, `og:url` and `og:image` links for the `url` in `site.json`, plus structured data. `index.html` and `tools.html` carry the same site-wide tags by hand (`og:image` points at `icons/og.png`, a 1200×630 card whose source is `icons/og.svg`); a fork changes those addresses along with the name.
 - `_headers` holds the security headers for Cloudflare Pages and Netlify: a content security policy that allows the YouTube IFrame API and player and no inline scripts (the theme bootstrap is `js/theme.js` for that reason), and a permissions policy that keeps the microphone available to the tuner. Other hosts set the same headers their own way, or go without.
+- Cloudflare Pages and GitHub Pages serve `song.html` at `/song` and `songs/<id>.html` at `/songs/<id>` (Cloudflare redirects the `.html` form there). Set `cleanUrls` to true in `data/site.json` for such a host and run `make index`: the pages' links, the canonical and hreflang addresses, the structured data and the sitemap then use the short form, and the `_headers` rule that keeps `song` out of search results covers both spellings. `tools.html` carries its canonical tags by hand, so drop the `.html` there too. Leave `cleanUrls` off for a host that serves only the file names; `make serve` handles both forms, like those hosts.
+- Hosts cache scripts and styles in the browser as they see fit (Cloudflare's zone default keeps them for four hours, over the `_headers` rules), so after a deploy a returning visitor could run an old script against a new page. The service worker makes that a non-issue: on a live host it serves the app shell (the pages, scripts, styles and icons) from its own cache, filled past the browser's cache when it installs, and after a navigation it fetches the whole shell again, at most once every five minutes, and swaps the set in together. A deploy reaches a returning visitor on their next navigation after that check; the song index and song data are always fetched first. No host setting is needed; the `_headers` cache rules only serve browsers without service workers.
+- Cloudflare Web Analytics, when enabled on the Pages project, injects a beacon script; the content security policy allows it and nothing else from outside the site and YouTube.
 - The tuner's microphone needs HTTPS, which the hosts above provide.
 - Those hosts serve `404.html` for unknown paths. Its links and assets are relative, right for a site at the domain root; a fork under a sub-path adds `<base href="/that-path/">` to it (an inline stylesheet keeps the page readable either way).
-- `sw.js` is the service worker; `_headers` marks it no-cache so updates reach visitors on their next visit. After adding a file to the shell list in `js/offline.js`, bump `CACHE` there so old copies are dropped (the test suite checks that every module the pages import is on the list).
+- `sw.js` is the service worker (browsers fetch it past their cache, so the `no-cache` rule in `_headers` is a courtesy). It keeps every page under its path without the `.html`, so a page reached either way is answered offline on any host, and on localhost it fetches everything from the network first so an edit shows on the next reload. After adding a file to the shell list in `js/offline.js`, bump `CACHE` there so old copies are dropped (the test suite checks that every module the pages import is on the list).
 - The content security policy allows no inline styles except the small block in `404.html`, which it names by hash; after editing that block, run `make test` and copy the hash the failing test prints into `_headers`.
 
 ## Credits and licensing

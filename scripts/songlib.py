@@ -484,10 +484,12 @@ def build_index(root, generate=None):
     return ordered
 
 
-def sitemap_xml(base_url, song_ids, pages=True):
-    """A sitemap for the site at base_url: the home page, the tools page and every song page (songs/<id>.html, or song.html?id= when no pages were written)."""
+def sitemap_xml(base_url, song_ids, pages=True, clean=False):
+    """A sitemap for the site at base_url: the home page, the tools page and every song page (songs/<id>.html, or song.html?id= when no pages were written);
+    `clean` drops the .html for a host that serves pages without it (site.json `cleanUrls`)."""
+    ext = "" if clean else ".html"
     base = base_url.rstrip("/")
-    locs = [f"{base}/", f"{base}/tools.html"] + [f"{base}/songs/{quote(str(sid))}.html" if pages else f"{base}/song.html?id={quote(str(sid))}" for sid in song_ids]
+    locs = [f"{base}/", f"{base}/tools{ext}"] + [f"{base}/songs/{quote(str(sid))}{ext}" if pages else f"{base}/song{ext}?id={quote(str(sid))}" for sid in song_ids]
     lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     lines += [f"  <url><loc>{escape(loc)}</loc></url>" for loc in locs]
     lines.append("</urlset>")
@@ -510,25 +512,28 @@ def load_site(root):
 def write_site_files(root, rows, pages=True):
     """Write sitemap.xml and robots.txt next to index.html once data/site.json names the site's url. Returns that url."""
     root = Path(root)
-    url = str(load_site(root).get("url") or "").strip()
+    site = load_site(root)
+    url = str(site.get("url") or "").strip()
     if not url:
         return None
     top = root.parent.parent
-    (top / "sitemap.xml").write_text(sitemap_xml(url, [row["id"] for row in rows], pages))
+    (top / "sitemap.xml").write_text(sitemap_xml(url, [row["id"] for row in rows], pages, clean=bool(site.get("cleanUrls"))))
     (top / "robots.txt").write_text(robots_txt(url))
     return url
 
 
 def song_page_html(template, song, site):
     """One static page for a song, made from song.html: its own title, description, Open Graph data
-    and structured data, served from songs/<id>.html. `<base href="../">` keeps the shared page's
-    relative paths working from that folder; `data-song` tells song-page.js which song to open."""
+    and structured data, served from songs/<id>.html (addressed without the .html when site.json says
+    the host serves it that way, `cleanUrls`). `<base href="../">` keeps the shared page's relative
+    paths working from that folder; `data-song` tells song-page.js which song to open."""
     esc = html_escape
     name = site.get("name") or "Nagori"
     title = f"{song['title']} · {song['artist']} · {name}"
     description = f"Chords, tab, video sync and finger positions for {song['title']} by {song['artist']}."
     url = str(site.get("url") or "").rstrip("/")
-    page_url = f"{url}/songs/{song['id']}.html" if url else None
+    page_path = f"songs/{song['id']}" + ("" if site.get("cleanUrls") else ".html")  # the page's address on its host
+    page_url = f"{url}/{page_path}" if url else None
     out = template
 
     def once(old, new):
@@ -537,6 +542,8 @@ def song_page_html(template, song, site):
         out = out.replace(old, new)
 
     once('<meta charset="utf-8">\n', '<meta charset="utf-8">\n  <base href="../">\n')
+    # Chrome's preload scanner resolves modulepreload links against the page's own folder, <base> or not.
+    out = out.replace('<link rel="modulepreload" href="js/', '<link rel="modulepreload" href="../js/')
     once(re.search(r"<title>[^<]*</title>", out).group(0), f"<title>{esc(title)}</title>")
     once(re.search(r'<meta name="description" content="[^"]*">', out).group(0), f'<meta name="description" content="{esc(description)}">')
     once(re.search(r'<meta property="og:title" content="[^"]*">', out).group(0), f'<meta property="og:title" content="{esc(title)}">')
@@ -566,7 +573,7 @@ def song_page_html(template, song, site):
     once('  <meta name="twitter:card" content="summary_large_image">\n', '  <meta name="twitter:card" content="summary_large_image">\n' + "".join(f"  {line}\n" for line in extra))
     once('<main class="song-page" id="app">', f'<main class="song-page" id="app" data-song="{esc(song["id"])}">')
     if out.count('href="#app"') == 1:  # the skip link: a fragment alone would resolve against <base>
-        out = out.replace('href="#app"', f'href="songs/{esc(song["id"])}.html#app"')
+        out = out.replace('href="#app"', f'href="{esc(page_path)}#app"')
     return out
 
 

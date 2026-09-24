@@ -9,7 +9,7 @@ need-song:
 	@test -n "$(SONG)" || { echo "usage: make $(MAKECMDGOALS) SONG=<slug>   (folders: $$(ls data/songs private/songs 2>/dev/null | grep -v ':' | tr '\n' ' '))"; exit 1; }
 
 serve:
-	python3 -m http.server $(PORT) --bind 127.0.0.1
+	python3 scripts/serve.py $(PORT)
 
 test:
 	node --test tests/*.test.mjs
