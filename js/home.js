@@ -3,6 +3,7 @@ import { t, applyLang, setupLanguageToggle, keyName, tuningName, parens } from '
 import { loadSite, applySite } from './site.js';
 import { registerOffline } from './offline.js';
 import { SORTS, DEFAULT_SORT, sortSongs, groupSongs, keyLabel } from './song-sort.js';
+import { openStore, memoryStore, pickFolderEntries, entriesFromDataTransfer, readSongFolders, makeRecord } from './local-songs.js';
 
 const SORT_KEY = 'nagori:sort';
 
@@ -13,14 +14,15 @@ export function initialSort(search, remembered) {
   return SORTS.includes(remembered) ? remembered : DEFAULT_SORT;
 }
 
-/** A private song (private/songs, never committed) opens through song.html with its root in the URL; a public one has its own page. */
+/** A private song (private/songs, never committed) or one of the visitor's own (this browser's store) opens through song.html with its root in the URL; a public one has its own page. */
 function songHref(song, view) {
+  if (song.local) return `song.html?id=${encodeURIComponent(song.id)}&base=local&view=${view}`;
   return song.private ? `song.html?id=${encodeURIComponent(song.id)}&base=private&view=${view}` : `songs/${encodeURIComponent(song.id)}.html?view=${view}`;
 }
 
-/** A card; `heading` is h3 under the page's "Songs" heading, h4 under a group heading. */
-function songCard(song, heading = 'h3') {
-  const meta = [keyName(song.key), song.bpm ? `${song.bpm} ${t('meta.bpm')}` : null, tuningName(song.tuning), song.duration, song.tracks ? t('home.tracks', { n: song.tracks }) : null, song.private ? t('home.private') : null].filter(Boolean);
+/** A card; `heading` is h3 under the page's "Songs" heading, h4 under a group heading; `onRemove` gives a visitor's own song its Remove button. */
+function songCard(song, heading = 'h3', onRemove = null) {
+  const meta = [keyName(song.key), song.bpm ? `${song.bpm} ${t('meta.bpm')}` : null, tuningName(song.tuning), song.duration, song.tracks ? t('home.tracks', { n: song.tracks }) : null, song.private ? t('home.private') : null, song.local ? t('home.yours') : null].filter(Boolean);
   return h(
     'article',
     { class: 'song-card' },
@@ -31,6 +33,7 @@ function songCard(song, heading = 'h3') {
       { class: 'actions' },
       h('a', { class: 'btn primary', href: songHref(song, 'tab') }, t('nav.tab')),
       h('a', { class: 'btn', href: songHref(song, 'chords') }, t('nav.chords')),
+      song.local && onRemove ? h('button', { class: 'btn small remove', type: 'button', onclick: () => onRemove(song) }, t('local.remove')) : null,
     ),
   );
 }
@@ -57,34 +60,40 @@ async function main() {
   const count = document.getElementById('song-count');
   const sortSelect = document.getElementById('song-sort');
   let mode = initialSort(location.search, storage.get(SORT_KEY));
-  let songs = [];
+  let collection = [];
+  let local = []; // the visitor's own songs, from this browser's store
   try {
     // A private collection beside the public one, when this copy has one (a local checkout or a private deployment); fetched alongside, so a missing one costs no time.
     const [pub, priv] = await Promise.allSettled([loadJSON('data/songs.json'), loadJSON('private/songs.json')]);
     if (pub.status === 'rejected') throw pub.reason;
-    songs = priv.status === 'fulfilled' ? [...pub.value, ...priv.value.map((song) => ({ ...song, private: true }))] : pub.value;
+    collection = priv.status === 'fulfilled' ? [...pub.value, ...priv.value.map((song) => ({ ...song, private: true }))] : pub.value;
   } catch (err) {
     clear(grid).append(h('p', { class: 'status error' }, t('home.loadError', { message: err.message })));
     return;
   }
+  const songs = () => [...collection, ...local];
+  let controls = false;
   const render = (query = '') => {
+    const all = songs();
     clear(grid);
-    if (!songs.length) {
+    if (!all.length) {
       grid.append(h('p', { class: 'empty-note' }, t('home.empty')));
       count.textContent = '';
       return;
     }
-    const shown = matchSongs(songs, query);
+    const shown = matchSongs(all, query);
     if (!shown.length) grid.append(h('p', { class: 'empty-note' }, t('home.noMatch')));
     const labelFor = (song, by) => (by === 'key' ? (song.key ? keyName(keyLabel(song.key)) : t('home.noKey')) : song.artist);
     for (const group of groupSongs(sortSongs(shown, mode), mode, labelFor)) {
       if (group.label) grid.append(h('h3', { class: 'song-group' }, group.label, h('span', { class: 'song-group-count' }, String(group.songs.length))));
-      for (const song of group.songs) grid.append(songCard(song, group.label ? 'h4' : 'h3'));
+      for (const song of group.songs) grid.append(songCard(song, group.label ? 'h4' : 'h3', removeLocal));
     }
-    count.textContent = query ? t('home.matchCount', { n: shown.length, total: songs.length }) : t('home.count', { n: songs.length });
+    count.textContent = query ? t('home.matchCount', { n: shown.length, total: all.length }) : t('home.count', { n: all.length });
   };
   // The filter and the sort are worth showing once the collection outgrows a glance.
-  if (songs.length > 6) {
+  const showControls = () => {
+    if (controls || songs().length <= 6) return;
+    controls = true;
     filter.hidden = false;
     filter.placeholder = t('home.filter');
     filter.setAttribute('aria-label', t('home.filter'));
@@ -101,7 +110,70 @@ async function main() {
       history.replaceState(null, '', url);
       render(filter.value);
     });
+  };
+
+  // --- The visitor's own songs: folders read in the browser, kept in IndexedDB, never uploaded ---
+  const panel = document.getElementById('local-songs');
+  const status = document.getElementById('local-status');
+  const store = (await openStore()) || memoryStore();
+  const say = (lines, error = false) => {
+    clear(status).append(...lines.flatMap((line, i) => (i ? [h('br'), line] : [line])));
+    status.classList.toggle('error', error);
+  };
+  const refreshLocal = async () => {
+    const records = await store.list();
+    local = records.map((record) => ({ ...record.row, local: true }));
+  };
+  async function removeLocal(song) {
+    await store.remove(song.id);
+    await refreshLocal();
+    render(filter.value);
+    say([t('local.removed', { title: song.title })]);
   }
+  const importEntries = async (entries) => {
+    if (!entries) return;
+    say([t('local.reading')]);
+    const { songs: found, problems } = await readSongFolders(entries);
+    for (const item of found) await store.put(await makeRecord(item));
+    await refreshLocal();
+    showControls();
+    render(filter.value);
+    const lines = [];
+    if (found.length) lines.push(t('local.added', { n: found.length }));
+    else if (!problems.length) lines.push(t('local.none'));
+    for (const problem of problems) lines.push(t('local.problem', { folder: problem.folder, message: t(problem.key, problem.params) }));
+    say(lines, !found.length);
+  };
+  if (panel) {
+    panel.hidden = false;
+    document.getElementById('local-add').addEventListener('click', async () => {
+      try {
+        await importEntries(await pickFolderEntries());
+      } catch (err) {
+        say([t('local.failed', { message: err.message })], true);
+      }
+    });
+    for (const type of ['dragenter', 'dragover']) {
+      panel.addEventListener(type, (e) => {
+        e.preventDefault();
+        panel.classList.add('is-drop');
+      });
+    }
+    panel.addEventListener('dragleave', (e) => {
+      if (!panel.contains(e.relatedTarget)) panel.classList.remove('is-drop');
+    });
+    panel.addEventListener('drop', async (e) => {
+      e.preventDefault();
+      panel.classList.remove('is-drop');
+      try {
+        await importEntries(await entriesFromDataTransfer(e.dataTransfer));
+      } catch (err) {
+        say([t('local.failed', { message: err.message })], true);
+      }
+    });
+  }
+  await refreshLocal();
+  showControls();
   render();
 }
 

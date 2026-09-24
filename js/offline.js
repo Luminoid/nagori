@@ -22,6 +22,7 @@ export const SHELL = [
   'js/not-found.js',
   'js/song-page.js',
   'js/song-sort.js',
+  'js/local-songs.js',
   'js/tab-renderer.js',
   'js/fingering.js',
   'js/chord-library.js',

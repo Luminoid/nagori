@@ -134,3 +134,7 @@ Write `song.json` and the track files directly; `examples/twelve-bar-blues/` is 
 ```
 
 `name` is the brand in the header and the page titles. `url` is where the site is published (`https://tabs.example.com`, or with a sub-path); once it is set, `make index` also writes `sitemap.xml` and `robots.txt` for it. `defaultLang` is `auto` (follow the browser), `en` or `zh`; a visitor's own choice, made with the header toggle or `?lang=`, always wins. The texts are per language and optional: `title` and `intro` replace the home page's heading and paragraph, `collection` puts a visible heading over the song grid, `footer` replaces the footer line on the home and tools pages. `copyright` (one string for every language, `"© 2026 Name · MIT"`) is appended to every footer, the song page's included; leave it empty for no such line.
+
+## Songs added in the browser
+
+The home page's "Your songs" panel reads folders in this format from the visitor's disk (`js/local-songs.js`): every `song.json` found, with the track files its `tracks[].file` names beside it and, when present, a `curation.json` for `duration` and `sortArtist`. A song whose `id` is missing takes its folder's name. The browser checks what the page needs (ids, title, artist, bars, time signature, parts with their files, measure counts, strings and tuning) and reports anything else as is; `make validate` remains the full check. The songs are kept in IndexedDB on that device and never uploaded.

@@ -6,6 +6,7 @@ import { analyzeTrack, positionsBySection, fingerString } from './fingering.js';
 import { libraryFor, STANDARD_TUNING } from './chord-library.js';
 import { loadSite, applySite, pageTitle, siteText } from './site.js';
 import { registerOffline } from './offline.js';
+import { openStore } from './local-songs.js';
 import { parseKey, tuningFor } from './theory.js';
 import { diagramSVG } from './chord-diagram.js';
 import { renderChordSheet } from './chord-sheet.js';
@@ -17,9 +18,20 @@ const params = new URLSearchParams(location.search);
 /** songs/<id>.html names its song on <main data-song>; song.html takes ?id=. */
 const PAGE_SONG = document.getElementById('app')?.dataset.song || '';
 let songId = params.get('id') || PAGE_SONG;
-/** `base=private` opens a song from private/songs (a collection git never sees) instead of data/songs. */
-const SONG_ROOT = params.get('base') === 'private' ? 'private/songs/' : 'data/songs/';
+/** `base=private` opens a song from private/songs (a collection git never sees) instead of data/songs; `base=local` one the visitor added from a folder, kept in this browser's store. */
+const BASE = params.get('base') === 'private' ? 'private' : params.get('base') === 'local' ? 'local' : 'public';
+const SONG_ROOT = BASE === 'private' ? 'private/songs/' : 'data/songs/';
 let DATA_BASE = '';
+let localRecord = null; // the store record of a visitor's own song: its song.json and track files
+
+/** The song.json for an id, from the site's files or from the browser's store. */
+async function loadSongJSON(id) {
+  if (BASE !== 'local') return loadJSON(`${SONG_ROOT}${id}/song.json`);
+  const store = await openStore();
+  localRecord = store ? await store.get(id) : null;
+  if (!localRecord) throw new Error(t('local.missing'));
+  return localRecord.song;
+}
 
 /** A sound picker value: a SOUNDS key, or "auto" for each part's own sound. */
 function soundChoice(name) {
@@ -103,7 +115,7 @@ function updateUrl() {
   if (next.get('source') && next.get('source') !== state.source) next.delete('source'); // the visitor chose otherwise; storage remembers it
   if (next.get('sound') && next.get('sound') !== state.sound) next.delete('sound');
   if (songId !== PAGE_SONG) next.set('id', songId);
-  if (SONG_ROOT !== 'data/songs/') next.set('base', 'private');
+  if (BASE !== 'public') next.set('base', BASE);
   next.set('view', state.view);
   if (state.view === 'tab' && state.trackId) next.set('track', state.trackId);
   const query = `${location.pathname}?${next}`;
@@ -115,7 +127,7 @@ function updateUrl() {
 
 function loadTrackFile(meta) {
   if (!state.files.has(meta.file)) {
-    const promise = loadJSON(DATA_BASE + meta.file);
+    const promise = BASE === 'local' ? (localRecord?.files?.[meta.file] ? Promise.resolve(localRecord.files[meta.file]) : Promise.reject(new Error(t('local.missing')))) : loadJSON(DATA_BASE + meta.file);
     promise.catch(() => state.files.delete(meta.file)); // a failed fetch is retried next time, not remembered
     state.files.set(meta.file, promise);
   }
@@ -778,18 +790,25 @@ async function render(app) {
   clear(app).append(renderHead(song), h('div', { class: 'song-layout' }, sidebar, els.content)); // the player first in reading order; CSS puts it beside the content on wide screens
 
   const footer = document.getElementById('song-footer');
-  const sourceText = song.source.label || t('footer.tab', { name: song.source.name });
+  const source = song.source || {}; // a song added from a folder may name no source
+  const sourceText = source.label || (source.name ? t('footer.tab', { name: source.name }) : '');
   clear(footer).append(
-    t('footer.transcription'),
-    song.source.url ? h('a', { href: song.source.url, target: '_blank', rel: 'noopener' }, sourceText) : h('span', {}, sourceText),
-    song.source.author && song.source.revisionId
-      ? t('footer.byRevision', { author: song.source.author, id: song.source.revisionId })
-      : song.source.author
-        ? t('footer.by', { author: song.source.author })
-        : song.source.revisionId
-          ? t('footer.revision', { id: song.source.revisionId })
-          : '',
-    t('footer.period'),
+    ...(sourceText
+      ? [
+          t('footer.transcription'),
+          source.url ? h('a', { href: source.url, target: '_blank', rel: 'noopener' }, sourceText) : h('span', {}, sourceText),
+          source.author && source.revisionId
+            ? t('footer.byRevision', { author: source.author, id: source.revisionId })
+            : source.author
+              ? t('footer.by', { author: source.author })
+              : source.revisionId
+                ? t('footer.revision', { id: source.revisionId })
+                : '',
+          t('footer.period'),
+        ]
+      : BASE === 'local'
+        ? [t('footer.local')]
+        : []),
     ...(song.video ? [t('footer.video'), h('a', { href: `https://www.youtube.com/watch?v=${song.video.id}`, target: '_blank', rel: 'noopener' }, song.video.title || 'YouTube'), t('footer.period')] : []),
     t('footer.fingerings'),
     siteText('copyright') ? ` ${siteText('copyright')}` : '',
@@ -831,7 +850,7 @@ async function render(app) {
 }
 
 async function main() {
-  const [, songResult] = await Promise.allSettled([loadSite(), songId ? loadJSON(`${SONG_ROOT}${songId}/song.json`) : Promise.resolve(null)]);
+  const [, songResult] = await Promise.allSettled([loadSite(), songId ? loadSongJSON(songId) : Promise.resolve(null)]);
   applyLang();
   applySite();
   setupThemeToggle();
@@ -844,7 +863,7 @@ async function main() {
       const songs = await loadJSON('data/songs.json');
       if (!songs.length) throw new Error(t('home.empty'));
       songId = songs[0].id;
-      state.song = await loadJSON(`${SONG_ROOT}${songId}/song.json`);
+      state.song = await loadSongJSON(songId);
     } else {
       if (songResult.status === 'rejected') throw songResult.reason;
       state.song = songResult.value;

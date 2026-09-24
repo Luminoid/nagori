@@ -6,6 +6,8 @@ The songs in this repository are a small public-domain collection. The author's 
 
 ## Use it with your own songs
 
+On the site itself, without installing anything: the home page's "Your songs" panel reads a song folder (or a whole collection of them) from your disk, by picker or by drag and drop, and keeps it in your browser's storage. Those songs open, play and print like the others and stay on that device only; nothing is uploaded. The folder format is the one below, which the importers write.
+
 1. Fork or download the repository and delete the folders under `data/songs/` you do not want (they are the public-domain starter collection).
 2. Add songs: import a MusicXML score from Guitar Pro, MuseScore or TuxGuitar, or write the JSON by hand (`make example` drops a hand-written twelve-bar blues into the collection to start from). "Adding a song" below has the commands, [docs/song-format.md](docs/song-format.md) the format.
 3. `make index` rebuilds the home page listing and writes each song's page from the song folders (the importers do it themselves), `make validate` checks every song, `make test` runs the test suite over your data too.
@@ -22,6 +24,7 @@ The songs in this repository are a small public-domain collection. The author's 
 - **Tools** (`tools.html`): a metronome (tempo slider and tap tempo, beats per bar, subdivisions, accent, space to start and stop), a chord dictionary (every root and the common qualities, drawn with finger numbers from the built-in library; click a shape to hear it), a fretboard chart with the note at every fret for standard tuning and the common alternatives (drop D, half step down, DADGAD, D A D F♯ B E, open G, bass; click a note to hear it, highlight a root and a scale, sharps or flats; the key and tuning chips on a song page open it with that scale and tuning selected), and a tuner (reference strings played with the same synthesis, or the microphone with a cents needle).
 - **Offline**: a service worker keeps the pages, the tools and every song opened, so practice continues without a connection (the YouTube video excepted; tab playback works). Browsers without module workers (Firefox at the time of writing) simply stay online-only.
 - **Printing**: the chords and tab views print on a light page without the header, video or controls.
+- **Your songs**: a visitor adds song folders from their own disk (folder picker or drag and drop), checked and kept in the browser's IndexedDB, listed with a "yours" chip, opened through `song.html?id=<slug>&base=local`, removable from the card. Nothing leaves the browser.
 - **Home page**: the collection sorted by artist (composers filed by surname where the curation says so), title, newest, key, tempo or length, with headings over each artist or key, a filter box, and the choice remembered and shareable as `?sort=`.
 - **Two languages**: the whole interface in English or Simplified Chinese, switched from the header and remembered. Section names, part roles, tunings and keys from the song data are translated too; song titles and lyrics stay as written.
 
@@ -50,6 +53,7 @@ index.html               song list
 songs/<id>.html          one static page per song, written by make index from song.html: the URL to share, with its own title and Open Graph data
 js/home.js               home page: song cards, the filter and the sort control
 js/song-sort.js          the home page's sort orders and the artist and key grouping (pure functions)
+js/local-songs.js        the visitor's own songs: reading a folder (picker, drop, file list), checking it, the IndexedDB store
 song.html                song page (chords and tab views)
 tools.html               metronome, fretboard note map, tuner
 404.html                 not-found page (static hosts serve it for unknown paths)
@@ -137,7 +141,7 @@ Lyrics come from the part that carries them: one syllable per sung note (`begin`
 
 ### A private collection
 
-Songs you may play but not publish (transcriptions of copyrighted songs, for instance) go under `private/songs/<slug>/`, the same layout as `data/songs/`. Git ignores `private`, so a deployment built from the repository never has them, while the local site lists them beside the public songs (their pages open through `song.html?id=<slug>&base=private`). To keep that collection under version control of its own, make `private` a symlink to a separate, private repository (the author's is `../nagori-songs`, holding `songs/` and the `songs.json` that `make index` writes). `make index` writes `private/songs.json` for them; `make validate`, `make report`, `make propose` and `make render` find a slug in either root; imports land there with `DEST=private/songs`. To serve them from the web, upload the folder directly (`wrangler pages deploy .`) to a second Pages project kept behind Cloudflare Access rather than connecting that project to git.
+Songs you may play but not publish (transcriptions of copyrighted songs, for instance) go under `private/songs/<slug>/`, the same layout as `data/songs/`. Git ignores `private`, so a deployment built from the repository never has them, while the local site lists them beside the public songs (their pages open through `song.html?id=<slug>&base=private`). To keep that collection under version control of its own, make `private` a symlink to a separate, private repository (the author's is `../nagori-songs`, holding `songs/` and the `songs.json` that `make index` writes). `make index` writes `private/songs.json` for them; `make validate`, `make report`, `make propose` and `make render` find a slug in either root; imports land there with `DEST=private/songs`. To serve them from the web, upload the folder directly (`wrangler pages deploy .`) to a second Pages project kept behind Cloudflare Access rather than connecting that project to git. Or skip the deployment: the public site's "Your songs" panel reads the same folders into the browser on any device.
 
 Then, either way:
 

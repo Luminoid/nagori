@@ -798,6 +798,69 @@ a.meta-chip:hover {
   border-color: var(--accent, currentColor);
 }
 
+/* The visitor's own songs: a folder picker and a drop zone above the list. */
+.local-songs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin: 0 0 28px;
+  padding: 16px 18px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.local-songs.is-drop {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.local-text {
+  flex: 1 1 320px;
+}
+
+.local-text h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.local-text p {
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
+.local-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.local-hint {
+  color: var(--text-faint);
+  font-size: 13px;
+}
+
+.local-status {
+  flex-basis: 100%;
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.local-status:empty {
+  display: none;
+}
+
+.local-status.error {
+  color: var(--danger);
+}
+
+.song-card .actions .remove {
+  margin-left: auto;
+}
+
 .song-toolbar {
   display: flex;
   flex-wrap: wrap;
