@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from songlib import assemble_song, bar_times_from_tempo, lyric_syllables, write_song  # noqa: E402
+from songlib import assemble_song, bar_times_from_tempo, lyric_placements, lyric_syllables, write_song  # noqa: E402
 
 spec = importlib.util.spec_from_file_location("import_musicxml", ROOT / "scripts" / "import-musicxml.py")
 musicxml = importlib.util.module_from_spec(spec)
@@ -108,6 +108,28 @@ class ImportMusicXMLTest(unittest.TestCase):
         self.assertFalse(beats[1].get("ring"))
         bass = self.tracks[1]
         self.assertEqual(bass["measures"][1]["beats"][0]["notes"], [{"s": 2, "f": 0}], "a note without a string number is placed by hand position (open A here)")
+
+    def test_lyric_placements_put_each_syllable_on_its_sung_beat(self):
+        q = {"d": [1, 4], "t": 4, "notes": [{"s": 0, "f": 0}]}
+        vocal = {"measures": [{"beats": [q, q, q, q]}, {"beats": [q, q, q, q]}], "lyrics": "call- _ ing so\nlong _ gone", "offset": 1}
+        placed, unplaced = lyric_placements(vocal)
+        self.assertEqual(placed, [
+            {"bar": 0, "pos": 0.0, "text": "call", "join": True},
+            {"bar": 0, "pos": 0.5, "text": "ing"},
+            {"bar": 0, "pos": 0.75, "text": "so"},
+            {"bar": 1, "pos": 0.0, "text": "long"},
+            {"bar": 1, "pos": 0.5, "text": "gone"},
+        ], "a held note takes a beat but no entry, and a hyphenated word keeps its join")
+        self.assertEqual(unplaced, 0)
+        vocal["lyrics"] += " and on and on and on"
+        placed, unplaced = lyric_placements(vocal)
+        self.assertEqual(([e["text"] for e in placed], unplaced), (["call", "ing", "so", "long", "gone", "and"], 5), "syllables past the last sung beat are left out and counted")
+
+    def test_vocal_part_gives_the_lyric_row(self):
+        song = assemble_song(slug="x", title=self.title, artist=self.artist, tracks=self.tracks, curation={}, source={"name": "MusicXML", "url": None}, vocal=self.vocal)
+        self.assertEqual([e["text"] for e in song["lyrics"]], ["Knives", "out", "catch", "the"])
+        self.assertTrue(song["lyrics"][0].get("join"))
+        self.assertEqual([(e["bar"], e["pos"]) for e in song["lyrics"]], [(0, 0.5), (0, 0.75), (1, 0.0), (1, 0.5)], "the fixture's vocal line comes in on the third beat")
 
     def test_vocal_part_feeds_the_generated_sheet(self):
         self.assertEqual(self.vocal["lyrics"], "Knives-out catch the")

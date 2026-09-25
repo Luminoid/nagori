@@ -65,3 +65,36 @@ test('renderSystem emits fret numbers, finger digits, chord names, markers and a
   assert.equal((svg.match(/class="measure-hit"/g) || []).length, 2);
   assert.match(svg, /class="barline final"/);
 });
+
+test('lyrics add a row under the staff, widen a bar whose syllables would collide, and carry a word with a hyphen', () => {
+  const bars = [measure([q([{ s: 5, f: 0 }]), q([{ s: 5, f: 2 }]), q([{ s: 5, f: 3 }]), q([{ s: 5, f: 5 }])]), measure([q([]), q([]), q([]), q([])])];
+  const track = { strings: 6, measures: bars };
+  const plain = layoutTrack(track, 800);
+  const lyrics = [
+    { bar: 0, pos: 0, text: 'Wake' },
+    { bar: 0, pos: 0.5, text: 'from' },
+    { bar: 0, pos: 0.625, text: 'your' }, // sung between two of the guitar's beats
+    { bar: 0, pos: 0.75, text: 'sleep.' },
+    { bar: 1, pos: 0, text: 'dry', join: true },
+    { bar: 1, pos: 0.5, text: 'ing' },
+  ];
+  const [system] = layoutTrack(track, 800, { lyrics });
+  assert.equal(system.height, plain[0].height + 16);
+  assert.equal(system.measures[0].lyrics.length, 4);
+  assert.equal(plain[0].measures[0].width, plain[0].measures[1].width);
+  assert.ok(system.measures[0].width > system.measures[1].width, 'the bar with four syllables takes more room');
+  const svg = renderSystem(system, track, { lastBar: 1 });
+  assert.equal((svg.match(/class="lyric"/g) || []).length, 6);
+  assert.match(svg, /class="lyric hyphen"[^>]*>-</);
+  assert.match(svg, /data-lyric="3"[^>]*>sleep\.</);
+  const xs = [...svg.matchAll(/class="lyric" x="([\d.]+)"/g)].map((m) => Number(m[1]));
+  for (let i = 1; i < 4; i++) assert.ok(xs[i] - xs[i - 1] >= 24, `syllable ${i} clears the one before it (${xs[i] - xs[i - 1]}px)`);
+  assert.ok(xs[1] < xs[2] && xs[2] < xs[3], 'syllables keep their order');
+});
+
+test('layoutTrack without lyrics leaves the systems as they were', () => {
+  const track = { strings: 6, measures: [measure([q([{ s: 5, f: 0 }]), q([]), q([]), q([])])] };
+  const [system] = layoutTrack(track, 600, { lyrics: [] });
+  assert.equal(system.measures[0].lyrics, null);
+  assert.doesNotMatch(renderSystem(system, track, {}), /class="lyric"/);
+});

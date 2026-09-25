@@ -34,6 +34,7 @@ Everything is plain JSON. `scripts/validate-song.py <slug>` (or `make validate`)
 | `sections` | list | `[{ name, bar }]`, 0-based bars in increasing order, names unique (the importers number repeats: `Chorus`, `Chorus 2`). Names such as `Intro`, `Verse 1`, `Chorus` are translated on the Chinese interface. |
 | `chordTimeline` | list | `[{ bar, pos, chord }]`: the chord sounding from that point, `pos` a fraction of the bar (0 to below 1), sorted by bar and position. Drives the now-playing panel, the chord sheet highlight and the fingering labels. |
 | `chordSheet` | object or null | `{ source, sections: [{ name, lines }] }`. A line is `{ type: "line", segments: [{ chord, text }] }` (chords over lyrics) or `{ type: "bars", bars: [{ bar, chords }] }` (a progression grid). Section names match `sections` so the sheet follows the playhead (a name the song does not have fails validation; a null name is allowed). |
+| `lyrics` | list | `[{ bar, pos, text, join }]`: the syllables sung, each at the bar (0-based) and position (a fraction of the bar) of the beat it is sung on, in order; `join: true` when the word goes on in the next syllable (a hyphen is drawn between them). Drawn in a row under the tab of every part, with the syllable being sung highlighted during playback (a toggle hides the row). Optional; the importers fill it from the vocal part. |
 | `chordLibrary` | object | Voicings for this song's chords, low string to high: `"x35543"`, or `"8 10 10 8 8 8"` when a fret has two digits, with `fingers` in the same layout (`0` open, `x` muted, `1` to `4`). One voicing or a list; the first is what the chords view draws. See "Chord libraries". |
 | `fingeringOverrides` | object | Keyed by a position's note set, `"5:8,2:8,1:8"` as `string:fret` pairs, optionally prefixed by a track id and `|`. Each maps `"string:fret"` to a finger. |
 | `defaultTrack` | string | The part opened first. |
@@ -82,7 +83,7 @@ A beat:
 | `ring` | Let ring: notes sound until the string is played again. Arpeggiated chords need this to be fingered as one shape. |
 | `chord` | A chord label at this beat (fills the chord timeline). |
 | `bs`, `be` | Beam start and end. |
-| `stroke` | `"down"` or `"up"`: strum direction; the strings are staggered accordingly. |
+| `stroke` | `"down"` or `"up"`: strum direction, the hand's (a down stroke plays the low strings first); drawn as an arrow under the rhythm and played staggered accordingly. |
 | `notes[].s` | String index, 0 for the highest string (high e; G on a bass). |
 | `notes[].f` | Fret, 0 for open, up to 30. |
 | `notes[].tie` | The note continues the previous one on that string instead of sounding again. |
@@ -118,7 +119,7 @@ Importers merge this file into `song.json`. Keys every importer understands:
 - `chordVocabulary`: chord names detection may use when the source has no chord labels or sheet
 - `timelineAliases`: renames the transcription's chord labels in the timeline (`"Am/C": "Am"`, either spelling of accidentals matches) so they agree with the chord sheet's names
 - `harmonyTracks`: the part ids detection listens to (default all); `chordTimelinePriority`: which parts' labels win
-- `tracks`: per source part, an object with `id`, `name`, `role`, `capo` and the per-part settings above (`sound`, `level`, `fingering`, `chordLibrary`). The MusicXML importer keys this by the part's id in the file (`P1`, `P2`, ...), its name, or its number (`"1"`), and also takes `strings` and `tuning` (a plain notation part becomes a guitar or bass), `transpose` (semitones added to written pitches, `-12` for a guitar part written an octave up) and `vocal: true` (keep a part as the lyric line); the Songsterr importer keys it by part number.
+- `tracks`: per source part, an object with `id`, `name`, `role`, `capo` and the per-part settings above (`sound`, `level`, `fingering`, `chordLibrary`). The MusicXML importer keys this by the part's id in the file (`P1`, `P2`, ...), its name, or its number (`"1"`), and also takes `strings` and `tuning` (a plain notation part becomes a guitar or bass), `transpose` (semitones added to written pitches, `-12` for a guitar part written an octave up) and `vocal: true` (keep a part as the lyric line, for `lyrics` and the generated sheet); the Songsterr importer keys it by part number.
 - `chordLibrary`, `fingeringOverrides`
 
 The MusicXML importer also reads `sourceName`, `sourceUrl` and `sourceLabel` (the credit line the song page's footer shows). Importer-specific keys are listed in the README under "Adding a song".

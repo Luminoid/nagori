@@ -284,6 +284,25 @@ def validate_song(folder):
                             problems.append(f"{at}: bars line needs a bars list")
                     elif not isinstance(line.get("segments"), list):
                         problems.append(f"{at}: needs segments [{{chord, text}}]")
+    lyrics = song.get("lyrics")
+    if lyrics is not None and not isinstance(lyrics, list):
+        problems.append(f"{where}: lyrics must be a list of {{bar, pos, text}}")
+    last = None
+    for i, entry in enumerate(lyrics if isinstance(lyrics, list) else []):
+        at = f"{where}: lyric {i + 1}"
+        if not isinstance(entry, dict) or not isinstance(entry.get("bar"), int) or not (0 <= entry["bar"] < max(bars, 1)):
+            problems.append(f"{at} needs a bar inside the song")
+        elif not (isinstance(entry.get("pos"), (int, float)) and 0 <= entry["pos"] < 1):
+            problems.append(f"{at} pos must be at least 0 and below 1 (a fraction of the bar)")
+        elif not isinstance(entry.get("text"), str) or not entry["text"].strip():
+            problems.append(f"{at} needs its text")
+        elif "join" in entry and not isinstance(entry["join"], bool):
+            problems.append(f"{at} join must be true or false")
+        else:
+            key = (entry["bar"], entry["pos"])
+            if last is not None and key < last:
+                problems.append(f"{at} is out of order")
+            last = key
     source = song.get("source")
     if isinstance(source, dict) and source.get("url") is not None and not re.match(r"^https?://", str(source["url"])):
         problems.append(f"{where}: source.url must start with http:// or https://")

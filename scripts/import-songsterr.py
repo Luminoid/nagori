@@ -118,12 +118,19 @@ def convert_beat(beat):
     chord = beat.get("chord")
     if chord and chord.get("text"):
         out["chord"] = chord["text"]
-    if beat.get("pickStroke") in ("up", "down"):
+    # A strum comes two ways that disagree by convention: brushStroke.direction is the hand's (down plays the
+    # low strings first, which is what the tab's arrow and the playback's stagger mean), while upStroke and
+    # downStroke name the arrow Songsterr draws along the staff, which points the other way (a brush "down"
+    # beat carries upStroke). pickStroke is the pick-direction symbol, also the hand's.
+    brush = beat.get("brushStroke")
+    if isinstance(brush, dict) and brush.get("direction") in ("up", "down"):
+        out["stroke"] = brush["direction"]
+    elif beat.get("pickStroke") in ("up", "down"):
         out["stroke"] = beat["pickStroke"]
-    elif beat.get("upStroke"):
+    elif beat.get("downStroke"):
         out["stroke"] = "up"
-    elif beat.get("brushStroke"):
-        out["stroke"] = beat["brushStroke"].get("direction", "down")
+    elif beat.get("upStroke"):
+        out["stroke"] = "down"
     notes = [n for n in (convert_note(n) for n in beat.get("notes", [])) if n]
     if beat.get("rest") or not notes:
         out["rest"] = True

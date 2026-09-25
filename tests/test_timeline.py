@@ -64,6 +64,23 @@ class ValidatorTimelineTest(unittest.TestCase):
             song["chordTimeline"].insert(1, dict(song["chordTimeline"][0]))
         self.assertTrue(any("repeats a position" in p for p in self.check(duplicate)))
 
+    def test_lyrics_need_a_bar_a_position_and_text(self):
+        def bad(song):
+            song["lyrics"] = [{"bar": 0, "pos": 0, "text": "one"}, {"bar": 0, "pos": 1, "text": "two"}, {"bar": 0, "pos": 0.5}, {"bar": 99, "pos": 0, "text": "far"}, {"bar": 1, "pos": 0, "text": "back", "join": 1}]
+        problems = self.check(bad)
+        self.assertTrue(any("lyric 2 pos" in p for p in problems))
+        self.assertTrue(any("lyric 3 needs its text" in p for p in problems))
+        self.assertTrue(any("lyric 4 needs a bar" in p for p in problems))
+        self.assertTrue(any("lyric 5 join" in p for p in problems))
+
+        def unsorted(song):
+            song["lyrics"] = [{"bar": 1, "pos": 0, "text": "two"}, {"bar": 0, "pos": 0.5, "text": "one"}]
+        self.assertTrue(any("lyric 2 is out of order" in p for p in self.check(unsorted)))
+
+        def good(song):
+            song["lyrics"] = [{"bar": 0, "pos": 0, "text": "one", "join": True}, {"bar": 1, "pos": 0.5, "text": "two"}]
+        self.assertEqual(self.check(good), [])
+
     def test_source_url_and_video_id(self):
         def bad_url(song):
             song["source"] = {"name": "x", "url": "javascript:alert(1)"}

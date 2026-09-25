@@ -16,6 +16,8 @@ const TAB = {
   PAD_R: 8,
   MIN_BEAT: 16,
   MIN_MEASURE: 48,
+  LYRIC_H: 16, // the lyric row under a system, when the song has lyrics
+  LYRIC_Y: 48, // its baseline, below the staff's bottom line
 };
 
 const Y = { marker: 12, chord: 28, ringLabel: 38, ring: 41 };
@@ -27,8 +29,8 @@ export function beatWidth(beat, unit = TAB.UNIT) {
   return Math.max(TAB.MIN_BEAT, w);
 }
 
-function systemHeight(strings) {
-  return TAB.TOP + (strings - 1) * TAB.STRING_GAP + TAB.BOTTOM;
+function systemHeight(strings, lyrics = false) {
+  return TAB.TOP + (strings - 1) * TAB.STRING_GAP + TAB.BOTTOM + (lyrics ? TAB.LYRIC_H : 0);
 }
 
 /** Start fraction (0..1) of each beat inside its measure, by cumulative duration. */
@@ -50,7 +52,43 @@ export function beatIndexAt(measure, frac) {
   return idx;
 }
 
-export function layoutTrack(track, availableWidth, { unit = TAB.UNIT } = {}) {
+/** x of a fraction of a measure, interpolated inside the beat that holds it; `fallback` for a measure without beats. */
+export function fractionX(beats, fractions, frac, fallback) {
+  if (!beats.length) return fallback;
+  let k = 0;
+  for (let i = 0; i < fractions.length; i++) if (fractions[i] <= frac + 1e-9) k = i;
+  const span = (k + 1 < fractions.length ? fractions[k + 1] : 1) - fractions[k];
+  const along = span > 0 ? Math.min(1, Math.max(0, (frac - fractions[k]) / span)) : 0;
+  return beats[k].x + along * beats[k].w;
+}
+
+/** The width of a syllable in the lyric row (10px text). */
+function lyricWidth(text) {
+  let w = 0;
+  for (const ch of text) w += /[\s.,;:'"!?\-]/.test(ch) ? 3 : /[A-Z]/.test(ch) ? 6.6 : 5.4;
+  return w;
+}
+
+/** How much wider a measure must be for its syllables not to run into each other or past the bar line (1 = wide enough). */
+function lyricStretch(measure, beats, natural, syllables) {
+  const fractions = beatFractions(measure);
+  const xs = syllables.map((s) => fractionX(beats, fractions, s.pos, TAB.PAD_L));
+  let stretch = 1;
+  syllables.forEach((s, k) => {
+    const need = lyricWidth(s.text) + (s.join ? 7 : 4);
+    const room = k + 1 < syllables.length ? xs[k + 1] - xs[k] : natural - xs[k] + TAB.PAD_L; // the next bar's first syllable sits at least PAD_L past the bar line
+    if (room > 0 && room < need) stretch = Math.max(stretch, need / room);
+  });
+  return Math.min(stretch, 3);
+}
+
+/** `lyrics`: the song's syllables `[{ bar, pos, text, join }]`; each measure then carries its own (with their index) and the system grows a lyric row. */
+export function layoutTrack(track, availableWidth, { unit = TAB.UNIT, lyrics = null } = {}) {
+  const lyricsByBar = new Map();
+  (lyrics || []).forEach((entry, index) => {
+    if (!lyricsByBar.has(entry.bar)) lyricsByBar.set(entry.bar, []);
+    lyricsByBar.get(entry.bar).push({ ...entry, index });
+  });
   let currentSig = null;
   const measures = track.measures.map((m, i) => {
     const sig = m.sig && (!currentSig || m.sig[0] !== currentSig[0] || m.sig[1] !== currentSig[1]) ? m.sig : null;
@@ -62,8 +100,19 @@ export function layoutTrack(track, availableWidth, { unit = TAB.UNIT } = {}) {
       x += w;
       return placed;
     });
-    const natural = Math.max(x + TAB.PAD_R, TAB.MIN_MEASURE) + (m.marker ? 6 : 0);
-    return { index: i, beats, natural, marker: m.marker || null, sig };
+    let natural = Math.max(x + TAB.PAD_R, TAB.MIN_MEASURE) + (m.marker ? 6 : 0);
+    const syllables = lyricsByBar.get(i) || null;
+    if (syllables) {
+      const stretch = lyricStretch(m, beats, natural, syllables);
+      if (stretch > 1) {
+        for (const b of beats) {
+          b.x *= stretch;
+          b.w *= stretch;
+        }
+        natural *= stretch;
+      }
+    }
+    return { index: i, beats, natural, marker: m.marker || null, sig, lyrics: syllables };
   });
   const inner = Math.max(120, availableWidth - TAB.LABEL_W);
   const rows = [];
@@ -79,7 +128,7 @@ export function layoutTrack(track, availableWidth, { unit = TAB.UNIT } = {}) {
     used += m.natural;
   }
   if (row.length) rows.push(row);
-  const height = systemHeight(track.strings);
+  const height = systemHeight(track.strings, lyricsByBar.size > 0);
   return rows.map((ms, si) => {
     const total = ms.reduce((a, m) => a + m.natural, 0);
     let scale = inner / total;
@@ -216,6 +265,21 @@ export function renderSystem(system, track, ctx = {}) {
       out.push(`<text class="time-sig" x="${m.x + 4}" y="${mid + 11}">${m.sig[1]}</text>`);
     }
     out.push(`<text class="bar-number" x="${m.x + 3}" y="${sb + 36}">${m.index + 1}</text>`);
+
+    // lyrics: each syllable under the point of the bar it is sung at, a hyphen carrying a word to its next syllable
+    if (m.lyrics) {
+      const fractions = beatFractions(src);
+      const xs = m.lyrics.map((s) => fractionX(m.beats, fractions, s.pos, m.x + TAB.PAD_L) - 5);
+      const ly = sb + TAB.LYRIC_Y;
+      m.lyrics.forEach((s, k) => {
+        out.push(`<text class="lyric" x="${xs[k].toFixed(1)}" y="${ly}" data-lyric="${s.index}">${escapeXml(s.text)}</text>`);
+        if (s.join) {
+          const end = xs[k] + lyricWidth(s.text);
+          const next = k + 1 < xs.length ? xs[k + 1] : m.x + m.width + TAB.PAD_L - 5;
+          out.push(`<text class="lyric hyphen" x="${((end + next) / 2).toFixed(1)}" y="${ly}">-</text>`);
+        }
+      });
+    }
 
     if (!src.beats.length) {
       out.push(restGlyph(1, m.x + m.width / 2, mid));

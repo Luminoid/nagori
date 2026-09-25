@@ -1381,6 +1381,21 @@ a.meta-chip:hover {
   stroke: var(--tab-dim);
 }
 
+.tab-svg .lyric {
+  fill: var(--text);
+  font-size: 10px;
+}
+
+.tab-svg .lyric.hyphen {
+  fill: var(--tab-dim);
+  text-anchor: middle;
+}
+
+.tab-svg .lyric.is-active {
+  fill: var(--accent-text);
+  font-weight: 700;
+}
+
 .tab-svg .tuplet {
   fill: var(--tab-dim);
   font-size: 8px;

@@ -5,7 +5,7 @@ An importer's job is to produce, in this format:
 
     tracks   [{ id, name, role, instrument, strings, tuning, kind, measures,
                 capo?, tempo?, partId? }]           string-instrument parts
-    vocal    { measures, lyrics, offset }            optional, for the generated sheet
+    vocal    { measures, lyrics, offset }            optional, for the lyric row under the tab and the generated sheet
     sheet    { source, sections }                    optional, a chord sheet from the source
     video    { provider, id, title, barTimes }       optional
     source   { name, url, ... }
@@ -221,6 +221,30 @@ def sung_slots(measures, offset=1):
     return slots
 
 
+def lyric_placements(vocal):
+    """The lyric row under the tab: every syllable of a vocal track at the (bar, position) of the beat it is
+    sung on, `[{ bar, pos, text, join? }]` with `join` on a syllable whose word goes on. A held note ('_')
+    takes no entry. Returns the list and how many syllables were left without a sung beat."""
+    slots = sung_slots(vocal["measures"], vocal.get("offset") or 1)
+    placed = []
+    slot = 0
+    unplaced = 0
+    for line in lyric_syllables(vocal["lyrics"]):
+        for text, joins in line:
+            if slot >= len(slots):
+                unplaced += bool(text)
+                continue
+            bar, pos = slots[slot]
+            slot += 1
+            if not text:
+                continue
+            entry = {"bar": bar, "pos": round(pos, 4), "text": text}
+            if joins:
+                entry["join"] = True
+            placed.append(entry)
+    return placed, unplaced
+
+
 def lyric_sheet(vocal, timeline, sections, bars):
     """Chords over lyrics, from a vocal track ({ measures, lyrics, offset }) and the chord timeline."""
     lines = lyric_syllables(vocal["lyrics"])
@@ -392,6 +416,10 @@ def assemble_song(*, slug, title, artist, tracks, curation, source, timeline_onl
         else:
             sheet = {"source": "generated", "generated": True, "sections": progression_sheet(timeline, sections, bars)}
             print("  chord sheet: generated progression (no lyrics in the transcription)")
+    lyrics = []
+    if vocal is not None and vocal.get("lyrics", "").strip():
+        lyrics, unplaced = lyric_placements(vocal)
+        print(f"  lyrics: {len(lyrics)} syllables under the tab" + (f" ({unplaced} past the last sung beat left out)" if unplaced else ""))
 
     if default_track is None or not any(t["id"] == default_track for t in tracks):
         default_track = tracks[0]["id"]
@@ -414,6 +442,7 @@ def assemble_song(*, slug, title, artist, tracks, curation, source, timeline_onl
         "sections": sections,
         "chordTimeline": timeline,
         "chordSheet": sheet,
+        "lyrics": lyrics,
         "chordLibrary": curation.get("chordLibrary", {}),
         "fingeringOverrides": curation.get("fingeringOverrides", {}),
         "defaultTrack": curation.get("defaultTrack", default_track),

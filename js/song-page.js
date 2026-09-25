@@ -47,6 +47,9 @@ const state = {
   systemEls: [],
   barToSystem: [],
   showFingers: storage.get('nagori:fingers', true),
+  showLyrics: storage.get('nagori:lyrics', true),
+  lyricIndex: -1, // the syllable lit under the playhead, and its element
+  lyricEl: null,
   autoscroll: storage.get('nagori:autoscroll', true),
   sync: null, // the active player: state.video or state.tab
   video: null,
@@ -535,6 +538,34 @@ function hideCursor() {
     svg.querySelector('[data-cursor]').classList.add('is-hidden');
     svg.querySelector('.measure-bg.is-active')?.classList.remove('is-active');
   }
+  state.lyricEl?.classList.remove('is-active');
+  state.lyricEl = null;
+  state.lyricIndex = -1;
+}
+
+/** Light the syllable being sung: the last one at or before (bar, frac), as long as it is from this bar or the one before. */
+function updateLyric(bar, frac) {
+  const lyrics = state.showLyrics ? state.song.lyrics : null;
+  if (!lyrics || !lyrics.length) return;
+  let lo = 0;
+  let hi = lyrics.length - 1;
+  let idx = -1;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    const e = lyrics[mid];
+    if (e.bar < bar || (e.bar === bar && e.pos <= frac + 1e-6)) {
+      idx = mid;
+      lo = mid + 1;
+    } else {
+      hi = mid - 1;
+    }
+  }
+  if (idx >= 0 && bar - lyrics[idx].bar > 1) idx = -1;
+  if (idx === state.lyricIndex) return;
+  state.lyricEl?.classList.remove('is-active');
+  state.lyricIndex = idx;
+  state.lyricEl = idx >= 0 ? state.systemEls[state.barToSystem[lyrics[idx].bar]]?.querySelector(`[data-lyric="${idx}"]`) || null : null;
+  state.lyricEl?.classList.add('is-active');
 }
 
 function updateCursor(bar, frac, playing) {
@@ -542,6 +573,7 @@ function updateCursor(bar, frac, playing) {
   if (!entry || !state.layout) return;
   const measure = entry.track.measures[bar];
   if (!measure) return;
+  updateLyric(bar, frac);
   const beat = measure.beats.length ? beatIndexAt(measure, frac) : 0;
   if (bar === state.pos.bar && beat === state.pos.beat) return;
   const systemIndex = state.barToSystem[bar];
@@ -587,12 +619,21 @@ function renderToolbar() {
     storage.set('nagori:fingers', state.showFingers);
     els.tabView.classList.toggle('hide-fingers', !state.showFingers);
   } });
+  const lyricsToggle = state.song.lyrics?.length
+    ? h('input', { type: 'checkbox', checked: state.showLyrics ? true : null, onchange: (e) => {
+      state.showLyrics = e.target.checked;
+      storage.set('nagori:lyrics', state.showLyrics);
+      const entry = state.tracks.get(state.trackId);
+      if (entry && state.layout) renderTab(entry); // the row changes the systems' height and the bars' widths
+    } })
+    : null;
   return h(
     'div',
     { class: 'toolbar' },
     picker,
     h('span', { class: 'spacer' }),
     h('label', { class: 'toggle' }, fingersToggle, t('toolbar.fingers')),
+    ...(lyricsToggle ? [h('label', { class: 'toggle' }, lyricsToggle, t('toolbar.lyrics'))] : []),
     h('a', { class: 'btn small', href: '#positions', onclick: (e) => {
       e.preventDefault(); // a bare fragment would resolve against <base> on songs/<id>.html
       document.getElementById('positions')?.scrollIntoView({ block: 'start', behavior: 'smooth' });
@@ -625,10 +666,12 @@ function tabWidth() {
 function renderTab(entry) {
   const width = tabWidth();
   state.layoutWidth = width;
-  state.layout = layoutTrack(entry.track, width);
+  state.layout = layoutTrack(entry.track, width, { lyrics: state.showLyrics ? state.song.lyrics : null });
   state.barToSystem = [];
   state.systemEls = [];
   state.pos = { bar: -1, beat: -1, system: -1 };
+  state.lyricIndex = -1;
+  state.lyricEl = null;
   clear(els.tabView);
   els.tabView.classList.toggle('hide-fingers', !state.showFingers);
   const lastBar = entry.track.measures.length - 1;
