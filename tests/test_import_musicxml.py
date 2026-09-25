@@ -312,3 +312,15 @@ class IndexAndExamplesTest(unittest.TestCase):
             self.assertEqual(validator.validate_song(folder), [], folder.name)
             song = json.loads((folder / "song.json").read_text())
             self.assertTrue(song.get("chordTimeline"), "the example shows chord labels")
+
+
+class TimelineAliasTests(unittest.TestCase):
+    def test_timeline_aliases_rename_labels_in_either_spelling(self):
+        from songlib import alias_timeline
+
+        timeline = [{"bar": 0, "pos": 0, "chord": "Am/C"}, {"bar": 1, "pos": 0, "chord": "D/F♯"}, {"bar": 2, "pos": 0.5, "chord": "E"}]
+        out = alias_timeline(timeline, {"Am/C": "Am", "D/F#": "Dadd9/F#"})
+        self.assertEqual([e["chord"] for e in out], ["Am", "Dadd9/F#", "E"])
+        self.assertEqual(out[2], timeline[2])
+        self.assertIs(alias_timeline(timeline, {}), timeline)
+

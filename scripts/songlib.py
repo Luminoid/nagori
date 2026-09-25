@@ -109,6 +109,20 @@ def bar_lengths(measures, signature=(4, 4)):
     return out
 
 
+def ascii_chord(name):
+    """A chord name with ASCII accidentals, the form the site matches names in."""
+    return str(name).replace("♯", "#").replace("♭", "b").strip()
+
+
+def alias_timeline(timeline, aliases):
+    """Rename chord labels in a timeline (`{"Am/C": "Am"}`), matching either spelling of accidentals,
+    so the transcription's labels agree with the chord sheet's names (curation `timelineAliases`)."""
+    if not aliases:
+        return timeline
+    table = {ascii_chord(k): v for k, v in aliases.items()}
+    return [dict(entry, chord=table.get(ascii_chord(entry["chord"]), entry["chord"])) for entry in timeline]
+
+
 def chord_timeline(tracks, priority_ids, signature=(4, 4)):
     """Per-measure chord annotations, taking the first track (by priority) that annotates a bar.
 
@@ -370,6 +384,7 @@ def assemble_song(*, slug, title, artist, tracks, curation, source, timeline_onl
             t["pitchOffset"] = (t.get("capo", 0) if t["kind"] == "guitar" else 0) - common
         timeline = detect_chord_timeline(harmony + bass, bars, vocabulary=sorted(vocabulary) or None)
         print(f"  chords detected from notes: {len(timeline)} changes" + (f" (vocabulary of {len(vocabulary)})" if vocabulary else ""))
+    timeline = alias_timeline(timeline, curation.get("timelineAliases") or {})
     if sheet is None and timeline:
         if vocal is not None and vocal.get("lyrics", "").strip():
             sheet = {"source": "generated", "generated": True, "sections": lyric_sheet(vocal, timeline, sections, bars)}
@@ -382,8 +397,8 @@ def assemble_song(*, slug, title, artist, tracks, curation, source, timeline_onl
         default_track = tracks[0]["id"]
     return {
         "id": slug,
-        "title": title,
-        "artist": artist,
+        "title": curation.get("title") or title,  # the source's spelling can be corrected here
+        "artist": curation.get("artist") or artist,
         "album": curation.get("album"),
         "year": curation.get("year"),
         "key": curation.get("key"),

@@ -108,6 +108,7 @@ So a song in standard tuning needs no library of its own to get chord diagrams a
 Importers merge this file into `song.json`. Keys every importer understands:
 
 - `album`, `year`, `key`, `duration`, `tuning` (label), `capo`, `defaultTrack`
+- `title`, `artist`: the spelling to show when the source's differs
 - `sortArtist`: how the home page's artist sort files the song, e.g. `Bach, Johann Sebastian` for an artist shown as `Johann Sebastian Bach`; defaults to the artist as written (a leading "The" is ignored). Goes into the index row as `artistSort`.
 - `added`: the day the song joined the collection, `YYYY-MM-DD`, for the home page's "Newest" order. `make index` records the day a folder first appears and keeps it on rebuilds, so this key is only for backdating.
 - `duration` is optional: without it, `make index` takes the length the tempo map gives.
@@ -115,6 +116,7 @@ Importers merge this file into `song.json`. Keys every importer understands:
 - `sections`: `[{ name, bar }]` when the source has no markers
 - `video`: `{ id, title, barTimes }`, or `{ id, title, offset }` to compute bar times from the tempo map, `offset` being the second in the video where bar 1 starts. (The author's Songsterr importer takes the sync points from the source instead when it has them.)
 - `chordVocabulary`: chord names detection may use when the source has no chord labels or sheet
+- `timelineAliases`: renames the transcription's chord labels in the timeline (`"Am/C": "Am"`, either spelling of accidentals matches) so they agree with the chord sheet's names
 - `harmonyTracks`: the part ids detection listens to (default all); `chordTimelinePriority`: which parts' labels win
 - `tracks`: per source part, an object with `id`, `name`, `role`, `capo` and the per-part settings above (`sound`, `level`, `fingering`, `chordLibrary`). The MusicXML importer keys this by the part's id in the file (`P1`, `P2`, ...), its name, or its number (`"1"`), and also takes `strings` and `tuning` (a plain notation part becomes a guitar or bass), `transpose` (semitones added to written pitches, `-12` for a guitar part written an octave up) and `vocal: true` (keep a part as the lyric line); the Songsterr importer keys it by part number.
 - `chordLibrary`, `fingeringOverrides`
