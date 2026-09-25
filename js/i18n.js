@@ -12,6 +12,7 @@ const en = {
   'nav.chords': 'Chords',
   'nav.tab': 'Tab',
   'nav.view': 'View',
+  'nav.source': 'Source code on GitHub',
   'theme.toggle': 'Toggle light or dark theme',
   'lang.toggle': 'Switch language',
 
@@ -265,6 +266,7 @@ const zh = {
   'nav.chords': '和弦',
   'nav.tab': '六线谱',
   'nav.view': '视图',
+  'nav.source': 'GitHub 上的源码',
   'theme.toggle': '切换深浅主题',
   'lang.toggle': '切换语言',
 

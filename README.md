@@ -2,6 +2,10 @@
 
 A guitar practice site you host with your own songs. This copy is configured for `https://guitar.luminoid.dev`, the author's instance; the name, Nagori (名残), is the trace a note leaves as it fades. Every song gets a chords view and a tab view, the video or a synthesized playback of the tab to follow bar by bar, and the left-hand finger positions for every part; beside the songs sit a metronome, a fretboard note map and a tuner. English and Chinese. Vanilla JavaScript, SVG and Web Audio, no build step, no dependencies: a folder of static files on any host.
 
+<p align="center">
+  <a href="https://guitar.luminoid.dev"><img src=".github/social-preview.png" alt="Nagori: guitar chords, tabs and practice tools with synthesized playback and video sync" width="720"></a>
+</p>
+
 The songs in this repository are a small public-domain collection. The author's own songs live in a separate private repository linked in as `private/`, which git ignores, so they never reach a deployment built from this one (see "A private collection"). To run the site with yours, see "Use it with your own songs".
 
 ## Use it with your own songs
@@ -24,7 +28,7 @@ To run your own copy of the site with your songs built in:
 1. Fork or download the repository and delete the folders under `data/songs/` you do not want (they are the public-domain starter collection).
 2. Add songs: import a MusicXML score from Guitar Pro, MuseScore or TuxGuitar, or write the JSON by hand (`make example` drops a hand-written twelve-bar blues into the collection to start from). "Adding a song" below has the commands, [docs/song-format.md](docs/song-format.md) the format.
 3. `make index` rebuilds the home page listing and writes each song's page from the song folders (the importers do it themselves), `make validate` checks every song, `make test` runs the test suite over your data too.
-4. Edit `data/site.json`: the site's name and address, its default language (`"auto"` follows the browser, or `"en"` / `"zh"`), the copyright line, whether the host serves pages without their `.html` (`cleanUrls`, see "Deployment"), and per language the home page title and intro, the collection's name and the footer line. Empty fields keep the built-in text. The name also sits in the titles, meta tags and noscript lines of the four HTML files, in `manifest.webmanifest` and in `icons/og.svg` (regenerate `og.png` after editing it): search for "Nagori" to find every spot.
+4. Edit `data/site.json`: the site's name and address, its default language (`"auto"` follows the browser, or `"en"` / `"zh"`), the copyright line, whether the host serves pages without their `.html` (`cleanUrls`, see "Deployment"), the repository a GitHub link in the header points to (`repo`, empty for none), and per language the home page title and intro, the collection's name and the footer line. Empty fields keep the built-in text. The name also sits in the titles, meta tags and noscript lines of the four HTML files, in `manifest.webmanifest` and in `icons/og.svg` (regenerate `og.png` after editing it): search for "Nagori" to find every spot.
 5. Deploy the folder as static files (see "Deployment"). The code is MIT licensed; the songs you add are yours to license.
 
 ## Features
@@ -75,6 +79,7 @@ robots.txt, sitemap.xml  for crawlers (make index writes both once data/site.jso
 _headers                 security headers for Cloudflare Pages and Netlify
 sw.js                    service worker: the app shell and every visited page and song, network first
 icons/                   favicon (SVG and PNG), home-screen icons, the Open Graph card and its SVG source
+.github/social-preview.png  the card GitHub shows when the repository is shared (1280 × 640)
 css/styles.css           design tokens (dark and light), layout, tab and diagram styles
 js/song-page.js          page controller: views, video sync, cursor, positions
 js/tab-renderer.js       measure layout into systems and SVG rendering (pure functions)

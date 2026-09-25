@@ -17,7 +17,8 @@ test('site.json has the documented shape', async () => {
     for (const lang of Object.keys(site[key])) assert.ok(['en', 'zh'].includes(lang), `${key}.${lang}`);
   }
   if ('cleanUrls' in site) assert.equal(typeof site.cleanUrls, 'boolean');
-  assert.deepEqual(Object.keys(site).filter((k) => !['name', 'defaultLang', 'url', 'cleanUrls', 'copyright', 'title', 'intro', 'collection', 'footer'].includes(k)), []);
+  if ('repo' in site) assert.match(site.repo, /^(https:\/\/\S+)?$/, 'repo is an https address or empty');
+  assert.deepEqual(Object.keys(site).filter((k) => !['name', 'defaultLang', 'url', 'cleanUrls', 'repo', 'copyright', 'title', 'intro', 'collection', 'footer'].includes(k)), []);
 });
 
 test('page links drop .html only when the site says its host serves pages without it', () => {

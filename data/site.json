@@ -3,6 +3,7 @@
   "defaultLang": "auto",
   "url": "https://guitar.luminoid.dev",
   "cleanUrls": true,
+  "repo": "https://github.com/Luminoid/nagori",
   "copyright": "© 2026 Luminoid · MIT",
   "title": {
     "en": "",

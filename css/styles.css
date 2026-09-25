@@ -217,6 +217,16 @@ svg {
   height: 18px;
 }
 
+.repo-link {
+  gap: 6px;
+  text-decoration: none;
+}
+
+.repo-link svg {
+  width: 16px;
+  height: 16px;
+}
+
 /* --- Generic controls --- */
 
 .chip-row {

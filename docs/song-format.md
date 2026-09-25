@@ -128,12 +128,12 @@ Write `song.json` and the track files directly; `examples/twelve-bar-blues/` is 
 ## site.json
 
 ```json
-{ "name": "Nagori", "defaultLang": "auto", "url": "https://guitar.luminoid.dev", "cleanUrls": true, "copyright": "© 2026 Luminoid · MIT",
+{ "name": "Nagori", "defaultLang": "auto", "url": "https://guitar.luminoid.dev", "cleanUrls": true, "repo": "https://github.com/Luminoid/nagori", "copyright": "© 2026 Luminoid · MIT",
   "title": { "en": "", "zh": "" }, "intro": { "en": "", "zh": "" },
   "collection": { "en": "", "zh": "" }, "footer": { "en": "", "zh": "" } }
 ```
 
-`name` is the brand in the header and the page titles. `url` is where the site is published (`https://tabs.example.com`, or with a sub-path); once it is set, `make index` also writes `sitemap.xml` and `robots.txt` for it. `cleanUrls` says the host serves `song.html` at `/song` and `songs/<id>.html` at `/songs/<id>` (Cloudflare Pages, GitHub Pages): the pages' links, canonical addresses, structured data and the sitemap then leave the `.html` out; omit it, or set it false, for a host that serves the file names only. `defaultLang` is `auto` (follow the browser), `en` or `zh`; a visitor's own choice, made with the header toggle or `?lang=`, always wins. The texts are per language and optional: `title` and `intro` replace the home page's heading and paragraph, `collection` puts a visible heading over the song grid, `footer` replaces the footer line on the home and tools pages. `copyright` (one string for every language, `"© 2026 Name · MIT"`) is appended to every footer, the song page's included; leave it empty for no such line.
+`name` is the brand in the header and the page titles. `url` is where the site is published (`https://tabs.example.com`, or with a sub-path); once it is set, `make index` also writes `sitemap.xml` and `robots.txt` for it. `cleanUrls` says the host serves `song.html` at `/song` and `songs/<id>.html` at `/songs/<id>` (Cloudflare Pages, GitHub Pages): the pages' links, canonical addresses, structured data and the sitemap then leave the `.html` out; omit it, or set it false, for a host that serves the file names only. `repo` puts a GitHub link among the header's controls on every page; leave it empty, or out, for none. `defaultLang` is `auto` (follow the browser), `en` or `zh`; a visitor's own choice, made with the header toggle or `?lang=`, always wins. The texts are per language and optional: `title` and `intro` replace the home page's heading and paragraph, `collection` puts a visible heading over the song grid, `footer` replaces the footer line on the home and tools pages. `copyright` (one string for every language, `"© 2026 Name · MIT"`) is appended to every footer, the song page's included; leave it empty for no such line.
 
 ## Songs added in the browser
 
