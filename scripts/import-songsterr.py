@@ -22,6 +22,7 @@ Only the Python standard library is used.
 """
 
 import argparse
+import copy
 import gzip
 import json
 import re
@@ -150,8 +151,48 @@ def tempo_map(automation):
     return sorted(out, key=lambda e: (e["bar"], e["pos"]))
 
 
+def played_order(raw_measures):
+    """Written bar indices in the order they are played, repeat signs unfolded: `repeatStart` opens a section,
+    `repeat` on its last bar says how many times it plays, `alternateEnding` lists the passes a bar belongs to.
+    Songsterr's sync points count played bars, so the tab has to as well."""
+    order = []
+    i = 0
+    start = 0
+    passes = {}
+    limit = 8 * len(raw_measures) + 8  # a malformed repeat must not loop forever
+    while i < len(raw_measures) and len(order) < limit:
+        m = raw_measures[i]
+        if m.get("repeatStart"):
+            start = i
+            passes.setdefault(start, 1)
+        current = passes.get(start, 1)
+        ending = m.get("alternateEnding")
+        if ending and current not in ending:
+            i += 1
+            continue
+        order.append(i)
+        count = m.get("repeat")
+        if count and current < count:
+            passes[start] = current + 1
+            i = start
+            continue
+        i += 1
+    return order
+
+
+def unfold_tempo(entries, order):
+    """A tempo map written against written bars, restated for every pass of a repeated bar (a change repeated as such is kept once)."""
+    out = []
+    for played, written in enumerate(order):
+        for e in entries:
+            if e["bar"] == written and not (out and (out[-1]["bpm"], out[-1]["unit"]) == (e["bpm"], e["unit"])):
+                out.append({**e, "bar": played})
+    return out
+
+
 def convert_measures(part):
-    measures = []
+    """The part's bars as played: repeats unfolded (played_order), a marker kept on a bar's first pass only."""
+    written = []
     for m in part["measures"]:
         voices = m.get("voices", [])
         if len(voices) > 1:
@@ -162,7 +203,18 @@ def convert_measures(part):
             out["marker"] = m["marker"]["text"]
         if m.get("signature"):
             out["sig"] = m["signature"]
-        measures.append(out)
+        written.append(out)
+    order = played_order(part["measures"])
+    if order == list(range(len(written))):
+        return written
+    measures = []
+    seen = set()
+    for i in order:
+        m = copy.deepcopy(written[i])
+        if i in seen:
+            m.pop("marker", None)
+        seen.add(i)
+        measures.append(m)
     return measures
 
 
@@ -311,7 +363,10 @@ def main():
             part = fetch_part(args.song_id, revision_id, meta["image"], t["partId"])
             lyrics = next((ln for ln in part.get("newLyrics") or [] if ln.get("text")), None)
             if lyrics:
-                vocal = {"measures": convert_measures(part), "lyrics": lyrics["text"], "offset": lyrics.get("offset") or 1}
+                order = played_order(part["measures"])
+                written_offset = (lyrics.get("offset") or 1) - 1  # the written bar the lyrics start on, moved to its first pass
+                offset = order.index(written_offset) + 1 if written_offset in order else 1
+                vocal = {"measures": convert_measures(part), "lyrics": lyrics["text"], "offset": offset}
         if include is not None and index not in include:
             continue
         if not args.all_tracks and (t.get("isDrums") or t.get("isVocalTrack") or not t.get("tuning")):
@@ -329,9 +384,11 @@ def main():
             "partId": t["partId"],
             "measures": convert_measures(part),
         }
+        if not tracks and len(track["measures"]) != len(part["measures"]):
+            print(f"  repeats unfolded: {len(part['measures'])} written bars, {len(track['measures'])} played")
         tempo = (part.get("automations") or {}).get("tempo") or []
         if tempo:
-            track["tempo"] = tempo_map(tempo)
+            track["tempo"] = unfold_tempo(tempo_map(tempo), played_order(part["measures"]))
         if part.get("capo"):
             track["capo"] = part["capo"]
         apply_track_meta(track, track_meta.get(str(t["partId"]), {}))
