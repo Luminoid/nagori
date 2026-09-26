@@ -1179,6 +1179,10 @@ a.meta-chip:hover {
   gap: 4px;
 }
 
+.source-row.no-video .mixer {
+  flex: 1 1 auto; /* no source switch to share a row with: the part chips share theirs with the click toggle */
+}
+
 .chip.mini {
   padding: 3px 9px;
   min-height: 26px;

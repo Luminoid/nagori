@@ -243,15 +243,10 @@ function renderSidebar() {
   );
   els.soundSelect.value = state.sound;
   els.soundLabel = h('label', { class: 'sound-field', title: t('sound.title'), style: { display: 'none' } }, h('span', {}, t('sound.label')), els.soundSelect);
-  els.sourceRow = h(
-    'div',
-    { class: 'source-row' },
-    h('div', { class: 'segmented small', role: 'group', 'aria-label': t('source.label') }, els.sourceVideo, els.sourceTab),
-    els.clickLabel,
-    els.soundLabel,
-    els.mixer,
-    els.playerError,
-  );
+  // Without a video there is nothing to switch from, so the row starts with the sound picker instead of a one-option switch.
+  els.sourceRow = song.video
+    ? h('div', { class: 'source-row' }, h('div', { class: 'segmented small', role: 'group', 'aria-label': t('source.label') }, els.sourceVideo, els.sourceTab), els.clickLabel, els.soundLabel, els.mixer, els.playerError)
+    : h('div', { class: 'source-row no-video' }, els.soundLabel, els.mixer, els.clickLabel, els.playerError); // the click toggle ends the part chips' row
 
   els.nowChord = h('div', { class: 'chord idle' }, '—');
   els.nowWhere = h('div', { class: 'where' }, t('now.idle'));
@@ -279,7 +274,7 @@ function renderSidebar() {
     h('button', { class: 'btn small', type: 'button', onclick: () => setOffset(0) }, t('sync.reset')),
   );
 
-  const videoPanel = h('div', { class: 'panel video-sticky' }, els.videoFrame, transport, els.sourceRow, now, els.sectionBar, els.syncRow);
+  const videoPanel = h('div', { class: 'panel video-sticky' }, ...(song.video ? [els.videoFrame] : []), transport, els.sourceRow, now, els.sectionBar, els.syncRow);
 
   els.positionsPanelTitle = h('h2', {}, t('positions.title')); // the sidebar comes before the content's h2s in reading order
   els.positionsPanelGrid = h('div', { class: 'position-grid' });
@@ -365,12 +360,12 @@ async function initPlayers() {
         const placeholder = els.videoFrame.querySelector('.video-placeholder');
         if (placeholder) placeholder.textContent = t('video.unavailable', { message: err.message });
         els.sourceVideo.disabled = true;
-        if (state.sync === video) setSource('tab').catch(showPlayerError);
+        if (state.sync === video) setSource('tab', { remember: false }).catch(showPlayerError);
       });
   } else {
     els.sourceVideo.disabled = true;
   }
-  await setSource(state.video && state.source !== 'tab' ? 'video' : 'tab');
+  await setSource(state.video && state.source !== 'tab' ? 'video' : 'tab', { remember: false });
 }
 
 /** Loads every track and builds the tab player once. */
@@ -409,12 +404,13 @@ function ensureTabPlayer() {
  * Switch between the video and the tab player, carrying the bar position, speed
  * and loop across. `fromPlayer`: the video started on its own, keep its position.
  */
-async function setSource(source, { fromPlayer = false } = {}) {
+/** `remember` is false for the page's own fallbacks (no video, a video that failed), which must not overwrite the listener's choice. */
+async function setSource(source, { fromPlayer = false, remember = true } = {}) {
   const target = source === 'tab' ? await ensureTabPlayer() : state.video;
   if (!target) return;
   const from = state.sync;
   state.source = source;
-  storage.set('nagori:source', source);
+  if (remember) storage.set('nagori:source', source);
   updateUrl();
   if (from !== target) {
     const pos = from && from.ready ? from.clock.timeToBar(from.time) : null;
