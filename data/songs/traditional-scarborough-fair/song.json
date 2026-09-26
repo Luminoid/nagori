@@ -397,6 +397,374 @@
    }
   ]
  },
+ "lyrics": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "text": "Are"
+  },
+  {
+   "bar": 0,
+   "pos": 0.6667,
+   "text": "you"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "text": "go",
+   "join": true
+  },
+  {
+   "bar": 1,
+   "pos": 0.3333,
+   "text": "ing"
+  },
+  {
+   "bar": 1,
+   "pos": 0.6667,
+   "text": "to"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "text": "Scar",
+   "join": true
+  },
+  {
+   "bar": 2,
+   "pos": 0.5,
+   "text": "bo",
+   "join": true
+  },
+  {
+   "bar": 2,
+   "pos": 0.6667,
+   "text": "rough"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "text": "Fair?"
+  },
+  {
+   "bar": 4,
+   "pos": 0.3333,
+   "text": "Pars",
+   "join": true
+  },
+  {
+   "bar": 4,
+   "pos": 0.6667,
+   "text": "ley,"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "text": "sage,"
+  },
+  {
+   "bar": 5,
+   "pos": 0.6667,
+   "text": "rose",
+   "join": true
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "text": "mar",
+   "join": true
+  },
+  {
+   "bar": 6,
+   "pos": 0.3333,
+   "text": "y"
+  },
+  {
+   "bar": 6,
+   "pos": 0.6667,
+   "text": "and"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "text": "thyme;"
+  },
+  {
+   "bar": 8,
+   "pos": 0.6667,
+   "text": "re",
+   "join": true
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "text": "mem",
+   "join": true
+  },
+  {
+   "bar": 9,
+   "pos": 0.6667,
+   "text": "ber"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "text": "me"
+  },
+  {
+   "bar": 10,
+   "pos": 0.6667,
+   "text": "to"
+  },
+  {
+   "bar": 10,
+   "pos": 0.8333,
+   "text": "the"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "text": "one"
+  },
+  {
+   "bar": 11,
+   "pos": 0.3333,
+   "text": "who"
+  },
+  {
+   "bar": 11,
+   "pos": 0.6667,
+   "text": "lives"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "text": "there,"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "text": "she"
+  },
+  {
+   "bar": 14,
+   "pos": 0.6667,
+   "text": "once"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "text": "was"
+  },
+  {
+   "bar": 15,
+   "pos": 0.6667,
+   "text": "a"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "text": "true"
+  },
+  {
+   "bar": 16,
+   "pos": 0.3333,
+   "text": "love"
+  },
+  {
+   "bar": 16,
+   "pos": 0.6667,
+   "text": "of"
+  },
+  {
+   "bar": 17,
+   "pos": 0.0,
+   "text": "mine."
+  },
+  {
+   "bar": 19,
+   "pos": 0.0,
+   "text": "Tell"
+  },
+  {
+   "bar": 19,
+   "pos": 0.6667,
+   "text": "her"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "text": "to"
+  },
+  {
+   "bar": 20,
+   "pos": 0.3333,
+   "text": "make"
+  },
+  {
+   "bar": 20,
+   "pos": 0.6667,
+   "text": "me"
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "text": "a"
+  },
+  {
+   "bar": 21,
+   "pos": 0.5,
+   "text": "cam",
+   "join": true
+  },
+  {
+   "bar": 21,
+   "pos": 0.6667,
+   "text": "bric"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "text": "shirt,"
+  },
+  {
+   "bar": 23,
+   "pos": 0.3333,
+   "text": "pars",
+   "join": true
+  },
+  {
+   "bar": 23,
+   "pos": 0.6667,
+   "text": "ley,"
+  },
+  {
+   "bar": 24,
+   "pos": 0.0,
+   "text": "sage,"
+  },
+  {
+   "bar": 24,
+   "pos": 0.6667,
+   "text": "rose",
+   "join": true
+  },
+  {
+   "bar": 25,
+   "pos": 0.0,
+   "text": "mar",
+   "join": true
+  },
+  {
+   "bar": 25,
+   "pos": 0.3333,
+   "text": "y"
+  },
+  {
+   "bar": 25,
+   "pos": 0.6667,
+   "text": "and"
+  },
+  {
+   "bar": 26,
+   "pos": 0.0,
+   "text": "thyme,"
+  },
+  {
+   "bar": 27,
+   "pos": 0.6667,
+   "text": "with",
+   "join": true
+  },
+  {
+   "bar": 28,
+   "pos": 0.0,
+   "text": "out"
+  },
+  {
+   "bar": 28,
+   "pos": 0.6667,
+   "text": "an",
+   "join": true
+  },
+  {
+   "bar": 29,
+   "pos": 0.0,
+   "text": "y"
+  },
+  {
+   "bar": 29,
+   "pos": 0.6667,
+   "text": "seam"
+  },
+  {
+   "bar": 29,
+   "pos": 0.8333,
+   "text": "or"
+  },
+  {
+   "bar": 30,
+   "pos": 0.0,
+   "text": "fine"
+  },
+  {
+   "bar": 30,
+   "pos": 0.3333,
+   "text": "nee",
+   "join": true
+  },
+  {
+   "bar": 30,
+   "pos": 0.6667,
+   "text": "dle",
+   "join": true
+  },
+  {
+   "bar": 31,
+   "pos": 0.0,
+   "text": "work,"
+  },
+  {
+   "bar": 33,
+   "pos": 0.0,
+   "text": "then"
+  },
+  {
+   "bar": 33,
+   "pos": 0.6667,
+   "text": "she'll"
+  },
+  {
+   "bar": 34,
+   "pos": 0.0,
+   "text": "be"
+  },
+  {
+   "bar": 34,
+   "pos": 0.6667,
+   "text": "a"
+  },
+  {
+   "bar": 35,
+   "pos": 0.0,
+   "text": "true"
+  },
+  {
+   "bar": 35,
+   "pos": 0.3333,
+   "text": "love"
+  },
+  {
+   "bar": 35,
+   "pos": 0.6667,
+   "text": "of"
+  },
+  {
+   "bar": 36,
+   "pos": 0.0,
+   "text": "mine."
+  }
+ ],
  "chordLibrary": {},
  "fingeringOverrides": {},
  "defaultTrack": "rhythm",

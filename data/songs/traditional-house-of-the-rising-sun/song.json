@@ -309,6 +309,10 @@
        {
         "chord": "Am",
         "text": "shun that house in New Orleans, "
+       },
+       {
+        "chord": "F",
+        "text": ""
        }
       ]
      },
@@ -337,6 +341,316 @@
    }
   ]
  },
+ "lyrics": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "text": "There"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "text": "is"
+  },
+  {
+   "bar": 1,
+   "pos": 0.3333,
+   "text": "a"
+  },
+  {
+   "bar": 1,
+   "pos": 0.5,
+   "text": "house"
+  },
+  {
+   "bar": 1,
+   "pos": 0.8333,
+   "text": "in"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "text": "New"
+  },
+  {
+   "bar": 2,
+   "pos": 0.3333,
+   "text": "Or",
+   "join": true
+  },
+  {
+   "bar": 2,
+   "pos": 0.5,
+   "text": "leans"
+  },
+  {
+   "bar": 2,
+   "pos": 0.8333,
+   "text": "they"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "text": "call"
+  },
+  {
+   "bar": 3,
+   "pos": 0.3333,
+   "text": "the"
+  },
+  {
+   "bar": 3,
+   "pos": 0.5,
+   "text": "ris",
+   "join": true
+  },
+  {
+   "bar": 3,
+   "pos": 0.8333,
+   "text": "ing"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "text": "sun."
+  },
+  {
+   "bar": 4,
+   "pos": 0.8333,
+   "text": "And"
+  },
+  {
+   "bar": 4,
+   "pos": 0.9167,
+   "text": "it's"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "text": "been"
+  },
+  {
+   "bar": 5,
+   "pos": 0.3333,
+   "text": "the"
+  },
+  {
+   "bar": 5,
+   "pos": 0.5,
+   "text": "ruin"
+  },
+  {
+   "bar": 5,
+   "pos": 0.8333,
+   "text": "of"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "text": "man",
+   "join": true
+  },
+  {
+   "bar": 6,
+   "pos": 0.0833,
+   "text": "y"
+  },
+  {
+   "bar": 6,
+   "pos": 0.3333,
+   "text": "poor"
+  },
+  {
+   "bar": 6,
+   "pos": 0.5,
+   "text": "boy,"
+  },
+  {
+   "bar": 6,
+   "pos": 0.8333,
+   "text": "and"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "text": "Lord,"
+  },
+  {
+   "bar": 7,
+   "pos": 0.3333,
+   "text": "I"
+  },
+  {
+   "bar": 7,
+   "pos": 0.5,
+   "text": "know"
+  },
+  {
+   "bar": 7,
+   "pos": 0.8333,
+   "text": "I'm"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "text": "one."
+  },
+  {
+   "bar": 8,
+   "pos": 0.8333,
+   "text": "Go"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "text": "and"
+  },
+  {
+   "bar": 9,
+   "pos": 0.3333,
+   "text": "tell"
+  },
+  {
+   "bar": 9,
+   "pos": 0.5,
+   "text": "my"
+  },
+  {
+   "bar": 9,
+   "pos": 0.8333,
+   "text": "ba",
+   "join": true
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "text": "by"
+  },
+  {
+   "bar": 10,
+   "pos": 0.3333,
+   "text": "sis",
+   "join": true
+  },
+  {
+   "bar": 10,
+   "pos": 0.5,
+   "text": "ter"
+  },
+  {
+   "bar": 10,
+   "pos": 0.8333,
+   "text": "nev",
+   "join": true
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "text": "er"
+  },
+  {
+   "bar": 11,
+   "pos": 0.3333,
+   "text": "do"
+  },
+  {
+   "bar": 11,
+   "pos": 0.5,
+   "text": "like"
+  },
+  {
+   "bar": 11,
+   "pos": 0.8333,
+   "text": "I've"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "text": "done,"
+  },
+  {
+   "bar": 12,
+   "pos": 0.8333,
+   "text": "oh,"
+  },
+  {
+   "bar": 12,
+   "pos": 0.9167,
+   "text": "to"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "text": "shun"
+  },
+  {
+   "bar": 13,
+   "pos": 0.3333,
+   "text": "that"
+  },
+  {
+   "bar": 13,
+   "pos": 0.5,
+   "text": "house"
+  },
+  {
+   "bar": 13,
+   "pos": 0.8333,
+   "text": "in"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "text": "New"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0833,
+   "text": "Or",
+   "join": true
+  },
+  {
+   "bar": 14,
+   "pos": 0.3333,
+   "text": "leans,"
+  },
+  {
+   "bar": 14,
+   "pos": 0.8333,
+   "text": "that"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "text": "they"
+  },
+  {
+   "bar": 15,
+   "pos": 0.3333,
+   "text": "call"
+  },
+  {
+   "bar": 15,
+   "pos": 0.5,
+   "text": "the"
+  },
+  {
+   "bar": 15,
+   "pos": 0.5833,
+   "text": "Ri",
+   "join": true
+  },
+  {
+   "bar": 15,
+   "pos": 0.8333,
+   "text": "sing"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "text": "Sun."
+  }
+ ],
  "chordLibrary": {},
  "fingeringOverrides": {},
  "defaultTrack": "rhythm",

@@ -769,6 +769,19 @@ function highlightSidebarCard(segment) {
   state.activeCardEl?.classList.remove('is-active');
   el?.classList.add('is-active');
   state.activeCardEl = el || null;
+  if (el && state.autoscroll) revealSidebarCard(el);
+}
+
+/** Scroll the sidebar's grid, and nothing else, until the lit card is inside it; the page's own scrolling follows the tab. */
+function revealSidebarCard(el) {
+  const grid = els.positionsPanelGrid;
+  if (grid.scrollHeight <= grid.clientHeight) return;
+  const g = grid.getBoundingClientRect();
+  const c = el.getBoundingClientRect();
+  const margin = 8;
+  const fits = c.height <= g.height - 2 * margin;
+  if (c.top < g.top + margin || (!fits && c.top !== g.top + margin)) grid.scrollBy({ top: c.top - g.top - margin, behavior: 'smooth' }); // a card taller than the box shows its top
+  else if (fits && c.bottom > g.bottom - margin) grid.scrollBy({ top: c.bottom - g.bottom + margin, behavior: 'smooth' });
 }
 
 // --- Views --------------------------------------------------------------------

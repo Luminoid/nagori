@@ -1000,6 +1000,29 @@ a.meta-chip:hover {
     order: 1; /* first in the DOM (reading order), beside the content on wide screens */
     position: sticky;
     top: 16px;
+    max-height: calc(100vh - 32px); /* a sticky column taller than the viewport would keep its bottom out of reach */
+  }
+
+  /* The video panel keeps its height; the positions panel takes what is left and scrolls its grid, title staying put. */
+  .sidebar .video-sticky {
+    flex: none;
+  }
+
+  .sidebar .positions-panel,
+  .sidebar .positions-panel .panel-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .sidebar .positions-panel {
+    min-height: 210px; /* the title and one row of cards, even on a short viewport where the column then overflows */
+  }
+
+  .sidebar .positions-panel .position-grid {
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
   }
 }
 

@@ -293,6 +293,256 @@
    }
   ]
  },
+ "lyrics": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "text": "Should"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "text": "auld"
+  },
+  {
+   "bar": 1,
+   "pos": 0.375,
+   "text": "ac",
+   "join": true
+  },
+  {
+   "bar": 1,
+   "pos": 0.5,
+   "text": "quain",
+   "join": true
+  },
+  {
+   "bar": 1,
+   "pos": 0.75,
+   "text": "tance"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "text": "be"
+  },
+  {
+   "bar": 2,
+   "pos": 0.375,
+   "text": "for",
+   "join": true
+  },
+  {
+   "bar": 2,
+   "pos": 0.5,
+   "text": "got,"
+  },
+  {
+   "bar": 2,
+   "pos": 0.75,
+   "text": "and"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "text": "nev",
+   "join": true
+  },
+  {
+   "bar": 3,
+   "pos": 0.375,
+   "text": "er"
+  },
+  {
+   "bar": 3,
+   "pos": 0.5,
+   "text": "brought"
+  },
+  {
+   "bar": 3,
+   "pos": 0.75,
+   "text": "to"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "text": "mind?"
+  },
+  {
+   "bar": 4,
+   "pos": 0.75,
+   "text": "Should"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "text": "auld"
+  },
+  {
+   "bar": 5,
+   "pos": 0.375,
+   "text": "ac",
+   "join": true
+  },
+  {
+   "bar": 5,
+   "pos": 0.5,
+   "text": "quain",
+   "join": true
+  },
+  {
+   "bar": 5,
+   "pos": 0.75,
+   "text": "tance"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "text": "be"
+  },
+  {
+   "bar": 6,
+   "pos": 0.375,
+   "text": "for",
+   "join": true
+  },
+  {
+   "bar": 6,
+   "pos": 0.5,
+   "text": "got,"
+  },
+  {
+   "bar": 6,
+   "pos": 0.75,
+   "text": "and"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "text": "auld"
+  },
+  {
+   "bar": 7,
+   "pos": 0.5,
+   "text": "lang"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "text": "syne?"
+  },
+  {
+   "bar": 8,
+   "pos": 0.75,
+   "text": "For"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "text": "auld"
+  },
+  {
+   "bar": 9,
+   "pos": 0.5,
+   "text": "lang"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "text": "syne,"
+  },
+  {
+   "bar": 10,
+   "pos": 0.375,
+   "text": "my"
+  },
+  {
+   "bar": 10,
+   "pos": 0.5,
+   "text": "dear,"
+  },
+  {
+   "bar": 10,
+   "pos": 0.75,
+   "text": "for"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "text": "auld"
+  },
+  {
+   "bar": 11,
+   "pos": 0.5,
+   "text": "lang"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "text": "syne,"
+  },
+  {
+   "bar": 12,
+   "pos": 0.75,
+   "text": "we'll"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "text": "take"
+  },
+  {
+   "bar": 13,
+   "pos": 0.375,
+   "text": "a"
+  },
+  {
+   "bar": 13,
+   "pos": 0.5,
+   "text": "cup"
+  },
+  {
+   "bar": 13,
+   "pos": 0.75,
+   "text": "of"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "text": "kind",
+   "join": true
+  },
+  {
+   "bar": 14,
+   "pos": 0.375,
+   "text": "ness"
+  },
+  {
+   "bar": 14,
+   "pos": 0.5,
+   "text": "yet,"
+  },
+  {
+   "bar": 14,
+   "pos": 0.75,
+   "text": "for"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "text": "auld"
+  },
+  {
+   "bar": 15,
+   "pos": 0.5,
+   "text": "lang"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "text": "syne."
+  }
+ ],
  "chordLibrary": {},
  "fingeringOverrides": {},
  "defaultTrack": "rhythm",

@@ -167,6 +167,136 @@
    }
   ]
  },
+ "lyrics": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "text": "Hap",
+   "join": true
+  },
+  {
+   "bar": 0,
+   "pos": 0.75,
+   "text": "py"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "text": "birth",
+   "join": true
+  },
+  {
+   "bar": 1,
+   "pos": 0.3333,
+   "text": "day"
+  },
+  {
+   "bar": 1,
+   "pos": 0.6667,
+   "text": "to"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "text": "you,"
+  },
+  {
+   "bar": 2,
+   "pos": 0.6667,
+   "text": "hap",
+   "join": true
+  },
+  {
+   "bar": 2,
+   "pos": 0.9167,
+   "text": "py"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "text": "birth",
+   "join": true
+  },
+  {
+   "bar": 3,
+   "pos": 0.3333,
+   "text": "day"
+  },
+  {
+   "bar": 3,
+   "pos": 0.6667,
+   "text": "to"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "text": "you,"
+  },
+  {
+   "bar": 4,
+   "pos": 0.6667,
+   "text": "hap",
+   "join": true
+  },
+  {
+   "bar": 4,
+   "pos": 0.9167,
+   "text": "py"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "text": "birth",
+   "join": true
+  },
+  {
+   "bar": 5,
+   "pos": 0.3333,
+   "text": "day,"
+  },
+  {
+   "bar": 5,
+   "pos": 0.6667,
+   "text": "dear"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "text": "friend,"
+  },
+  {
+   "bar": 6,
+   "pos": 0.6667,
+   "text": "hap",
+   "join": true
+  },
+  {
+   "bar": 6,
+   "pos": 0.9167,
+   "text": "py"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "text": "birth",
+   "join": true
+  },
+  {
+   "bar": 7,
+   "pos": 0.3333,
+   "text": "day"
+  },
+  {
+   "bar": 7,
+   "pos": 0.6667,
+   "text": "to"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "text": "you."
+  }
+ ],
  "chordLibrary": {},
  "fingeringOverrides": {},
  "defaultTrack": "rhythm",

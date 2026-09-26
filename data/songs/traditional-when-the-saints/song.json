@@ -350,6 +350,326 @@
    }
   ]
  },
+ "lyrics": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "text": "Oh,"
+  },
+  {
+   "bar": 0,
+   "pos": 0.3333,
+   "text": "when"
+  },
+  {
+   "bar": 0,
+   "pos": 0.6667,
+   "text": "the"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "text": "saints"
+  },
+  {
+   "bar": 2,
+   "pos": 0.25,
+   "text": "go"
+  },
+  {
+   "bar": 2,
+   "pos": 0.5,
+   "text": "march",
+   "join": true
+  },
+  {
+   "bar": 2,
+   "pos": 0.75,
+   "text": "ing"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "text": "in,"
+  },
+  {
+   "bar": 4,
+   "pos": 0.25,
+   "text": "oh,"
+  },
+  {
+   "bar": 4,
+   "pos": 0.5,
+   "text": "when"
+  },
+  {
+   "bar": 4,
+   "pos": 0.75,
+   "text": "the"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "text": "saints"
+  },
+  {
+   "bar": 5,
+   "pos": 0.5,
+   "text": "go"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "text": "march",
+   "join": true
+  },
+  {
+   "bar": 6,
+   "pos": 0.5,
+   "text": "ing"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "text": "in,"
+  },
+  {
+   "bar": 8,
+   "pos": 0.25,
+   "text": "I"
+  },
+  {
+   "bar": 8,
+   "pos": 0.5,
+   "text": "want"
+  },
+  {
+   "bar": 8,
+   "pos": 0.75,
+   "text": "to"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "text": "be"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "text": "in"
+  },
+  {
+   "bar": 10,
+   "pos": 0.5,
+   "text": "that"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "text": "num",
+   "join": true
+  },
+  {
+   "bar": 11,
+   "pos": 0.25,
+   "text": "ber"
+  },
+  {
+   "bar": 12,
+   "pos": 0.5,
+   "text": "when"
+  },
+  {
+   "bar": 12,
+   "pos": 0.75,
+   "text": "the"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "text": "saints"
+  },
+  {
+   "bar": 13,
+   "pos": 0.5,
+   "text": "go"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "text": "march",
+   "join": true
+  },
+  {
+   "bar": 14,
+   "pos": 0.5,
+   "text": "ing"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "text": "in."
+  },
+  {
+   "bar": 16,
+   "pos": 0.25,
+   "text": "And"
+  },
+  {
+   "bar": 16,
+   "pos": 0.5,
+   "text": "when"
+  },
+  {
+   "bar": 16,
+   "pos": 0.75,
+   "text": "the"
+  },
+  {
+   "bar": 17,
+   "pos": 0.0,
+   "text": "sun"
+  },
+  {
+   "bar": 18,
+   "pos": 0.25,
+   "text": "re",
+   "join": true
+  },
+  {
+   "bar": 18,
+   "pos": 0.5,
+   "text": "fuse"
+  },
+  {
+   "bar": 18,
+   "pos": 0.75,
+   "text": "to"
+  },
+  {
+   "bar": 19,
+   "pos": 0.0,
+   "text": "shine,"
+  },
+  {
+   "bar": 20,
+   "pos": 0.25,
+   "text": "and"
+  },
+  {
+   "bar": 20,
+   "pos": 0.5,
+   "text": "when"
+  },
+  {
+   "bar": 20,
+   "pos": 0.75,
+   "text": "the"
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "text": "sun"
+  },
+  {
+   "bar": 21,
+   "pos": 0.5,
+   "text": "re",
+   "join": true
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "text": "fuse"
+  },
+  {
+   "bar": 22,
+   "pos": 0.5,
+   "text": "to"
+  },
+  {
+   "bar": 23,
+   "pos": 0.0,
+   "text": "shine,"
+  },
+  {
+   "bar": 24,
+   "pos": 0.25,
+   "text": "I"
+  },
+  {
+   "bar": 24,
+   "pos": 0.5,
+   "text": "want"
+  },
+  {
+   "bar": 24,
+   "pos": 0.75,
+   "text": "to"
+  },
+  {
+   "bar": 25,
+   "pos": 0.0,
+   "text": "be"
+  },
+  {
+   "bar": 26,
+   "pos": 0.0,
+   "text": "in"
+  },
+  {
+   "bar": 26,
+   "pos": 0.5,
+   "text": "that"
+  },
+  {
+   "bar": 27,
+   "pos": 0.0,
+   "text": "num",
+   "join": true
+  },
+  {
+   "bar": 27,
+   "pos": 0.25,
+   "text": "ber"
+  },
+  {
+   "bar": 28,
+   "pos": 0.5,
+   "text": "when"
+  },
+  {
+   "bar": 28,
+   "pos": 0.75,
+   "text": "the"
+  },
+  {
+   "bar": 29,
+   "pos": 0.0,
+   "text": "sun"
+  },
+  {
+   "bar": 29,
+   "pos": 0.5,
+   "text": "re",
+   "join": true
+  },
+  {
+   "bar": 30,
+   "pos": 0.0,
+   "text": "fuse"
+  },
+  {
+   "bar": 30,
+   "pos": 0.5,
+   "text": "to"
+  },
+  {
+   "bar": 31,
+   "pos": 0.0,
+   "text": "shine."
+  }
+ ],
  "chordLibrary": {},
  "fingeringOverrides": {},
  "defaultTrack": "rhythm",

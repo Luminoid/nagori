@@ -408,6 +408,451 @@
    }
   ]
  },
+ "lyrics": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "text": "Oh,"
+  },
+  {
+   "bar": 0,
+   "pos": 0.3333,
+   "text": "Dan",
+   "join": true
+  },
+  {
+   "bar": 0,
+   "pos": 0.6667,
+   "text": "ny"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "text": "boy,"
+  },
+  {
+   "bar": 1,
+   "pos": 0.375,
+   "text": "the"
+  },
+  {
+   "bar": 1,
+   "pos": 0.5,
+   "text": "pipes,"
+  },
+  {
+   "bar": 1,
+   "pos": 0.625,
+   "text": "the"
+  },
+  {
+   "bar": 1,
+   "pos": 0.75,
+   "text": "pipes"
+  },
+  {
+   "bar": 1,
+   "pos": 0.875,
+   "text": "are"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "text": "call",
+   "join": true
+  },
+  {
+   "bar": 2,
+   "pos": 0.25,
+   "text": "ing"
+  },
+  {
+   "bar": 2,
+   "pos": 0.625,
+   "text": "from"
+  },
+  {
+   "bar": 2,
+   "pos": 0.75,
+   "text": "glen"
+  },
+  {
+   "bar": 2,
+   "pos": 0.875,
+   "text": "to"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "text": "glen,"
+  },
+  {
+   "bar": 3,
+   "pos": 0.375,
+   "text": "and"
+  },
+  {
+   "bar": 3,
+   "pos": 0.5,
+   "text": "down"
+  },
+  {
+   "bar": 3,
+   "pos": 0.625,
+   "text": "the"
+  },
+  {
+   "bar": 3,
+   "pos": 0.75,
+   "text": "moun",
+   "join": true
+  },
+  {
+   "bar": 3,
+   "pos": 0.875,
+   "text": "tain"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "text": "side."
+  },
+  {
+   "bar": 4,
+   "pos": 0.625,
+   "text": "The"
+  },
+  {
+   "bar": 4,
+   "pos": 0.75,
+   "text": "sum",
+   "join": true
+  },
+  {
+   "bar": 4,
+   "pos": 0.875,
+   "text": "mer's"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "text": "gone,"
+  },
+  {
+   "bar": 5,
+   "pos": 0.375,
+   "text": "and"
+  },
+  {
+   "bar": 5,
+   "pos": 0.5,
+   "text": "all"
+  },
+  {
+   "bar": 5,
+   "pos": 0.625,
+   "text": "the"
+  },
+  {
+   "bar": 5,
+   "pos": 0.75,
+   "text": "ro",
+   "join": true
+  },
+  {
+   "bar": 5,
+   "pos": 0.875,
+   "text": "ses"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "text": "fall",
+   "join": true
+  },
+  {
+   "bar": 6,
+   "pos": 0.25,
+   "text": "ing,"
+  },
+  {
+   "bar": 6,
+   "pos": 0.625,
+   "text": "'tis"
+  },
+  {
+   "bar": 6,
+   "pos": 0.75,
+   "text": "you,"
+  },
+  {
+   "bar": 6,
+   "pos": 0.875,
+   "text": "'tis"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "text": "you"
+  },
+  {
+   "bar": 7,
+   "pos": 0.375,
+   "text": "must"
+  },
+  {
+   "bar": 7,
+   "pos": 0.5,
+   "text": "go"
+  },
+  {
+   "bar": 7,
+   "pos": 0.625,
+   "text": "and"
+  },
+  {
+   "bar": 7,
+   "pos": 0.75,
+   "text": "I"
+  },
+  {
+   "bar": 7,
+   "pos": 0.875,
+   "text": "must"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "text": "bide."
+  },
+  {
+   "bar": 8,
+   "pos": 0.625,
+   "text": "But"
+  },
+  {
+   "bar": 8,
+   "pos": 0.75,
+   "text": "come"
+  },
+  {
+   "bar": 8,
+   "pos": 0.875,
+   "text": "ye"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "text": "back"
+  },
+  {
+   "bar": 9,
+   "pos": 0.375,
+   "text": "when"
+  },
+  {
+   "bar": 9,
+   "pos": 0.5,
+   "text": "sum",
+   "join": true
+  },
+  {
+   "bar": 9,
+   "pos": 0.625,
+   "text": "mer's"
+  },
+  {
+   "bar": 9,
+   "pos": 0.75,
+   "text": "in"
+  },
+  {
+   "bar": 9,
+   "pos": 0.875,
+   "text": "the"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "text": "mead",
+   "join": true
+  },
+  {
+   "bar": 10,
+   "pos": 0.25,
+   "text": "ow,"
+  },
+  {
+   "bar": 10,
+   "pos": 0.625,
+   "text": "or"
+  },
+  {
+   "bar": 10,
+   "pos": 0.75,
+   "text": "when"
+  },
+  {
+   "bar": 10,
+   "pos": 0.875,
+   "text": "the"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "text": "val",
+   "join": true
+  },
+  {
+   "bar": 11,
+   "pos": 0.375,
+   "text": "ley's"
+  },
+  {
+   "bar": 11,
+   "pos": 0.5,
+   "text": "hushed"
+  },
+  {
+   "bar": 11,
+   "pos": 0.625,
+   "text": "and"
+  },
+  {
+   "bar": 11,
+   "pos": 0.75,
+   "text": "white"
+  },
+  {
+   "bar": 11,
+   "pos": 0.875,
+   "text": "with"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "text": "snow,"
+  },
+  {
+   "bar": 12,
+   "pos": 0.625,
+   "text": "'tis"
+  },
+  {
+   "bar": 12,
+   "pos": 0.75,
+   "text": "I'll"
+  },
+  {
+   "bar": 12,
+   "pos": 0.875,
+   "text": "be"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "text": "here"
+  },
+  {
+   "bar": 13,
+   "pos": 0.375,
+   "text": "in"
+  },
+  {
+   "bar": 13,
+   "pos": 0.5,
+   "text": "sun",
+   "join": true
+  },
+  {
+   "bar": 13,
+   "pos": 0.625,
+   "text": "shine"
+  },
+  {
+   "bar": 13,
+   "pos": 0.75,
+   "text": "or"
+  },
+  {
+   "bar": 13,
+   "pos": 0.875,
+   "text": "in"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "text": "sha",
+   "join": true
+  },
+  {
+   "bar": 14,
+   "pos": 0.25,
+   "text": "dow,"
+  },
+  {
+   "bar": 14,
+   "pos": 0.625,
+   "text": "oh,"
+  },
+  {
+   "bar": 14,
+   "pos": 0.75,
+   "text": "Dan",
+   "join": true
+  },
+  {
+   "bar": 14,
+   "pos": 0.875,
+   "text": "ny"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "text": "boy,"
+  },
+  {
+   "bar": 15,
+   "pos": 0.125,
+   "text": "oh,"
+  },
+  {
+   "bar": 15,
+   "pos": 0.25,
+   "text": "Dan",
+   "join": true
+  },
+  {
+   "bar": 15,
+   "pos": 0.375,
+   "text": "ny"
+  },
+  {
+   "bar": 15,
+   "pos": 0.5,
+   "text": "boy,"
+  },
+  {
+   "bar": 15,
+   "pos": 0.625,
+   "text": "I"
+  },
+  {
+   "bar": 15,
+   "pos": 0.75,
+   "text": "love"
+  },
+  {
+   "bar": 15,
+   "pos": 0.875,
+   "text": "you"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "text": "so."
+  }
+ ],
  "chordLibrary": {},
  "fingeringOverrides": {},
  "defaultTrack": "rhythm",

@@ -252,6 +252,224 @@
    }
   ]
  },
+ "lyrics": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "text": "Si",
+   "join": true
+  },
+  {
+   "bar": 0,
+   "pos": 0.5,
+   "text": "lent"
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "text": "night,"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "text": "ho",
+   "join": true
+  },
+  {
+   "bar": 2,
+   "pos": 0.5,
+   "text": "ly"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "text": "night,"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "text": "all"
+  },
+  {
+   "bar": 4,
+   "pos": 0.6667,
+   "text": "is"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "text": "calm,"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "text": "all"
+  },
+  {
+   "bar": 6,
+   "pos": 0.6667,
+   "text": "is"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "text": "bright,"
+  },
+  {
+   "bar": 8,
+   "pos": 0.0,
+   "text": "round"
+  },
+  {
+   "bar": 8,
+   "pos": 0.6667,
+   "text": "yon"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "text": "vir",
+   "join": true
+  },
+  {
+   "bar": 9,
+   "pos": 0.5,
+   "text": "gin"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "text": "moth",
+   "join": true
+  },
+  {
+   "bar": 10,
+   "pos": 0.5,
+   "text": "er"
+  },
+  {
+   "bar": 10,
+   "pos": 0.6667,
+   "text": "and"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "text": "child,"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "text": "ho",
+   "join": true
+  },
+  {
+   "bar": 12,
+   "pos": 0.6667,
+   "text": "ly"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "text": "in",
+   "join": true
+  },
+  {
+   "bar": 13,
+   "pos": 0.5,
+   "text": "fant"
+  },
+  {
+   "bar": 13,
+   "pos": 0.6667,
+   "text": "so"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "text": "ten",
+   "join": true
+  },
+  {
+   "bar": 14,
+   "pos": 0.5,
+   "text": "der"
+  },
+  {
+   "bar": 14,
+   "pos": 0.6667,
+   "text": "and"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "text": "mild,"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "text": "sleep"
+  },
+  {
+   "bar": 16,
+   "pos": 0.6667,
+   "text": "in"
+  },
+  {
+   "bar": 17,
+   "pos": 0.0,
+   "text": "heav",
+   "join": true
+  },
+  {
+   "bar": 17,
+   "pos": 0.5,
+   "text": "en",
+   "join": true
+  },
+  {
+   "bar": 17,
+   "pos": 0.6667,
+   "text": "ly"
+  },
+  {
+   "bar": 18,
+   "pos": 0.0,
+   "text": "peace,"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "text": "sleep"
+  },
+  {
+   "bar": 20,
+   "pos": 0.5,
+   "text": "in"
+  },
+  {
+   "bar": 20,
+   "pos": 0.6667,
+   "text": "heav",
+   "join": true
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "text": "en",
+   "join": true
+  },
+  {
+   "bar": 21,
+   "pos": 0.5,
+   "text": "ly"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "text": "peace."
+  }
+ ],
  "chordLibrary": {},
  "fingeringOverrides": {},
  "defaultTrack": "rhythm",

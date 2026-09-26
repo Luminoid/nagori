@@ -407,6 +407,294 @@
    }
   ]
  },
+ "lyrics": [
+  {
+   "bar": 0,
+   "pos": 0.0,
+   "text": "A",
+   "join": true
+  },
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "text": "maz",
+   "join": true
+  },
+  {
+   "bar": 1,
+   "pos": 0.6667,
+   "text": "ing"
+  },
+  {
+   "bar": 2,
+   "pos": 0.0,
+   "text": "grace,"
+  },
+  {
+   "bar": 2,
+   "pos": 0.6667,
+   "text": "how"
+  },
+  {
+   "bar": 3,
+   "pos": 0.0,
+   "text": "sweet"
+  },
+  {
+   "bar": 3,
+   "pos": 0.6667,
+   "text": "the"
+  },
+  {
+   "bar": 4,
+   "pos": 0.0,
+   "text": "sound,"
+  },
+  {
+   "bar": 4,
+   "pos": 0.6667,
+   "text": "that"
+  },
+  {
+   "bar": 5,
+   "pos": 0.0,
+   "text": "saved"
+  },
+  {
+   "bar": 5,
+   "pos": 0.6667,
+   "text": "a"
+  },
+  {
+   "bar": 6,
+   "pos": 0.0,
+   "text": "wretch"
+  },
+  {
+   "bar": 6,
+   "pos": 0.6667,
+   "text": "like"
+  },
+  {
+   "bar": 7,
+   "pos": 0.0,
+   "text": "me."
+  },
+  {
+   "bar": 8,
+   "pos": 0.6667,
+   "text": "I"
+  },
+  {
+   "bar": 9,
+   "pos": 0.0,
+   "text": "once"
+  },
+  {
+   "bar": 9,
+   "pos": 0.6667,
+   "text": "was"
+  },
+  {
+   "bar": 10,
+   "pos": 0.0,
+   "text": "lost,"
+  },
+  {
+   "bar": 10,
+   "pos": 0.6667,
+   "text": "but"
+  },
+  {
+   "bar": 11,
+   "pos": 0.0,
+   "text": "now"
+  },
+  {
+   "bar": 11,
+   "pos": 0.6667,
+   "text": "am"
+  },
+  {
+   "bar": 12,
+   "pos": 0.0,
+   "text": "found,"
+  },
+  {
+   "bar": 12,
+   "pos": 0.6667,
+   "text": "was"
+  },
+  {
+   "bar": 13,
+   "pos": 0.0,
+   "text": "blind,"
+  },
+  {
+   "bar": 13,
+   "pos": 0.6667,
+   "text": "but"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "text": "now"
+  },
+  {
+   "bar": 14,
+   "pos": 0.6667,
+   "text": "I"
+  },
+  {
+   "bar": 15,
+   "pos": 0.0,
+   "text": "see."
+  },
+  {
+   "bar": 16,
+   "pos": 0.6667,
+   "text": "'Twas"
+  },
+  {
+   "bar": 17,
+   "pos": 0.0,
+   "text": "grace"
+  },
+  {
+   "bar": 17,
+   "pos": 0.6667,
+   "text": "that"
+  },
+  {
+   "bar": 18,
+   "pos": 0.0,
+   "text": "taught"
+  },
+  {
+   "bar": 18,
+   "pos": 0.6667,
+   "text": "my"
+  },
+  {
+   "bar": 19,
+   "pos": 0.0,
+   "text": "heart"
+  },
+  {
+   "bar": 19,
+   "pos": 0.6667,
+   "text": "to"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "text": "fear,"
+  },
+  {
+   "bar": 20,
+   "pos": 0.6667,
+   "text": "and"
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "text": "grace"
+  },
+  {
+   "bar": 21,
+   "pos": 0.6667,
+   "text": "my"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "text": "fears"
+  },
+  {
+   "bar": 22,
+   "pos": 0.6667,
+   "text": "re",
+   "join": true
+  },
+  {
+   "bar": 23,
+   "pos": 0.0,
+   "text": "lieved;"
+  },
+  {
+   "bar": 24,
+   "pos": 0.6667,
+   "text": "how"
+  },
+  {
+   "bar": 25,
+   "pos": 0.0,
+   "text": "pre",
+   "join": true
+  },
+  {
+   "bar": 25,
+   "pos": 0.6667,
+   "text": "cious"
+  },
+  {
+   "bar": 26,
+   "pos": 0.0,
+   "text": "did"
+  },
+  {
+   "bar": 26,
+   "pos": 0.6667,
+   "text": "that"
+  },
+  {
+   "bar": 27,
+   "pos": 0.0,
+   "text": "grace"
+  },
+  {
+   "bar": 27,
+   "pos": 0.6667,
+   "text": "ap",
+   "join": true
+  },
+  {
+   "bar": 28,
+   "pos": 0.0,
+   "text": "pear"
+  },
+  {
+   "bar": 28,
+   "pos": 0.6667,
+   "text": "the"
+  },
+  {
+   "bar": 29,
+   "pos": 0.0,
+   "text": "hour"
+  },
+  {
+   "bar": 29,
+   "pos": 0.6667,
+   "text": "I"
+  },
+  {
+   "bar": 30,
+   "pos": 0.0,
+   "text": "first"
+  },
+  {
+   "bar": 30,
+   "pos": 0.6667,
+   "text": "be",
+   "join": true
+  },
+  {
+   "bar": 31,
+   "pos": 0.0,
+   "text": "lieved."
+  }
+ ],
  "chordLibrary": {},
  "fingeringOverrides": {},
  "defaultTrack": "rhythm",
